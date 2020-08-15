@@ -5,7 +5,6 @@ on:
     branches:
       - master
       - development
-      - chore/setup-project
 
 jobs:
   deploy:
@@ -23,20 +22,10 @@ jobs:
         if: github.ref == 'refs/heads/master'
         run: |
           git remote add production https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_PRODUCTION_APP.git
-          git push production origin/master:refs/heads/master
+          git push -f production origin/master:refs/heads/master
 
       - name: Deploy Staging
         if: github.ref == 'refs/heads/development'
         run: |
           git remote add staging https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_STAGING_APP.git
-          git push staging origin/development:refs/heads/master
-
-      - name: Deploy TEST Production
-        run: |
-          git remote add production https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_PRODUCTION_APP.git
-          git push -f production origin/chore/setup-project:refs/heads/master
-
-      - name: Deploy TEST Staging
-        run: |
-          git remote add staging https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_STAGING_APP.git
-          git push -f staging origin/chore/setup-project:refs/heads/master
+          git push -f staging origin/development:refs/heads/master
