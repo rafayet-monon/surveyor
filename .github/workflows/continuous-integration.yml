@@ -1,0 +1,25 @@
+name: CI
+
+on: [pull_request]
+
+jobs:
+  build-and-test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Install node packages
+        run: npm install
+
+      - name: Run Eslint
+        run: npm run lint
+
+      - name: Run SASS lint
+        run: npm run stylelint
+
+      - name: Run test
+        run: npm run test
+        env:
+          CI: true
