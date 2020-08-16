@@ -4,6 +4,6 @@ import App from './App';
 
 test('renders app name SURVEYOR', () => {
   const { getByText } = render(<App />);
-  const appName = getByText(/SURVEYOR_TEST/i);
+  const appName = getByText(/SURVEYOR/i);
   expect(appName).toBeInTheDocument();
 });

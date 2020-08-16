@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-const unused_eslint = true;
+
 function App() {
   return (
     <div className="App">
