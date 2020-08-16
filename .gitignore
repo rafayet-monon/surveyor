@@ -24,3 +24,5 @@ yarn-error.log*
 .idea/
 **/**/.sass-cache/
 .env
+test-results.json
+eslint-output.json
