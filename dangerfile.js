@@ -15,7 +15,7 @@ if (Object.keys(esLintJson).length !== 0) {
     const line_no = lint_obj.messages[0].line;
     const danger_message = lint_obj.messages[0].message;
 
-    let full_message = `Path: ${file_path} - Line: ${line_no} - message: ${danger_message}`;
+    const full_message = `Path: ${file_path} - Line: ${line_no} - message: ${danger_message}`;
     fail(`Eslint Failure: ${full_message}`);
   }
 }
