@@ -13,8 +13,7 @@ jobs:
       - name: Install node packages
         run: npm install
 
-      - name: Run Eslint
-        if: always()
+      - name: Run ESLint
         run: npm run lint-in-file
 
       - name: Run SASS lint
