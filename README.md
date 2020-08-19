@@ -4,7 +4,7 @@
 
 ## [Project Board](https://github.com/rafayet-monon/surveyor/projects/1)
 
-## Installation and Setup Instructions
+## Usage
 
 You will need `node` and `npm` installed globally on your machine.  Built using `node-14.6.0` and `npm-6.14.6`
 
@@ -63,3 +63,12 @@ HEROKU_API_KEY: api key from heroku account's settings
 HEROKU_STAGING_APP: staging_app_name
 HEROKU_PRODUCTION_APP: production_app_name
 ```
+## License
+
+It is free software, and may be redistributed under the terms specified in the [LICENSE] file.
+
+[LICENSE]: /LICENSE
+
+## About
+
+This project is created to complete **Web Frontend Certification Path** at [Nimble](https://nimblehq.co/).
