@@ -1,0 +1,33 @@
+name: CI
+
+on: [pull_request]
+
+jobs:
+  build-and-test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Install node packages
+        run: npm install
+
+      - name: Run ESLint
+        run: npm run lint-in-file
+
+      - name: Run SASS lint
+        if: always()
+        run: npm run stylelint
+
+      - name: Run test
+        if: always()
+        run: npm run test
+        env:
+          CI: true
+
+      - name: Run Danger
+        if: always()
+        run: npm run danger
+        env:
+          GITHUB_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
