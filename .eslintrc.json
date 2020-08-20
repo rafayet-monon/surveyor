@@ -11,6 +11,7 @@
   "rules": {
     "react/prop-types": 0,
     "no-console": 1,
+    "quotes": [2, "single", { "avoidEscape": true }],
     "react-hooks/rules-of-hooks": 2,
     "react-hooks/exhaustive-deps": 1,
     "jest/no-disabled-tests": "warn",
