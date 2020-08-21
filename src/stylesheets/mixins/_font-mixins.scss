@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'Neuzeit S LT Std';
+  src: url('../fonts/Linotype - NeuzeitSLTStd-Book.otf');
+}
+
+@mixin neuzeit-font() {
+  font-family: 'Neuzeit S LT Std', serif;
+}

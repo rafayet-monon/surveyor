@@ -10,9 +10,7 @@ function App() {
     <Router>
       <ScrollToTop>
         <AuthProvider>
-          <div className="app">
-            <RouteList />
-          </div>
+          <RouteList />
         </AuthProvider>
       </ScrollToTop>
     </Router>

@@ -1,0 +1,43 @@
+.logo-label-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 390px;
+  left: calc(50% - 320px/2);
+  padding: 0;
+  position: absolute;
+  top: calc(50% - 390px/2);
+  width: 320px;
+
+  .img-logo {
+    align-self: center;
+    flex: none;
+    height: 40px;
+    left: 76.08px;
+    margin: 0 24px;
+    order: 0;
+    position: static;
+    top: 0;
+    width: 167.84px;
+  }
+
+  .text-label {
+    align-self: center;
+    color: #fff;
+    display: flex;
+    flex: none;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: normal;
+    height: 22px;
+    left: 0;
+    letter-spacing: -0.41px;
+    line-height: 22px;
+    margin: 0 24px;
+    opacity: 0.6;
+    order: 1;
+    position: static;
+    right: 0;
+    text-align: center;
+    top: 64px;
+  }
+}

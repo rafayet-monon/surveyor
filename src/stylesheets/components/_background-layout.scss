@@ -1,0 +1,18 @@
+.background-layout {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  .background-overlay {
+    backdrop-filter: blur(100px);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, $primary 100%);
+    bottom: 0;
+    left: 0;
+    mix-blend-mode: normal;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
