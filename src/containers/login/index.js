@@ -3,6 +3,7 @@ import BackgroundLayout from '../../components/backgroundLayout';
 import backgroundImage from '../../images/backgrounds/authentication_background.png';
 import LogoWithLabel from '../../components/logoWithLabel';
 import TextInput from '../../components/textInput';
+import FormButton from '../../components/formButton';
 
 const Login = () => {
   const label = 'Sign in to Nimble';
@@ -28,6 +29,8 @@ const Login = () => {
                   inputId='password'
                   inputType='password'
                 />
+
+                <FormButton label='Sign in' />
               </form>
             </div>
           </div>

@@ -1,0 +1,30 @@
+.button-wrapper {
+  bottom: 0;
+  flex: none;
+  left: 0;
+  order: 2;
+  position: static;
+  right: 0;
+  top: 79.41%;
+
+  .button-custom {
+    @include neuzeit-font;
+    /* identical to box height, or 129% */
+    align-items: center;
+    background: #fff;
+    border-radius: 10px;
+    color: #15151a;
+    font-size: 17px;
+    /* Regular / Semi Bold */
+    font-style: normal;
+    font-weight: 800;
+    height: 50px;
+    left: calc(50% - 343px/2 - 0.5px);
+    letter-spacing: -0.41px;
+    line-height: 22px;
+    margin: 0 8px;
+    text-align: center;
+    top: calc(50% - 50px/2);
+    width: 304px;
+  }
+}
