@@ -5,9 +5,11 @@
 // Globals
 @import 'stylesheets/base/body';
 @import 'stylesheets/base/basic';
+@import 'stylesheets/base/global';
 // Components
 @import 'stylesheets/components/background-layout';
 @import 'stylesheets/components/logo-with-label';
+@import 'stylesheets/components/text-input';
 // Containers
 @import 'stylesheets/containers/home';
 @import 'stylesheets/containers/login';

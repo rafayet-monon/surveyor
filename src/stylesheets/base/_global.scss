@@ -1,0 +1,12 @@
+.form-wrapper {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  left: calc(50% - 320px/2);
+  margin-top: 24px;
+  order: 1;
+  padding: 0;
+  position: static;
+  top: 118px;
+  width: 320px;
+}

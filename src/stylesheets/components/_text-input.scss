@@ -1,0 +1,69 @@
+.text-input-wrapper {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  height: 84px;
+  left: 0;
+  margin-bottom: 20px;
+  order: 1;
+  padding: 0;
+  position: static;
+  top: 108px;
+  width: 320px;
+
+  .input-label {
+    @include neuzeit-font;
+    align-items: center;
+    bottom: 76.19%;
+    color: #fff;
+    display: flex;
+    flex: none;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 800;
+    left: 0;
+    letter-spacing: -0.24px;
+    line-height: 20px;
+    margin: 0 8px;
+    margin-bottom: 10px;
+    order: 0;
+    position: static;
+    right: 0;
+    top: 0;
+  }
+
+  .input-control {
+    bottom: 0;
+    flex: none;
+    left: 0;
+    margin: 0 8px;
+    order: 1;
+    position: static;
+    right: 0;
+    top: 33.33%;
+  }
+
+  input {
+    @include neuzeit-font;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.18);
+    border: transparent;
+    border-radius: 12px;
+    color: #fff;
+    display: flex;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: normal;
+    height: 55px;
+    letter-spacing: -0.41px;
+    line-height: 22px;
+    width: 304px;
+  }
+
+  input:focus {
+    background: rgba(255, 255, 255, 0.18);
+    box-shadow: none !important;
+    color: #fff;
+    outline: none;
+  }
+}
