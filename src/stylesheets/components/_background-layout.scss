@@ -6,7 +6,7 @@
   top: 0;
 
   .background-overlay {
-    backdrop-filter: blur(100px);
+    backdrop-filter: blur(50px);
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, $primary 100%);
     bottom: 0;
     left: 0;
