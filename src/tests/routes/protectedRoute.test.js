@@ -21,4 +21,4 @@ describe('When AuthenticaedRoute component is mounted', () => {
   });
 });
 
-test.todo('Test authorized route');
+test.todo('Test authorized route after authentication functionality');
