@@ -1,5 +1,5 @@
 import React from 'react';
-import BackgroundLayout from '../../components/backgroundLayout';
+import BackgroundLayout from '../../components/BackgroundLayout';
 import backgroundImage from '../../images/backgrounds/authentication_background.png';
 
 const ForgotPassword = () => {

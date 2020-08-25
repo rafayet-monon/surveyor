@@ -4,7 +4,11 @@ const FormButton = ({ label }) => {
   return (
     <div>
       <div className='button-wrapper'>
-        <button type='submit' className='btn button-custom'>
+        <button
+          data-testid='form-button-test'
+          type='submit'
+          className='btn button-custom'
+        >
           {label}
         </button>
       </div>
