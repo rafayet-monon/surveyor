@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { AuthenticaedRoute } from '../../routes/protectedRoute';
+import { AuthenticatedRoute } from '../../routes/protectedRoute';
 import Home from '../../containers/Home';
 import { AuthProvider } from '../../contexts/authContext';
 import { Router } from 'react-router-dom';
@@ -10,9 +10,9 @@ describe('When AuthenticaedRoute component is mounted', () => {
   it('returns to login page if not authorized', () => {
     const history = createMemoryHistory();
     render(
-      <Router history={history}>
+      <Router history={ history }>
         <AuthProvider>
-          <AuthenticaedRoute path="/" exact component={Home} />
+          <AuthenticatedRoute path="/" exact component={ Home } />
         </AuthProvider>
       </Router>
     );

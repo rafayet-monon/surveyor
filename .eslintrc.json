@@ -18,7 +18,8 @@
     "jest/no-focused-tests": "error",
     "jest/no-identical-title": "error",
     "jest/prefer-to-have-length": "warn",
-    "jest/valid-expect": "error"
+    "jest/valid-expect": "error",
+    "react/jsx-curly-spacing": [2, "always"]
   },
   "plugins": ["react", "import", "jsx-a11y", "react-hooks", "jest", "cypress"],
   "parser": "babel-eslint",

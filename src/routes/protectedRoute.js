@@ -2,46 +2,38 @@ import React, { useContext } from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import { AuthContext } from '../contexts/authContext';
 
-const AuthenticaedRoute = ({ component: Component, ...rest }) => {
+const AuthenticatedRoute = ({ component: Component, ...rest }) => {
   const { state } = useContext(AuthContext);
 
   return (
     <Route
-      {...rest}
-      render={(props) =>
+      { ...rest }
+      render={ (props) =>
         state.isAuthenticated ? (
-          <Component {...props} />
+          <Component { ...props } />
         ) : (
-          <Redirect
-            to={{
-              pathname: '/login',
-            }}
-          />
+          <Redirect to={ { pathname: '/login' } } />
         )
       }
     />
   );
 };
 
-const UnauthenticaedRoute = ({ component: Component, ...rest }) => {
+const UnauthenticatedRoute = ({ component: Component, ...rest }) => {
   const { state } = useContext(AuthContext);
 
   return (
     <Route
-      {...rest}
-      render={(props) =>
+      { ...rest }
+      render={ (props) =>
         !state.isAuthenticated ? (
-          <Component {...props} />
+          <Component { ...props } />
         ) : (
-          <Redirect
-            to={{
-              pathname: '/',
-            }}
-          />
+          <Redirect to={ { pathname: '/' } } />
         )
       }
     />
   );
 };
 
-export { AuthenticaedRoute, UnauthenticaedRoute };
+export { AuthenticatedRoute, UnauthenticatedRoute };

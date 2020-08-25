@@ -1,14 +1,14 @@
 import React from 'react';
 import { Switch } from 'react-router-dom';
-import { AuthenticaedRoute, UnauthenticaedRoute } from './protectedRoute';
+import { AuthenticatedRoute, UnauthenticatedRoute } from './protectedRoute';
 import Home from '../containers/Home';
 import Login from '../containers/Login';
 
 const RouteList = () => {
   return (
     <Switch>
-      <AuthenticaedRoute path="/" exact component={Home} />
-      <UnauthenticaedRoute path="/login" component={Login} />
+      <AuthenticatedRoute path="/" exact component={ Home } />
+      <UnauthenticatedRoute path="/login" component={ Login } />
     </Switch>
   );
 };
