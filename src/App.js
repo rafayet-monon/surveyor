@@ -1,8 +1,8 @@
 import React from 'react';
-import './App.scss';
+import 'App.scss';
 import { BrowserRouter as Router } from 'react-router-dom';
-import RouteList from './routes';
-import { AuthProvider } from './contexts/authContext';
+import RouteList from 'routes';
+import { AuthProvider } from 'contexts/authContext';
 
 function App() {
   return (

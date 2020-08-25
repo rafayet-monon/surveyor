@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { AuthenticatedRoute } from '../../routes/protectedRoute';
-import Home from '../../containers/Home';
-import { AuthProvider } from '../../contexts/authContext';
+import { AuthenticatedRoute } from 'routes/protectedRoute';
+import Home from 'containers/Home';
+import { AuthProvider } from 'contexts/authContext';
 import { Router } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
 
