@@ -1,14 +1,4 @@
-import React, { createContext, useEffect, useReducer } from 'react';
-
-const AuthContext = createContext();
-
-const initialState = {
-  isAuthenticated: false,
-  user: null,
-  token: null,
-};
-
-const reducer = (state, action) => {
+const AuthReducer = (state, action) => {
   switch (action.type) {
     case 'AUTH': {
       const user = action.payload.attributes;
@@ -44,22 +34,4 @@ const reducer = (state, action) => {
   }
 };
 
-const AuthProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(reducer, initialState);
-
-  useEffect(() => {
-    let token = localStorage.getItem('token');
-
-    if (token && !state.isAuthenticated) {
-      dispatch({ type: 'REFRESH' });
-    }
-  });
-
-  return (
-    <AuthContext.Provider value={ { state, dispatch } }>
-      {children}
-    </AuthContext.Provider>
-  );
-};
-
-export { AuthProvider, AuthContext };
+export default AuthReducer;
