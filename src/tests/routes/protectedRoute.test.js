@@ -6,7 +6,7 @@ import { AuthProvider } from 'contexts/auth';
 import { Router } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
 
-describe('When AuthenticaedRoute component is mounted', () => {
+describe('when AuthenticaedRoute component is mounted', () => {
   it('returns to login page if not authorized', () => {
     const history = createMemoryHistory();
     render(
