@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { render } from '@testing-library/react';
+
 import Home from 'containers/Home';
 
 describe('When visited the forgot password page', () => {
