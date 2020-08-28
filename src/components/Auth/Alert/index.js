@@ -3,32 +3,43 @@ import React from 'react';
 import bellIcon from 'images/icons/bell_icon.png';
 import errorIcon from 'images/icons/error_icon.png';
 
-const Info = (title, subtitle) => {
+const Info = ({ title, description }) => {
   return (
-    <div className="row auth-alert">
+    <div className="auth-alert">
       <div className="auth-alert__icon">
-        <img src={ errorIcon } alt="Info" />
+        <img src={ bellIcon } alt="Info" data-testid="info-icon-test" />
       </div>
       <div className="auth-alert__message">
-        <span className="auth-alert__title">{ title }</span>
-        <span className="auth-alert__info">{ subtitle }</span>
+        <span className="auth-alert__title" data-testid="info-title-test">
+          { title }
+        </span>
+        <span className="auth-alert__info" data-testid="info-description-test">
+          { description }
+        </span>
       </div>
     </div>
   );
 };
 
-const Error = (title, subtitle) => {
+const Error = ({ title, description }) => {
   return (
-    <div className="row auth-alert">
+    <div className="auth-alert">
       <div className="auth-alert__icon">
-        <img src={ bellIcon } alt="Error" />
+        <img src={ errorIcon } alt="Error" data-testid="error-icon-test" />
       </div>
       <div className="auth-alert__message">
-        <span className="auth-alert__title">{ title }</span>
-        <span className="auth-alert__errors">{ subtitle }</span>
+        <span className="auth-alert__title" data-testid="error-title-test">
+          { title }
+        </span>
+        <span
+          className="auth-alert__errors"
+          data-testid="error-description-test"
+        >
+          { description }
+        </span>
       </div>
     </div>
   );
 };
 
-export default { Info, Error };
+export { Info, Error };

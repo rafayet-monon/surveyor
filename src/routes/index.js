@@ -4,7 +4,10 @@ import { Switch } from 'react-router-dom';
 
 import Home from 'containers/Home';
 import Login from 'containers/Login';
-import { AuthenticatedRoute, UnauthenticatedRoute } from 'routes/protectedRoute';
+import {
+  AuthenticatedRoute,
+  UnauthenticatedRoute,
+} from 'routes/protectedRoute';
 
 const RouteList = () => {
   return (
