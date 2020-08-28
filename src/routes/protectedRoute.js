@@ -14,7 +14,7 @@ const AuthenticatedRoute = ({ component: Component, ...rest }) => {
         state.isAuthenticated ? (
           <Component { ...props } />
         ) : (
-          <Redirect to={ { pathname: '/login' } } />
+          <Redirect to={{ pathname: '/login' }} />
         )
       }
     />
@@ -31,7 +31,7 @@ const UnauthenticatedRoute = ({ component: Component, ...rest }) => {
         !state.isAuthenticated ? (
           <Component { ...props } />
         ) : (
-          <Redirect to={ { pathname: '/' } } />
+          <Redirect to={{ pathname: '/' }} />
         )
       }
     />
