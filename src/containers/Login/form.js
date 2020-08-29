@@ -5,7 +5,7 @@ import InputText from 'components/Auth/InputText';
 
 const Form = () => {
   return (
-    <div>
+    <div className="row">
       <form data-testid="login-form-test">
         <InputText
           label="Email"
