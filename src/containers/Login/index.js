@@ -1,11 +1,9 @@
 import React from 'react';
 
+import Page from 'containers/Login/page';
+
 const Login = () => {
-  return (
-    <div>
-      <h1>Login</h1>
-    </div>
-  );
+  return <Page />;
 };
 
 export default Login;

@@ -1,0 +1,17 @@
+.logo-auth {
+  $self: &;
+
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+
+  &__label {
+    color: #fff;
+    display: flex;
+    font-size: 17px;
+    letter-spacing: -0.41px;
+    line-height: 22px;
+    margin: 24px 24px 0;
+    opacity: 0.6;
+  }
+}

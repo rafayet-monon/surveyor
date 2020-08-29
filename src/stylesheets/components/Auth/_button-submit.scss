@@ -1,0 +1,13 @@
+.button-submit {
+  .btn--form-white {
+    @include neuzeit-font-semi-bold;
+    align-items: center;
+    background: #fff;
+    border-radius: 10px;
+    color: #15151a;
+    font-size: 17px;
+    height: 55px;
+    letter-spacing: -0.41px;
+    width: 100%;
+  }
+}
