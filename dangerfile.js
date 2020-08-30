@@ -1,5 +1,6 @@
-const { fail } =  require('danger')
 const fs = require('fs')
+
+const { fail } =  require('danger')
 const jest = require('danger-plugin-jest/dist/index.js')
 const stylelint = require('danger-plugin-stylelint')
 
