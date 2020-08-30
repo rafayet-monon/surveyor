@@ -48,6 +48,7 @@ describe('When TextInput component is mounted', () => {
         label={ label }
         inputId={ inputId }
         inputType={ passInputType }
+        forgotPassLink={ true }
       />
     );
     const forgotPass = getByText(/Forgot/i);

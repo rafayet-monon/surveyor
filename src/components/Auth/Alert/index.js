@@ -5,17 +5,22 @@ import errorIcon from 'images/icons/error_icon.png';
 
 const Info = ({ title, description }) => {
   return (
-    <div className="auth-alert">
-      <div className="auth-alert__icon">
-        <img src={ bellIcon } alt="Info" data-testid="info-icon-test" />
+    <div className="row auth-alert">
+      <div className="col-2">
+        <div className="auth-alert__icon">
+          <img src={ bellIcon } alt="Info" data-testid="info-icon-test" />
+        </div>
       </div>
-      <div className="auth-alert__message">
-        <span className="auth-alert__title" data-testid="info-title-test">
-          { title }
-        </span>
-        <span className="auth-alert__info" data-testid="info-description-test">
-          { description }
-        </span>
+      <div className="col-10 pl-0">
+        <div className="auth-alert__message">
+          <p className="auth-alert__title" data-testid="info-title-test">
+            { title }
+          </p>
+
+          <p className="auth-alert__info" data-testid="info-description-test">
+            { description }
+          </p>
+        </div>
       </div>
     </div>
   );
@@ -23,20 +28,22 @@ const Info = ({ title, description }) => {
 
 const Error = ({ title, description }) => {
   return (
-    <div className="auth-alert">
-      <div className="auth-alert__icon">
-        <img src={ errorIcon } alt="Error" data-testid="error-icon-test" />
+    <div className="row auth-alert">
+      <div className="col-2">
+        <div className="auth-alert__icon">
+          <img src={ errorIcon } alt="Info" data-testid="error-icon-test" />
+        </div>
       </div>
-      <div className="auth-alert__message">
-        <span className="auth-alert__title" data-testid="error-title-test">
-          { title }
-        </span>
-        <span
-          className="auth-alert__errors"
-          data-testid="error-description-test"
-        >
-          { description }
-        </span>
+      <div className="col-10 pl-0">
+        <div className="auth-alert__message">
+          <p className="auth-alert__title" data-testid="error-title-test">
+            { title }
+          </p>
+
+          <p className="auth-alert__error" data-testid="error-description-test">
+            { description }
+          </p>
+        </div>
       </div>
     </div>
   );

@@ -1,23 +1,24 @@
 import React from 'react';
 
-const InputText = ({ labelFor, label, inputType, inputId }) => {
-  const isPassword = inputType === 'password';
+const InputText = ({ labelFor, label, inputType, inputId, forgotPassLink }) => {
   return (
     <div className="input-text">
-      <label
-        htmlFor={ labelFor }
-        className="input-text__label"
-        data-testid="input-label-test"
-      >
-        { label }
-      </label>
-      <input
-        type={ inputType }
-        id={ inputId }
-        className="form-control input-text__box"
-        data-testid="text-input-test"
-      />
-      { isPassword && (
+      <div className="input-text__container">
+        <label
+          htmlFor={ labelFor }
+          className="input-text__label"
+          data-testid="input-label-test"
+        >
+          { label }
+        </label>
+        <input
+          type={ inputType }
+          id={ inputId }
+          className="form-control input-text__box"
+          data-testid="text-input-test"
+        />
+      </div>
+      { forgotPassLink && (
         <a
           href="/"
           className="input-text__forgot-pass"
