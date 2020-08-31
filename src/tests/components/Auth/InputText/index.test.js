@@ -11,7 +11,7 @@ describe('When TextInput component is mounted', () => {
   const inputType = 'email';
 
   it('renders label with props', () => {
-    const { getByTestId } = render(
+    const { getByLabelText } = render(
       <TextInput
         labelFor={ labelFor }
         label={ label }
@@ -19,10 +19,9 @@ describe('When TextInput component is mounted', () => {
         inputType={ inputType }
       />
     );
-    const inputLabel = expect(getByTestId('input-label-test'));
+    const inputLabel = getByLabelText(label);
 
-    inputLabel.toHaveAttribute('for', labelFor);
-    inputLabel.toContainHTML(label);
+    expect(inputLabel).toBeInTheDocument();
   });
 
   it('renders input with props', () => {
