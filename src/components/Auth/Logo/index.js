@@ -6,12 +6,7 @@ const Logo = ({ label }) => {
   return (
     <div className="row">
       <div className="logo-auth">
-        <img
-          src={ logo }
-          alt="NIMBLE"
-          className="logo-auth__img"
-          data-testid="logo-test"
-        />
+        <img src={ logo } alt="NIMBLE" className="logo-auth__img" />
         <p className="logo-auth__label">{ label }</p>
       </div>
     </div>

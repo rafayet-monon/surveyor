@@ -5,8 +5,8 @@ const BackgroundLayout = ({ backgroundImage, children }) => {
     <div className="background-layout">
       <div
         className="background-layout__image"
-        data-testid="background-image-test"
         style={{ background: `url(${backgroundImage}), #000` }}
+        aria-label="background-layout-image"
       >
         <div className="background-layout__overlay">{ children }</div>
       </div>

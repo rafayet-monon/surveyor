@@ -8,16 +8,16 @@ describe('When FormButton component is mounted', () => {
   const label = 'Log in';
 
   it('renders button with submit type', () => {
-    const { getByTestId } = render(<FormButton label={ label } />);
-    const formButton = expect(getByTestId('form-button-test'));
+    const { getByRole } = render(<FormButton label={ label } />);
+    const formButton = getByRole('button', { type: 'submit' });
 
-    formButton.toHaveAttribute('type', 'submit');
+    expect(formButton).toBeInTheDocument();
   });
 
   it('renders button with label', () => {
-    const { getByTestId } = render(<FormButton label={ label } />);
-    const formButton = expect(getByTestId('form-button-test'));
+    const { getByText } = render(<FormButton label={ label } />);
+    const formButton = getByText(/Log in/);
 
-    formButton.toContainHTML(label);
+    expect(formButton).toBeInTheDocument();
   });
 });

@@ -8,11 +8,11 @@ import logo from 'images/logo_white.png';
 describe('When LogoWithLabel component is mounted', () => {
   const label = 'Sign in to Nimble';
 
-  it('renders button with submit type', () => {
-    const { getByTestId } = render(<LogoWithLabel label={ label } />);
-    const logoImage = expect(getByTestId('logo-test'));
+  it('renders the logo', () => {
+    const { getByAltText } = render(<LogoWithLabel label={ label } />);
+    const logoImage = getByAltText('NIMBLE');
 
-    logoImage.toHaveAttribute('src', logo);
+    expect(logoImage).toHaveAttribute('src', logo);
   });
 
   it('renders button with label', () => {

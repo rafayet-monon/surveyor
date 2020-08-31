@@ -7,37 +7,37 @@ import bellIcon from 'images/icons/bell_icon.png';
 import errorIcon from 'images/icons/error_icon.png';
 
 describe('When Info component is mounted', () => {
-  const title = 'Info';
+  const title = 'Info!';
   const description = 'Info Description';
 
-  it('renders button with submit type', () => {
-    const { getByTestId } = render(
+  it('renders messages with information', () => {
+    const { getByText, getByAltText } = render(
       <Info title={ title } description={ description } />
     );
-    const logoImage = expect(getByTestId('info-icon-test'));
-    const infoTitle = expect(getByTestId('info-title-test'));
-    const infoDescription = expect(getByTestId('info-description-test'));
+    const logoImage = getByAltText('Info');
+    const infoTitle = getByText(/Info!/);
+    const infoDescription = getByText(/Info Description/);
 
-    infoTitle.toContainHTML(title);
-    infoDescription.toContainHTML(description);
-    logoImage.toHaveAttribute('src', bellIcon);
+    expect(infoTitle).toBeInTheDocument();
+    expect(infoDescription).toBeInTheDocument();
+    expect(logoImage).toHaveAttribute('src', bellIcon);
   });
 });
 
 describe('When Error component is mounted', () => {
-  const title = 'Error';
+  const title = 'Error!';
   const description = 'Error Description';
 
-  it('renders button with submit type', () => {
-    const { getByTestId } = render(
+  it('renders messages with errors', () => {
+    const { getByText, getByAltText } = render(
       <Error title={ title } description={ description } />
     );
-    const logoImage = expect(getByTestId('error-icon-test'));
-    const infoTitle = expect(getByTestId('error-title-test'));
-    const infoDescription = expect(getByTestId('error-description-test'));
+    const logoImage = getByAltText('Error');
+    const errorTitle = getByText(/Error!/);
+    const errorDescription = getByText(/Error Description/);
 
-    infoTitle.toContainHTML(title);
-    infoDescription.toContainHTML(description);
-    logoImage.toHaveAttribute('src', errorIcon);
+    expect(errorTitle).toBeInTheDocument();
+    expect(errorDescription).toBeInTheDocument();
+    expect(logoImage).toHaveAttribute('src', errorIcon);
   });
 });

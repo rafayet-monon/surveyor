@@ -26,7 +26,7 @@ describe('When TextInput component is mounted', () => {
   });
 
   it('renders input with props', () => {
-    const { getByTestId } = render(
+    const { getByRole } = render(
       <TextInput
         labelFor={ labelFor }
         label={ label }
@@ -34,10 +34,9 @@ describe('When TextInput component is mounted', () => {
         inputType={ inputType }
       />
     );
-    const textInput = expect(getByTestId('text-input-test'));
+    const textInput = getByRole('textbox', { type: inputType, id: inputId });
 
-    textInput.toHaveAttribute('type', inputType);
-    textInput.toHaveAttribute('id', inputId);
+    expect(textInput).toBeInTheDocument();
   });
 
   it('renders forgot password link if inputType is password', () => {

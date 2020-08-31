@@ -7,12 +7,14 @@ import backgroundImage from 'images/auth_background.png';
 
 describe('When BackgroundLayout component is mounted', () => {
   it('shows image in background', () => {
-    const { getByTestId } = render(
+    const { getByLabelText } = render(
       <BackgroundLayout backgroundImage={ backgroundImage } />
     );
-    const imageDiv = expect(getByTestId('background-image-test'));
+    const imageDiv = getByLabelText('background-layout-image');
 
-    imageDiv.toHaveStyle(`background-image: url(${backgroundImage}), #000`);
+    expect(imageDiv).toHaveStyle(
+      `background-image: url(${backgroundImage}), #000`
+    );
   });
 
   it('renders child component', () => {

@@ -8,18 +8,14 @@ const Info = ({ title, description }) => {
     <div className="row auth-alert">
       <div className="col-2">
         <div className="auth-alert__icon">
-          <img src={ bellIcon } alt="Info" data-testid="info-icon-test" />
+          <img src={ bellIcon } alt="Info" />
         </div>
       </div>
       <div className="col-10 pl-0">
         <div className="auth-alert__message">
-          <p className="auth-alert__title" data-testid="info-title-test">
-            { title }
-          </p>
+          <p className="auth-alert__title">{ title }</p>
 
-          <p className="auth-alert__info" data-testid="info-description-test">
-            { description }
-          </p>
+          <p className="auth-alert__info">{ description }</p>
         </div>
       </div>
     </div>
@@ -31,18 +27,14 @@ const Error = ({ title, description }) => {
     <div className="row auth-alert">
       <div className="col-2">
         <div className="auth-alert__icon">
-          <img src={ errorIcon } alt="Info" data-testid="error-icon-test" />
+          <img src={ errorIcon } alt="Error" />
         </div>
       </div>
       <div className="col-10 pl-0">
         <div className="auth-alert__message">
-          <p className="auth-alert__title" data-testid="error-title-test">
-            { title }
-          </p>
+          <p className="auth-alert__title">{ title }</p>
 
-          <p className="auth-alert__error" data-testid="error-description-test">
-            { description }
-          </p>
+          <p className="auth-alert__error">{ description }</p>
         </div>
       </div>
     </div>
