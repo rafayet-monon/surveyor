@@ -16,7 +16,7 @@ describe('When FormButton component is mounted', () => {
 
   it('renders button with label', () => {
     const { getByText } = render(<FormButton label={ label } />);
-    const formButton = getByText(/Log in/);
+    const formButton = getByText(label);
 
     expect(formButton).toBeInTheDocument();
   });
