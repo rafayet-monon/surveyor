@@ -1,0 +1,101 @@
+.skeleton {
+  $self: &;
+
+  &-header {
+    display: flex;
+    height: auto;
+    margin-top: 32px;
+    padding: 0 32px;
+    width: 100%;
+  }
+
+  &__menu-bar {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__menu-bar .react-loading-skeleton {
+    border-radius: 12px;
+  }
+
+  &__user-img {
+    margin-left: auto;
+    order: 2;
+  }
+
+  &-details {
+    display: flex;
+    flex-direction: column;
+    max-width: 704px;
+    padding: 42px 32px 0;
+    @include media-breakpoint(map-get($grid, 'desktop')) {
+      padding-top: 50px;
+    }
+    @include media-breakpoint(map-get($grid, 'tablet')) {
+      padding-top: 50px;
+    }
+  }
+
+  &__date .react-loading-skeleton {
+    border-radius: 12px;
+  }
+
+  &__day {
+    margin-top: 14px;
+  }
+
+  &__day .react-loading-skeleton {
+    border-radius: 12px;
+  }
+
+  &__survey-img {
+    margin-top: 20px;
+    @include media-breakpoint(map-get($grid, 'desktop')) {
+      margin-top: 65px;
+    }
+    @include media-breakpoint(map-get($grid, 'tablet')) {
+      margin-top: 65px;
+    }
+  }
+
+  &__survey-img .react-loading-skeleton {
+    border-radius: 12px;
+    @include media-breakpoint(map-get($grid, 'desktop')) {
+      height: 305px !important;
+    }
+    @include media-breakpoint(map-get($grid, 'tablet')) {
+      height: 305px !important;
+    }
+  }
+
+  &__survey-title {
+    margin-top: 38px;
+    max-width: 318px;
+  }
+
+  &__survey-title .react-loading-skeleton {
+    border-radius: 12px;
+    max-width: 100%;
+  }
+
+  &__survey-desc {
+    margin-top: 8px;
+  }
+
+  &__survey-desc .react-loading-skeleton {
+    border-radius: 12px;
+  }
+
+  &__navigation {
+    margin-left: auto;
+    order: 2;
+    position: relative;
+    @include media-breakpoint(map-get($grid, 'desktop')) {
+      bottom: 65px;
+    }
+    @include media-breakpoint(map-get($grid, 'tablet')) {
+      bottom: 65px;
+    }
+  }
+}

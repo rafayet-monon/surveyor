@@ -4,6 +4,7 @@ import { Switch } from 'react-router-dom';
 
 import ForgotPassword from 'containers/ForgotPassword';
 import Home from 'containers/Home';
+import LazyLoader from 'containers/LazyLoader';
 import Login from 'containers/Login';
 import {
   AuthenticatedRoute,
@@ -19,6 +20,7 @@ const RouteList = () => {
         path="/forgot-password"
         component={ ForgotPassword }
       />
+      <UnauthenticatedRoute path="/loader" component={ LazyLoader } />
     </Switch>
   );
 };
