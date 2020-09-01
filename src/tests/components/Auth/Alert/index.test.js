@@ -2,19 +2,19 @@ import React from 'react';
 
 import { render } from '@testing-library/react';
 
-import { Info, Error } from 'components/Auth/Alert';
+import Alert from 'components/Auth/Alert';
 import bellIcon from 'images/icons/bell_icon.png';
 import errorIcon from 'images/icons/error_icon.png';
 
-describe('When Info component is mounted', () => {
+describe('When Alert component is mounted without type', () => {
   const title = 'Info!';
   const description = 'Info Description';
 
   it('renders messages with information', () => {
     const { getByText, getByAltText } = render(
-      <Info title={ title } description={ description } />
+      <Alert title={ title } description={ description } />
     );
-    const logoImage = getByAltText('Info');
+    const logoImage = getByAltText('info');
     const infoTitle = getByText(/Info!/);
     const infoDescription = getByText(/Info Description/);
 
@@ -24,15 +24,15 @@ describe('When Info component is mounted', () => {
   });
 });
 
-describe('When Error component is mounted', () => {
+describe('When Alert component is mounted with error type', () => {
   const title = 'Error!';
   const description = 'Error Description';
 
   it('renders messages with errors', () => {
     const { getByText, getByAltText } = render(
-      <Error title={ title } description={ description } />
+      <Alert title={ title } description={ description } alertType="error" />
     );
-    const logoImage = getByAltText('Error');
+    const logoImage = getByAltText('error');
     const errorTitle = getByText(/Error!/);
     const errorDescription = getByText(/Error Description/);
 
