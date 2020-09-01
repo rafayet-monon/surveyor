@@ -1,9 +1,13 @@
 import React from 'react';
 
-const FormButton = ({ label }) => {
+const FormButton = ({ label, isDisabled }) => {
   return (
     <div className="form-button">
-      <button type="submit" className="btn form-button__button--white">
+      <button
+        type="submit"
+        className="btn form-button__button--white"
+        disabled={ isDisabled }
+      >
         { label }
       </button>
     </div>

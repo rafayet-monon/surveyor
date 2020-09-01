@@ -3,7 +3,7 @@ import React from 'react';
 import Alert from 'components/Auth/Alert';
 import Logo from 'components/Auth/Logo';
 import BackgroundLayout from 'components/BackgroundLayout';
-import Form from 'containers/ForgotPassword/form';
+import ForgotPasswordForm from 'containers/ForgotPassword/forgotPasswordForm';
 import backgroundImage from 'images/auth_background.png';
 
 const Page = () => {
@@ -17,7 +17,7 @@ const Page = () => {
           title="Check your email."
           description="We have emailed you instruction to reset your password."
         />
-        <Form />
+        <ForgotPasswordForm />
       </div>
     </BackgroundLayout>
   );
