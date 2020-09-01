@@ -12,3 +12,8 @@ $color-white: (
 $primary-color: map-get($color-black, 'primary') !default;
 $secondary-color: map-get($color-white, 'primary') !default;
 
+
+$grid: (
+  tablet: 768px,
+  desktop: 1140px
+);
