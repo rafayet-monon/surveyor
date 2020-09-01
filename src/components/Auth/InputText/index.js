@@ -14,7 +14,7 @@ const InputText = ({ labelFor, label, inputType, inputId, forgotPassLink }) => {
         />
       </div>
       { forgotPassLink && (
-        <a href="/" className="input-text__forgot-pass">
+        <a href="/" className="input-text__forgot-password">
           Forgot?
         </a>
       ) }

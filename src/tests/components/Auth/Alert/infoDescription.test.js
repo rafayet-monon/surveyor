@@ -8,9 +8,7 @@ describe('When InfoDescription component is mounted', () => {
   const description = 'Info Description';
 
   it('renders messages with information', () => {
-    const { getByText } = render(
-      <InfoDescription description={ description } />
-    );
+    const { getByText } = render(<InfoDescription description={ description } />);
     const infoDescription = getByText(/Info Description/);
 
     expect(infoDescription).toBeInTheDocument();
