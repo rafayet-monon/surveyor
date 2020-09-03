@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-import ErrorDescription from 'components/Auth/Alert/errorDescription';
-import InfoDescription from 'components/Auth/Alert/infoDescription';
 import bellIcon from 'images/icons/bell_icon.png';
 import errorIcon from 'images/icons/error_icon.png';
 
@@ -25,10 +23,7 @@ const Alert = ({ alertType, title, description }) => {
         <div className="auth-alert__message">
           <p className="auth-alert__title">{ title }</p>
 
-          { alert.type === 'info'
-            ? <InfoDescription description={ description } />
-            : <ErrorDescription description={ description } />
-          }
+          <p className={ `auth-alert__${alert.type}` }>{ description }</p>
         </div>
       </div>
     </div>
