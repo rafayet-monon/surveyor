@@ -25,11 +25,10 @@ const Alert = ({ alertType, title, description }) => {
         <div className="auth-alert__message">
           <p className="auth-alert__title">{ title }</p>
 
-          { alert.type === 'info' ? (
-            <InfoDescription description={ description } />
-          ) : (
-            <ErrorDescription description={ description } />
-          ) }
+          { alert.type === 'info'
+            ? <InfoDescription description={ description } />
+            : <ErrorDescription description={ description } />
+          }
         </div>
       </div>
     </div>
