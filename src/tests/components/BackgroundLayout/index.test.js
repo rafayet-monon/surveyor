@@ -13,7 +13,7 @@ describe('When BackgroundLayout component is mounted', () => {
     const imageDiv = getByLabelText('background-layout-image');
 
     expect(imageDiv).toHaveStyle(
-      `background-image: url(${backgroundImage}), #000`
+      `background-image: url(${backgroundImage})`
     );
   });
 
