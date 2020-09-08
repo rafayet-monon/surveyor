@@ -9,7 +9,7 @@
 
   &__label {
     @include neuzeit-font-semi-bold;
-    color: #fff;
+    color: $secondary-color;
     font-size: 15px;
     letter-spacing: -0.24px;
     line-height: 20px;
@@ -22,7 +22,7 @@
     background: rgba(255, 255, 255, 0.18);
     border: transparent;
     border-radius: 12px;
-    color: #fff;
+    color: $secondary-color;
     display: flex;
     font-size: 17px;
     height: 55px;
@@ -34,14 +34,14 @@
   &__box:focus {
     background: rgba(255, 255, 255, 0.18);
     box-shadow: none !important;
-    color: #fff;
+    color: $secondary-color;
     outline: none;
   }
 
   &__forgot-password {
     @include neuzeit-font-normal;
     bottom: 38px;
-    color: #fff;
+    color: $secondary-color;
     display: flex;
     font-size: 15px;
     letter-spacing: -0.24px;
@@ -53,7 +53,7 @@
   }
 
   &__forgot-password:hover {
-    color: #fff;
+    color: $secondary-color;
     text-decoration: none;
   }
 }

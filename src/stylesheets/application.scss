@@ -5,8 +5,8 @@
 // Base
 @import 'base/fonts';
 // Mixins
-@import 'mixins/font-mixins';
-@import 'mixins/auth-mixins';
+@import 'mixins/font';
+@import 'mixins/auth-container';
 // Components
 @import 'components/background-layout';
 @import 'components/Auth/button-submit';

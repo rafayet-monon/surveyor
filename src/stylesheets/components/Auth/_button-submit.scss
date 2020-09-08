@@ -1,8 +1,10 @@
 .button-submit {
-  .btn--white {
+  $self: &;
+
+  &__btn--white {
     @include neuzeit-font-semi-bold;
     align-items: center;
-    background: #fff;
+    background: $secondary-color;
     border-radius: 10px;
     color: #15151a;
     font-size: 17px;
