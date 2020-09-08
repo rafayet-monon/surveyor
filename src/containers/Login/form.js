@@ -19,6 +19,7 @@ const Form = () => {
           labelFor="password"
           inputId="password"
           inputType="password"
+          forgotPassLink={ true }
         />
 
         <ButtonSubmit label="Sign in" />
