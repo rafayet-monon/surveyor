@@ -7,16 +7,14 @@
 
   &__img {
     align-self: center;
-    height: 40px;
     margin: 0 24px 24px;
-    width: 167.84px;
   }
 
   &__label {
     align-self: center;
     color: $secondary-color;
     display: flex;
-    font-size: 17px;
+    font-size: $semi-font-size;
     letter-spacing: -0.41px;
     line-height: 22px;
     opacity: 0.6;

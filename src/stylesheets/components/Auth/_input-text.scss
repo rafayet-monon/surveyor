@@ -10,7 +10,7 @@
   &__label {
     @include neuzeit-font-semi-bold;
     color: $secondary-color;
-    font-size: 15px;
+    font-size: $small-font-size;
     letter-spacing: -0.24px;
     line-height: 20px;
     margin: 0 0 10px;
@@ -24,7 +24,7 @@
     border-radius: 12px;
     color: $secondary-color;
     display: flex;
-    font-size: 17px;
+    font-size: $semi-font-size;
     height: 55px;
     letter-spacing: -0.41px;
     line-height: 22px;
@@ -43,7 +43,7 @@
     bottom: 38px;
     color: $secondary-color;
     display: flex;
-    font-size: 15px;
+    font-size: $small-font-size;
     letter-spacing: -0.24px;
     line-height: 20px;
     margin-left: auto;
