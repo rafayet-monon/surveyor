@@ -1,7 +1,7 @@
 import React from 'react';
 
-import ButtonSubmit from 'components/Auth/ButtonSubmit';
 import InputText from 'components/Auth/InputText';
+import ButtonSubmit from 'components/ButtonSubmit';
 
 const Form = () => {
   return (
