@@ -1,20 +1,20 @@
 import React from 'react';
 
-import InputText from 'components/Auth/InputText';
-import ButtonSubmit from 'components/ButtonSubmit';
+import FormInputGroup from 'components/Auth/FormInputGroup';
+import FormButton from 'components/FormButton';
 
 const Form = () => {
   return (
     <div className="row">
       <form>
-        <InputText
+        <FormInputGroup
           label="Email"
           labelFor="email"
           inputId="email"
           inputType="email"
         />
 
-        <InputText
+        <FormInputGroup
           label="Password"
           labelFor="password"
           inputId="password"
@@ -22,7 +22,7 @@ const Form = () => {
           forgotPassLink={ true }
         />
 
-        <ButtonSubmit label="Sign in" />
+        <FormButton label="Sign in" />
       </form>
     </div>
   );

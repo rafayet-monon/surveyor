@@ -1,15 +1,6 @@
-@mixin neuzeit-font-normal() {
+@mixin neuzeit-font() {
   font: {
     family: 'Neuzeit S LT Std', serif;
     style: normal;
-    weight: normal;
-  }
-}
-
-@mixin neuzeit-font-semi-bold() {
-  font: {
-    family: 'Neuzeit S LT Std', serif;
-    style: normal;
-    weight: 800;
   }
 }

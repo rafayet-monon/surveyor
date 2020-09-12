@@ -2,7 +2,7 @@ import React from 'react';
 
 import { render } from '@testing-library/react';
 
-import FormButton from 'components/ButtonSubmit';
+import FormButton from 'components/FormButton';
 
 describe('When FormButton component is mounted', () => {
   const label = 'Log in';

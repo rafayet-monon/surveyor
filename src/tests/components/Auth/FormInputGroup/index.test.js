@@ -2,7 +2,7 @@ import React from 'react';
 
 import { render } from '@testing-library/react';
 
-import TextInput from 'components/Auth/InputText';
+import FormInputGroup from 'components/Auth/FormInputGroup';
 
 describe('When TextInput component is mounted', () => {
   const labelFor = 'email';
@@ -12,7 +12,7 @@ describe('When TextInput component is mounted', () => {
 
   it('renders label with props', () => {
     const { getByLabelText } = render(
-      <TextInput
+      <FormInputGroup
         labelFor={ labelFor }
         label={ label }
         inputId={ inputId }
@@ -26,7 +26,7 @@ describe('When TextInput component is mounted', () => {
 
   it('renders input with props', () => {
     const { getByRole } = render(
-      <TextInput
+      <FormInputGroup
         labelFor={ labelFor }
         label={ label }
         inputId={ inputId }
@@ -41,7 +41,7 @@ describe('When TextInput component is mounted', () => {
   it('renders forgot password link if inputType is password', () => {
     const passInputType = 'password';
     const { getByText } = render(
-      <TextInput
+      <FormInputGroup
         labelFor={ labelFor }
         label={ label }
         inputId={ inputId }

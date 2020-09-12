@@ -1,4 +1,4 @@
-.input-text {
+.form-input-group {
   $self: &;
 
   display: flex;
@@ -8,16 +8,17 @@
   width: 320px;
 
   &__label {
-    @include neuzeit-font-semi-bold;
+    @include neuzeit-font;
     color: $secondary-color;
     font-size: $small-font-size;
+    font-weight: $font-weight-bold;
     letter-spacing: -0.24px;
     line-height: 20px;
     margin: 0 0 10px;
   }
 
   &__box {
-    @include neuzeit-font-normal;
+    @include neuzeit-font;
     align-items: center;
     background: rgba(255, 255, 255, 0.18);
     border: transparent;
@@ -25,6 +26,7 @@
     color: $secondary-color;
     display: flex;
     font-size: $semi-font-size;
+    font-weight: $font-weight-normal;
     height: 55px;
     letter-spacing: -0.41px;
     line-height: 22px;
@@ -33,17 +35,18 @@
 
   &__box:focus {
     background: rgba(255, 255, 255, 0.18);
-    box-shadow: none !important;
+    box-shadow: none;
     color: $secondary-color;
     outline: none;
   }
 
   &__forgot-password {
-    @include neuzeit-font-normal;
+    @include neuzeit-font;
     bottom: 38px;
     color: $secondary-color;
     display: flex;
     font-size: $small-font-size;
+    font-weight: $font-weight-normal;
     letter-spacing: -0.24px;
     line-height: 20px;
     margin-left: auto;
