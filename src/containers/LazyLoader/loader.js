@@ -22,7 +22,7 @@ const Loader = () => {
           <Skeleton height={ 18 } width={ 90 } />
         </span>
         <span className="skeleton__survey-img">
-          <Skeleton height={ 250 } />
+          <Skeleton />
         </span>
         <span className="skeleton__survey-title">
           <Skeleton height={ 18 } width={ 318 } />
