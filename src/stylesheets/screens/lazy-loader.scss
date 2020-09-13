@@ -28,7 +28,7 @@
     display: flex;
     flex-direction: column;
     max-width: 704px;
-    padding: 42px 32px 0;
+    padding: 50px 32px;
     @include media-breakpoint(map-get($grid, 'desktop')) {
       padding-top: 50px;
     }
@@ -50,23 +50,12 @@
   }
 
   &__survey-img {
-    margin-top: 20px;
-    @include media-breakpoint(map-get($grid, 'desktop')) {
-      margin-top: 65px;
-    }
-    @include media-breakpoint(map-get($grid, 'tablet')) {
-      margin-top: 65px;
-    }
+    margin-top: 65px;
   }
 
   &__survey-img .react-loading-skeleton {
     border-radius: 12px;
-    @include media-breakpoint(map-get($grid, 'desktop')) {
-      height: 305px !important;
-    }
-    @include media-breakpoint(map-get($grid, 'tablet')) {
-      height: 305px !important;
-    }
+    height: 305px;
   }
 
   &__survey-title {
