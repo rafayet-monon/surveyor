@@ -1,11 +1,11 @@
 .logo-auth {
   display: flex;
   flex-direction: column;
-  margin-bottom: 24px;
+  margin-bottom: rem(24px);
 
   &__img {
     align-self: center;
-    margin: 0 24px 24px;
+    margin: rem(0 24px 24px);
   }
 
   &__label {
@@ -13,8 +13,8 @@
     color: $secondary-color;
     display: flex;
     font-size: $semi-font-size;
-    letter-spacing: -0.41px;
-    line-height: 22px;
+    letter-spacing: rem(-0.41px);
+    line-height: rem(22px);
     opacity: 0.6;
     text-align: center;
   }

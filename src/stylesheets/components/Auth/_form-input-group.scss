@@ -1,31 +1,31 @@
 .form-input-group {
   display: flex;
   flex-direction: column;
-  height: 90px;
-  margin-bottom: 20px;
-  width: 320px;
+  height: rem(90px);
+  margin-bottom: rem(20px);
+  width: rem(320px);
 
   &__label {
     color: $secondary-color;
     font-size: $small-font-size;
     font-weight: $font-weight-bold;
-    letter-spacing: -0.24px;
-    line-height: 20px;
-    margin: 0 0 10px;
+    letter-spacing: rem(-0.24px);
+    line-height: rem(20px);
+    margin: rem(0 0 10px);
   }
 
   &__input {
     align-items: center;
     background: rgba(255, 255, 255, 0.18);
     border: transparent;
-    border-radius: 12px;
+    border-radius: rem(12px);
     color: $secondary-color;
     display: flex;
     font-size: $semi-font-size;
     font-weight: $font-weight-normal;
-    height: 55px;
-    letter-spacing: -0.41px;
-    line-height: 22px;
+    height: rem(55px);
+    letter-spacing: rem(-0.41px);
+    line-height: rem(22px);
     margin: auto;
   }
 
@@ -37,17 +37,17 @@
   }
 
   &__forgot-password {
-    bottom: 38px;
+    bottom: rem(38px);
     color: $secondary-color;
     display: flex;
     font-size: $small-font-size;
     font-weight: $font-weight-normal;
-    letter-spacing: -0.24px;
-    line-height: 20px;
+    letter-spacing: rem(-0.24px);
+    line-height: rem(20px);
     margin-left: auto;
     opacity: 0.5;
     position: relative;
-    right: 8px;
+    right: rem(8px);
   }
 
   &__forgot-password:hover {

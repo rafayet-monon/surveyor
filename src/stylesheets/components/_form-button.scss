@@ -2,12 +2,12 @@
   &__button--white {
     align-items: center;
     background: $secondary-color;
-    border-radius: 10px;
+    border-radius: rem(10px);
     color: $black-button-text;
     font-size: $semi-font-size;
     font-weight: $font-weight-bold;
-    height: 55px;
-    letter-spacing: -0.41px;
+    height: rem(55px);
+    letter-spacing: rem(-0.41px);
     width: 100%;
   }
 }
