@@ -2,7 +2,6 @@
   $self: &;
 
   &__button--white {
-    @include neuzeit-font;
     align-items: center;
     background: $secondary-color;
     border-radius: 10px;

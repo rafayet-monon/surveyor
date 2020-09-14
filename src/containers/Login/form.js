@@ -9,14 +9,12 @@ const Form = () => {
       <form>
         <FormInputGroup
           label="Email"
-          labelFor="email"
           inputId="email"
           inputType="email"
         />
 
         <FormInputGroup
           label="Password"
-          labelFor="password"
           inputId="password"
           inputType="password"
           forgotPassLink={ true }

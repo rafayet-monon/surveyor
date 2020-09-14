@@ -1,16 +1,16 @@
 import React from 'react';
 
-const FormInputGroup = ({ labelFor, label, inputType, inputId, forgotPassLink }) => {
+const FormInputGroup = ({ label, inputType, inputId, forgotPassLink }) => {
   return (
     <div className="form-input-group">
       <div className="form-input-group__container">
-        <label htmlFor={ labelFor } className="form-input-group__label">
+        <label htmlFor={ inputId } className="form-input-group__label">
           { label }
         </label>
         <input
           type={ inputType }
           id={ inputId }
-          className="form-control form-input-group__box"
+          className="form-control form-input-group__input"
         />
       </div>
       { forgotPassLink && (

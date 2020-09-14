@@ -5,7 +5,6 @@ import { render } from '@testing-library/react';
 import FormInputGroup from 'components/Auth/FormInputGroup';
 
 describe('When TextInput component is mounted', () => {
-  const labelFor = 'email';
   const label = 'Email';
   const inputId = 'email';
   const inputType = 'email';
@@ -13,7 +12,6 @@ describe('When TextInput component is mounted', () => {
   it('renders label with props', () => {
     const { getByLabelText } = render(
       <FormInputGroup
-        labelFor={ labelFor }
         label={ label }
         inputId={ inputId }
         inputType={ inputType }
@@ -27,7 +25,6 @@ describe('When TextInput component is mounted', () => {
   it('renders input with props', () => {
     const { getByRole } = render(
       <FormInputGroup
-        labelFor={ labelFor }
         label={ label }
         inputId={ inputId }
         inputType={ inputType }
@@ -42,7 +39,6 @@ describe('When TextInput component is mounted', () => {
     const passInputType = 'password';
     const { getByText } = render(
       <FormInputGroup
-        labelFor={ labelFor }
         label={ label }
         inputId={ inputId }
         inputType={ passInputType }

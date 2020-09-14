@@ -8,7 +8,6 @@
   width: 320px;
 
   &__label {
-    @include neuzeit-font;
     color: $secondary-color;
     font-size: $small-font-size;
     font-weight: $font-weight-bold;
@@ -17,8 +16,7 @@
     margin: 0 0 10px;
   }
 
-  &__box {
-    @include neuzeit-font;
+  &__input {
     align-items: center;
     background: rgba(255, 255, 255, 0.18);
     border: transparent;
@@ -33,7 +31,7 @@
     margin: auto;
   }
 
-  &__box:focus {
+  &__input:focus {
     background: rgba(255, 255, 255, 0.18);
     box-shadow: none;
     color: $secondary-color;
@@ -41,7 +39,6 @@
   }
 
   &__forgot-password {
-    @include neuzeit-font;
     bottom: 38px;
     color: $secondary-color;
     display: flex;

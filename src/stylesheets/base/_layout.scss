@@ -3,5 +3,9 @@ html {
 }
 
 body {
-  font-size: 1.6rem;
+  font: {
+    family: 'Neuzeit S LT Std', serif;
+    size: 1.6rem;
+    style: normal;
+  }
 }
