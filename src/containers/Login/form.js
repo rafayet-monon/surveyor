@@ -7,11 +7,7 @@ const Form = () => {
   return (
     <div className="row">
       <form>
-        <FormInputGroup
-          label="Email"
-          inputId="email"
-          inputType="email"
-        />
+        <FormInputGroup label="Email" inputId="email" inputType="email" />
 
         <FormInputGroup
           label="Password"
