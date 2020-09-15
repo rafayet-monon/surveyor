@@ -4,8 +4,8 @@
   &-header {
     display: flex;
     height: auto;
-    margin-top: 32px;
-    padding: 0 32px;
+    margin-top: rem(32px);
+    padding: rem(0 32px);
     width: 100%;
   }
 
@@ -16,7 +16,9 @@
   }
 
   &__menu-bar .react-loading-skeleton {
-    border-radius: 12px;
+    border-radius: rem(12px);
+    height: rem(18px);
+    width: rem(117px);
   }
 
   &__user-img {
@@ -24,21 +26,29 @@
     order: 2;
   }
 
+  &__user-img .react-loading-skeleton {
+    border-radius: 50%;
+    height: rem(36px);
+    width: rem(36px);
+  }
+
   &-details {
     display: flex;
     flex-direction: column;
-    max-width: 704px;
-    padding: 50px 32px;
+    max-width: rem(704px);
+    padding: rem(50px 32px);
     @include media-breakpoint(map-get($grid, 'desktop')) {
-      padding-top: 50px;
+      padding-top: rem(50px);
     }
     @include media-breakpoint(map-get($grid, 'tablet')) {
-      padding-top: 50px;
+      padding-top: rem(50px);
     }
   }
 
   &__date .react-loading-skeleton {
-    border-radius: 12px;
+    border-radius: rem(12px);
+    height: rem(18px);
+    width: rem(117px);
   }
 
   &__day {
@@ -47,33 +57,38 @@
 
   &__day .react-loading-skeleton {
     border-radius: 12px;
+    height: rem(18px);
+    width: rem(90px);
   }
 
   &__survey-img {
-    margin-top: 65px;
+    margin-top: rem(65px);
   }
 
   &__survey-img .react-loading-skeleton {
-    border-radius: 12px;
-    height: 305px;
+    border-radius: rem(12px);
+    height: rem(305px);
   }
 
   &__survey-title {
-    margin-top: 38px;
-    max-width: 318px;
+    margin-top: rem(38px);
+    max-width: rem(318px);
   }
 
   &__survey-title .react-loading-skeleton {
-    border-radius: 12px;
-    max-width: 100%;
+    border-radius: rem(12px);
+    height: rem(18px);
+    width: rem(318px);
   }
 
   &__survey-desc {
-    margin-top: 8px;
+    margin-top: rem(8px);
   }
 
   &__survey-desc .react-loading-skeleton {
-    border-radius: 12px;
+    border-radius: rem(12px);
+    height: rem(18px);
+    width: rem(207px);
   }
 
   &__navigation {
@@ -81,10 +96,16 @@
     order: 2;
     position: relative;
     @include media-breakpoint(map-get($grid, 'desktop')) {
-      bottom: 65px;
+      bottom: rem(65px);
     }
     @include media-breakpoint(map-get($grid, 'tablet')) {
-      bottom: 65px;
+      bottom: rem(65px);
     }
+  }
+
+  &__navigation .react-loading-skeleton {
+    border-radius: 50%;
+    height: rem(56px);
+    width: rem(56px);
   }
 }

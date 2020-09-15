@@ -7,31 +7,31 @@ const Loader = () => {
     <SkeletonTheme color="#313236" highlightColor="#49494D">
       <div className="skeleton-header">
         <span className="skeleton__menu-bar">
-          <Skeleton height={ 18 } width={ 117 } />
+          <Skeleton />
         </span>
         <span className="skeleton__user-img">
-          <Skeleton circle={ true } height={ 36 } width={ 36 } />
+          <Skeleton />
         </span>
       </div>
 
       <div className="container skeleton-details">
         <span className="skeleton__date">
-          <Skeleton height={ 18 } width={ 117 } />
+          <Skeleton />
         </span>
         <span className="skeleton__day">
-          <Skeleton height={ 18 } width={ 90 } />
+          <Skeleton />
         </span>
         <span className="skeleton__survey-img">
           <Skeleton />
         </span>
         <span className="skeleton__survey-title">
-          <Skeleton height={ 18 } width={ 318 } />
+          <Skeleton />
         </span>
         <span className="skeleton__survey-desc">
-          <Skeleton height={ 18 } width={ 207 } />
+          <Skeleton />
         </span>
         <span className="skeleton__navigation">
-          <Skeleton circle={ true } height={ 56 } width={ 56 } />
+          <Skeleton />
         </span>
       </div>
     </SkeletonTheme>
