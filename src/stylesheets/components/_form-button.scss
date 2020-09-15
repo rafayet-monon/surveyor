@@ -1,0 +1,13 @@
+.form-button {
+  &__button--white {
+    align-items: center;
+    background: $secondary-color;
+    border-radius: rem(10px);
+    color: $black-button-text;
+    font-size: map-get($font-sizes, 'lg');
+    font-weight: map-get($font-weight, 'bolder');
+    height: rem(55px);
+    letter-spacing: -0.41px;
+    width: 100%;
+  }
+}
