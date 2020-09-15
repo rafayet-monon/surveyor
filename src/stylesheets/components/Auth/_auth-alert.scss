@@ -8,29 +8,19 @@
   width: 100%;
 
   &__title {
-    color: #fff;
+    color: $secondary-color;
     font-size: map-get($font-sizes, 'md');
     font-weight: map-get($font-weight, 'bolder');
     letter-spacing: -0.24px;
-    line-height: 20px;
-    margin-bottom: 10px;
+    line-height: rem(20px);
+    margin-bottom: rem(10px);
   }
 
   &__info {
-    color: $secondary-color;
-    font-size: map-get($font-sizes, 'sm');
-    font-weight: $font-weight-normal;
-    letter-spacing: -0.08px;
-    line-height: 18px;
-    opacity: 0.6;
+    @include alert-detail();
   }
 
   &__error {
-    color: $secondary-color;
-    font-size: map-get($font-sizes, 'sm');;
-    font-weight: map-get($font-weight, 'normal');
-    letter-spacing: -0.08px;
-    line-height: rem(18px);
-    opacity: 0.6;
+    @include alert-detail();
   }
 }

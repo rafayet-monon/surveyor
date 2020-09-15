@@ -1,7 +1,14 @@
 // Colors
-$white: #fff !default;
-$black: #000 !default;
-$primary-color: $black !default;
-$secondary-color: $white !default;
-$black-button-text: #15151a !default;
+$color-black: (
+  lighter-transparent: rgba(37, 37, 37, 0.6),
+  light: #15151a,
+  primary: #000
+);
+
+$color-white: (
+  primary: #fff
+);
+
+$primary-color: map-get($color-black, 'primary') !default;
+$secondary-color: map-get($color-white, 'primary') !default;
 
