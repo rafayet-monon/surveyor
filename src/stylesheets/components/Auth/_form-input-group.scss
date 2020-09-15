@@ -7,9 +7,9 @@
 
   &__label {
     color: $secondary-color;
-    font-size: $small-font-size;
-    font-weight: $font-weight-bold;
-    letter-spacing: rem(-0.24px);
+    font-size: map-get($font-sizes, 'md');
+    font-weight: map-get($font-weight, 'bolder');
+    letter-spacing: -0.24px;
     line-height: rem(20px);
     margin: rem(0 0 10px);
   }
@@ -21,10 +21,10 @@
     border-radius: rem(12px);
     color: $secondary-color;
     display: flex;
-    font-size: $semi-font-size;
-    font-weight: $font-weight-normal;
+    font-size: map-get($font-sizes, 'lg');
+    font-weight: map-get($font-weight, 'normal');
     height: rem(55px);
-    letter-spacing: rem(-0.41px);
+    letter-spacing: -0.41px;
     line-height: rem(22px);
     margin: auto;
   }
@@ -40,9 +40,9 @@
     bottom: rem(38px);
     color: $secondary-color;
     display: flex;
-    font-size: $small-font-size;
-    font-weight: $font-weight-normal;
-    letter-spacing: rem(-0.24px);
+    font-size: map-get($font-sizes, 'md');
+    font-weight: map-get($font-weight, 'normal');
+    letter-spacing: -0.24px;
     line-height: rem(20px);
     margin-left: auto;
     opacity: 0.5;
