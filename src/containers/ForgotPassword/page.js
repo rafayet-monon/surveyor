@@ -9,6 +9,7 @@ import backgroundImage from 'images/auth_background.png';
 const Page = () => {
   const logoLabel =
     'Enter your email to receive instructions for resetting your password.';
+
   return (
     <BackgroundLayout backgroundImage={ backgroundImage }>
       <div className="container container-forgot-password">

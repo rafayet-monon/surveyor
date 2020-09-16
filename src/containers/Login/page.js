@@ -8,6 +8,7 @@ import Form from './form';
 
 const Page = () => {
   const logoLabel = 'Sign in to Nimble';
+
   return (
     <BackgroundLayout backgroundImage={ backgroundImage }>
       <div className="container container-login">
