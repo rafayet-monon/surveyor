@@ -6,31 +6,31 @@ const Loader = () => {
   return (
     <SkeletonTheme color="#313236" highlightColor="#49494D">
       <div className="skeleton-header">
-        <span className="skeleton__menu-bar">
+        <span className="skeleton-header__menu-bar">
           <Skeleton />
         </span>
-        <span className="skeleton__user-img">
+        <span className="skeleton-header__user-image">
           <Skeleton />
         </span>
       </div>
 
       <div className="container skeleton-details">
-        <span className="skeleton__date">
+        <span className="skeleton-details__date">
           <Skeleton />
         </span>
-        <span className="skeleton__day">
+        <span className="skeleton-details__day">
           <Skeleton />
         </span>
-        <span className="skeleton__survey-img">
+        <span className="skeleton-details__survey-img">
           <Skeleton />
         </span>
-        <span className="skeleton__survey-title">
+        <span className="skeleton-details__survey-title">
           <Skeleton />
         </span>
-        <span className="skeleton__survey-desc">
+        <span className="skeleton-details__survey-desc">
           <Skeleton />
         </span>
-        <span className="skeleton__navigation">
+        <span className="skeleton-details__navigation">
           <Skeleton />
         </span>
       </div>

@@ -1,13 +1,9 @@
-.skeleton {
-  $self: &;
-
-  &-header {
-    display: flex;
-    height: auto;
-    margin-top: rem(32px);
-    padding: rem(0 32px);
-    width: 100%;
-  }
+.skeleton-header {
+  display: flex;
+  height: auto;
+  margin-top: rem(32px);
+  padding: rem(0 32px);
+  width: 100%;
 
   &__menu-bar {
     align-items: center;
@@ -21,7 +17,7 @@
     width: rem(117px);
   }
 
-  &__user-img {
+  &__user-image {
     margin-left: auto;
     order: 2;
   }
@@ -31,18 +27,18 @@
     height: rem(36px);
     width: rem(36px);
   }
+}
 
-  &-details {
-    display: flex;
-    flex-direction: column;
-    max-width: rem(704px);
-    padding: rem(50px 32px);
-    @include media-breakpoint(map-get($grid, 'desktop')) {
-      padding-top: rem(50px);
-    }
-    @include media-breakpoint(map-get($grid, 'tablet')) {
-      padding-top: rem(50px);
-    }
+.skeleton-details {
+  display: flex;
+  flex-direction: column;
+  max-width: rem(704px);
+  padding: rem(50px 32px);
+  @include media-breakpoint(map-get($grid, 'desktop')) {
+    padding-top: rem(50px);
+  }
+  @include media-breakpoint(map-get($grid, 'tablet')) {
+    padding-top: rem(50px);
   }
 
   &__date .react-loading-skeleton {
@@ -52,7 +48,7 @@
   }
 
   &__day {
-    margin-top: 14px;
+    margin-top: rem(14px);
   }
 
   &__day .react-loading-skeleton {

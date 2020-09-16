@@ -5,11 +5,9 @@ import Loader from 'containers/LazyLoader/loader';
 
 const Page = () => {
   return (
-    <div className="skeleton">
-      <BackgroundLayout>
-        <Loader />
-      </BackgroundLayout>
-    </div>
+    <BackgroundLayout>
+      <Loader />
+    </BackgroundLayout>
   );
 };
 
