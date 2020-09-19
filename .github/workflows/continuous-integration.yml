@@ -25,11 +25,22 @@ jobs:
         if: always()
         run: npm run stylelint
 
-      - name: Run test
+      - name: Run unit test
         if: always()
         run: npm run test
         env:
           CI: true
+
+      - name: Run UI test
+        if: always()
+        uses: cypress-io/github-action@v1
+        run: npm run cypress
+        with:
+          start: npm start
+          wait-on: http://localhost:3000
+        env:
+          CYPRESS_VALID_EMAIL: ${{ secrets.REACT_APP_VALID_EMAIL }}
+          CYPRESS_VALID_PASSWORD: ${{ secrets.REACT_APP_VALID_PASSWORD }}
 
       - name: Run Danger
         if: always()

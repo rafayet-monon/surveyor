@@ -14,7 +14,8 @@
     "stylelint": "stylelint '**/*.scss'",
     "lint-in-file": "eslint \"src/**/*.{js,jsx}\" --quiet --output-file ./eslint-output.json -f json",
     "danger": "npx danger ci",
-    "cypress": "cypress open"
+    "cypress-cli": "cypress open",
+    "cypress": "cypress run"
   },
   "eslintConfig": {
     "extends": "react-app"
