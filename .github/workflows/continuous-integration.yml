@@ -37,9 +37,7 @@ jobs:
         with:
           start: npm start
           wait-on: http://localhost:3000
-        env:
-          CYPRESS_VALID_EMAIL: ${{ secrets.REACT_APP_VALID_EMAIL }}
-          CYPRESS_VALID_PASSWORD: ${{ secrets.REACT_APP_VALID_PASSWORD }}
+          env: CYPRESS_VALID_EMAIL=${{ secrets.REACT_APP_VALID_EMAIL }}, CYPRESS_VALID_PASSWORD=${{ secrets.REACT_APP_VALID_PASSWORD }}
 
       - name: Run Danger
         if: always()
