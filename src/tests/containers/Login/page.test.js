@@ -2,6 +2,7 @@ import React from 'react';
 
 import { render, wait } from '@testing-library/react';
 import { createMemoryHistory } from 'history';
+import { Router } from 'react-router-dom';
 
 import Page from 'containers/Login/page';
 import { AuthProvider } from 'contexts/auth';
@@ -37,25 +38,7 @@ describe('When visited the Login Page', () => {
     const mockEmail = 'mock@surveyor.com';
     const mockPass = 'mockpass';
     const loginError = 'Unable to login';
-
     const { container, findByText } = render(
-      <AuthProvider>
-        <Page />
-      </AuthProvider>
-    );
-
-    SubmitLoginForm(mockEmail, mockPass, container);
-
-    const errorTitle = await findByText(loginError);
-    expect(errorTitle).toBeInTheDocument();
-  });
-
-  it('redirects to home if valid email and password given', async () => {
-    const mockEmail = process.env.REACT_APP_VALID_EMAIL;
-    const mockPass = process.env.REACT_APP_VALID_PASSWORD;
-    const history = createMemoryHistory();
-
-    const { container } = render(
       <AuthProvider>
         <Page />
       </AuthProvider>
@@ -63,6 +46,24 @@ describe('When visited the Login Page', () => {
     await wait(() => {
       SubmitLoginForm(mockEmail, mockPass, container);
     });
+
+    const errorTitle = await findByText(loginError);
+    expect(errorTitle).toBeInTheDocument();
+  });
+
+  it('redirects to home if valid email and password given', async () => {
+    const validEmail = process.env.REACT_APP_VALID_EMAIL;
+    const validPass = process.env.REACT_APP_VALID_PASSWORD;
+    const history = createMemoryHistory();
+    const { container } = render(
+      <AuthProvider>
+        <Page />
+      </AuthProvider>
+    );
+    await wait(() => {
+      SubmitLoginForm(validEmail, validPass, container);
+    });
+
     expect(history.location.pathname).toBe('/');
   });
 });
