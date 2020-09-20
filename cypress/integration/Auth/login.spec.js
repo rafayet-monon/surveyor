@@ -1,4 +1,8 @@
+const autoRecord = require('cypress-autorecord');
+
 describe('The Login Page', () => {
+  autoRecord();
+
   it('successfully logs in user with valid credentials', function () {
     const valid_email = Cypress.env('CYPRESS_VALID_EMAIL')
     const valid_password = Cypress.env('CYPRESS_VALID_PASSWORD')
