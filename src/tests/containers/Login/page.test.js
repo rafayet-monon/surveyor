@@ -1,9 +1,9 @@
 import React from 'react';
 
 import { render, wait } from '@testing-library/react';
-import { createMemoryHistory } from 'history';
 
-import Login from 'containers/Login';
+
+
 import Page from 'containers/Login/page';
 import { AuthProvider } from 'contexts/auth';
 import backgroundImage from 'images/auth_background.png';
@@ -11,7 +11,6 @@ import SubmitLoginForm from 'tests/shared_examples/submitLoginForm';
 
 describe('When visited the Login Page', () => {
   const logoLabel = 'Sign in to Nimble';
-
   it('shows a background image', () => {
     const { getByLabelText } = render(
       <AuthProvider>
@@ -46,23 +45,6 @@ describe('When visited the Login Page', () => {
     SubmitLoginForm(mockEmail, mockPass, container);
 
     const errorTitle = await findByText(loginError);
-    expect(errorTitle).toBeInTheDocument();
-  });
-
-  it('redirects to home if valid email and password given', async () => {
-    const validEmail = process.env.REACT_APP_VALID_EMAIL;
-    const validPass = process.env.REACT_APP_VALID_PASSWORD;
-
-    const { container, findByText } = render(
-      <AuthProvider>
-        <Page />
-      </AuthProvider>
-    );
-    await wait(() => {
-      SubmitLoginForm(validEmail, validPass, container);
-    });
-
-    const errorTitle = await findByText('Home');
     expect(errorTitle).toBeInTheDocument();
   });
 });
