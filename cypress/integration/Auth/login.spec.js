@@ -1,7 +1,7 @@
 describe('The Login Page', () => {
   it('successfully logs in user with valid credentials', function () {
-    const valid_email = Cypress.env('CYPRESS_VALID_EMAIL')
-    const valid_password = Cypress.env('CYPRESS_VALID_PASSWORD')
+    const valid_email = Cypress.env('VALID_EMAIL')
+    const valid_password = Cypress.env('VALID_PASSWORD')
 
     cy.visit('/login')
     cy.get('input[name=email]').type(valid_email)
