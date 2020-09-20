@@ -3,6 +3,7 @@ import React from 'react';
 import { render, wait } from '@testing-library/react';
 import { createMemoryHistory } from 'history';
 
+import Login from 'containers/Login';
 import Page from 'containers/Login/page';
 import { AuthProvider } from 'contexts/auth';
 import backgroundImage from 'images/auth_background.png';
@@ -42,9 +43,7 @@ describe('When visited the Login Page', () => {
         <Page />
       </AuthProvider>
     );
-    await wait(() => {
-      SubmitLoginForm(mockEmail, mockPass, container);
-    });
+    SubmitLoginForm(mockEmail, mockPass, container);
 
     const errorTitle = await findByText(loginError);
     expect(errorTitle).toBeInTheDocument();
@@ -53,8 +52,8 @@ describe('When visited the Login Page', () => {
   it('redirects to home if valid email and password given', async () => {
     const validEmail = process.env.REACT_APP_VALID_EMAIL;
     const validPass = process.env.REACT_APP_VALID_PASSWORD;
-    const history = createMemoryHistory();
-    const { container } = render(
+
+    const { container, findByText } = render(
       <AuthProvider>
         <Page />
       </AuthProvider>
@@ -63,6 +62,7 @@ describe('When visited the Login Page', () => {
       SubmitLoginForm(validEmail, validPass, container);
     });
 
-    expect(history.location.pathname).toBe('/');
+    const errorTitle = await findByText('Home');
+    expect(errorTitle).toBeInTheDocument();
   });
 });
