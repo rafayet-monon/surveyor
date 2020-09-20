@@ -1,14 +1,21 @@
 // Colors
-$color-black: (
-  lighter-transparent: rgba(37, 37, 37, 0.6),
-  light: #15151a,
-  primary: #000
+$primary-color: #000 !default;
+$secondary-color: #fff !default;
+
+$brand-gray: (
+  primary: hsl(240, 11%, 9%),
+  transparent: hsla(0, 0%, 15%, 0.6)
 );
 
-$color-white: (
-  primary: #fff
+// Font Size
+$font-sizes: (
+  sm: 0.8125rem,
+  md: 0.9375rem,
+  lg: 1.0625rem,
 );
 
-$primary-color: map-get($color-black, 'primary') !default;
-$secondary-color: map-get($color-white, 'primary') !default;
-
+// Font Weight
+$font-weight: (
+  normal: 400,
+  bolder: 800
+);

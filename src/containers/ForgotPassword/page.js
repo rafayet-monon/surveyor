@@ -16,7 +16,7 @@ const Page = () => {
         <Logo label={ logoLabel } />
         <Alert
           title="Check your email."
-          description="We have emailed you instruction to reset your password."
+          description="We've emailed you instruction to reset your password."
         />
         <Form />
       </div>

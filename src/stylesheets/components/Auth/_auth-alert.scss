@@ -1,6 +1,6 @@
 .auth-alert {
-  backdrop-filter: blur(rem(54.3656px));
-  background: map-get($color-black, 'lighter-transparent');
+  backdrop-filter: blur(rem(54px));
+  background: map-get($brand-gray, 'primary');
   border-radius: rem(12px);
   margin-bottom: rem(24px);
   min-height: rem(96px);
@@ -16,11 +16,13 @@
     margin-bottom: rem(10px);
   }
 
-  &__info {
-    @include alert-detail();
-  }
-
+  &__info,
   &__error {
-    @include alert-detail();
+    color: $secondary-color;
+    font-size: map-get($font-sizes, 'sm');
+    font-weight: map-get($font-weight, 'normal');
+    letter-spacing: -0.08px;
+    line-height: rem(18px);
+    opacity: 0.6;
   }
 }

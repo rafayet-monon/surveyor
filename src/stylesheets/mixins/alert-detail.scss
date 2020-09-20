@@ -1,8 +1,0 @@
-@mixin alert-detail() {
-  color: $secondary-color;
-  font-size: map-get($font-sizes, 'sm');
-  font-weight: map-get($font-weight, 'normal');
-  letter-spacing: -0.08px;
-  line-height: rem(18px);
-  opacity: 0.6;
-}
