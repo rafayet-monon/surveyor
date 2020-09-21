@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Page from 'containers/ForgotPassword/page';
+import Page from 'screens/ForgotPassword/page';
 
 const ForgotPassword = () => {
   return <Page />;

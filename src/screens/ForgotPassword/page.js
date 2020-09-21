@@ -3,8 +3,8 @@ import React from 'react';
 import Alert from 'components/Auth/Alert';
 import Logo from 'components/Auth/Logo';
 import BackgroundLayout from 'components/BackgroundLayout';
-import Form from 'containers/ForgotPassword/form';
 import backgroundImage from 'images/auth_background.png';
+import Form from 'screens/ForgotPassword/form';
 
 const Page = () => {
   const logoLabel =

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import BackgroundLayout from 'components/BackgroundLayout';
-import Loader from 'containers/LazyLoader/loader';
+import Loader from 'screens/LazyLoader/loader';
 
 const Page = () => {
   return (
