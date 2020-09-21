@@ -3,8 +3,11 @@ import React from 'react';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 
 const Loader = () => {
+  const themeColor = '#313236';
+  const highlightColor = '#49494D';
+
   return (
-    <SkeletonTheme color="#313236" highlightColor="#49494D">
+    <SkeletonTheme color={ themeColor } highlightColor={ highlightColor }>
       <div className="skeleton-header">
         <span className="skeleton-header__menu-bar">
           <Skeleton />
