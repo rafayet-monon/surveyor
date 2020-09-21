@@ -5,7 +5,6 @@ import { render } from '@testing-library/react';
 import Page from 'containers/Login/page';
 import backgroundImage from 'images/auth_background.png';
 
-
 describe('When visited the Login Page', () => {
   const logoLabel = 'Sign in to Nimble';
   it('shows a background image', () => {
