@@ -1,4 +1,6 @@
 .auth-alert {
+  @extend .row;
+
   backdrop-filter: blur(rem(54px));
   background: map-get($brand-gray, 'primary');
   border-radius: rem(12px);
@@ -6,6 +8,16 @@
   min-height: rem(96px);
   padding-top: rem(15px);
   width: 100%;
+
+  &__icon {
+    @extend .col-2;
+  }
+
+  &__message {
+    @extend .col-10;
+
+    padding-left: 0;
+  }
 
   &__title {
     color: $secondary-color;

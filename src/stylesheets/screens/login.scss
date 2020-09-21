@@ -1,3 +1,7 @@
 .container-login {
   @include auth-container();
 }
+
+.form-login {
+  @extend .row;
+}

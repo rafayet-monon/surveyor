@@ -1,5 +1,7 @@
 .form-button {
   &__button--white {
+    @extend .btn;
+
     align-items: center;
     background: $secondary-color;
     border-radius: rem(10px);

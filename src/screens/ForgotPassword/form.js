@@ -5,7 +5,7 @@ import FormButton from 'components/FormButton';
 
 const Form = () => {
   return (
-    <div className="row">
+    <div className="form-forgot-password">
       <form>
         <FormInputGroup label="Email" inputId="email" inputType="email" />
 

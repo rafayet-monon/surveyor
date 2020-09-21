@@ -1,4 +1,6 @@
 .logo-auth {
+  @extend .row;
+
   display: flex;
   flex-direction: column;
   margin-bottom: rem(24px);
