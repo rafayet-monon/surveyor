@@ -3,13 +3,15 @@
     @extend .btn;
 
     align-items: center;
+    width: 100%;
+    height: rem(55px);
+
+    color: map-get($brand-gray, 'transparent');
+    font-weight: map-get($font-weight, 'bolder');
+    font-size: map-get($font-sizes, 'lg');
+    letter-spacing: -0.41px;
+
     background: $secondary-color;
     border-radius: rem(10px);
-    color: map-get($brand-gray, 'transparent');
-    font-size: map-get($font-sizes, 'lg');
-    font-weight: map-get($font-weight, 'bolder');
-    height: rem(55px);
-    letter-spacing: -0.41px;
-    width: 100%;
   }
 }

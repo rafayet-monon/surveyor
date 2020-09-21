@@ -1,55 +1,62 @@
 .form-input-group {
   display: flex;
   flex-direction: column;
+  width: rem(320px);
   height: rem(90px);
   margin-bottom: rem(20px);
-  width: rem(320px);
 
   &__label {
-    color: $secondary-color;
-    font-size: map-get($font-sizes, 'md');
-    font-weight: map-get($font-weight, 'bolder');
-    letter-spacing: -0.24px;
-    line-height: rem(20px);
     margin: rem(0 0 10px);
+
+    color: $secondary-color;
+    font-weight: map-get($font-weight, 'bolder');
+    font-size: map-get($font-sizes, 'md');
+    line-height: rem(20px);
+    letter-spacing: -0.24px;
   }
 
   &__input {
     @extend .form-control;
 
+    display: flex;
     align-items: center;
+    height: rem(55px);
+    margin: auto;
+
+    color: $secondary-color;
+    font-weight: map-get($font-weight, 'normal');
+    font-size: map-get($font-sizes, 'lg');
+    line-height: rem(22px);
+    letter-spacing: -0.41px;
+
     background: rgba(255, 255, 255, 0.18);
     border: transparent;
     border-radius: rem(12px);
-    color: $secondary-color;
-    display: flex;
-    font-size: map-get($font-sizes, 'lg');
-    font-weight: map-get($font-weight, 'normal');
-    height: rem(55px);
-    letter-spacing: -0.41px;
-    line-height: rem(22px);
-    margin: auto;
   }
 
   &__input:focus {
-    background: rgba(255, 255, 255, 0.18);
-    box-shadow: none;
     color: $secondary-color;
+
+    background: rgba(255, 255, 255, 0.18);
     outline: none;
+    box-shadow: none;
   }
 
   &__forgot-password {
-    bottom: rem(38px);
-    color: $secondary-color;
-    display: flex;
-    font-size: map-get($font-sizes, 'md');
-    font-weight: map-get($font-weight, 'normal');
-    letter-spacing: -0.24px;
-    line-height: rem(20px);
-    margin-left: auto;
-    opacity: 0.5;
     position: relative;
     right: rem(8px);
+    bottom: rem(38px);
+
+    display: flex;
+    margin-left: auto;
+
+    color: $secondary-color;
+    font-weight: map-get($font-weight, 'normal');
+    font-size: map-get($font-sizes, 'md');
+    line-height: rem(20px);
+    letter-spacing: -0.24px;
+
+    opacity: 0.5;
   }
 
   &__forgot-password:hover {

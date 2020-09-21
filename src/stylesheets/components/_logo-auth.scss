@@ -11,13 +11,15 @@
   }
 
   &__label {
-    align-self: center;
-    color: $secondary-color;
     display: flex;
+    align-self: center;
+
+    color: $secondary-color;
     font-size: map-get($font-sizes, 'lg');
-    letter-spacing: -0.41px;
     line-height: rem(22px);
-    opacity: 0.6;
+    letter-spacing: -0.41px;
     text-align: center;
+
+    opacity: 0.6;
   }
 }

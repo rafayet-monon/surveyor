@@ -1,6 +1,15 @@
 {
   "extends": "stylelint-config-sass-guidelines",
+  "plugins": [
+    "stylelint-config-rational-order/plugin"
+  ],
   "rules": {
-    "scss/at-extend-no-missing-placeholder": null
+    "scss/at-extend-no-missing-placeholder": null,
+    "order/properties-order": [],
+    "order/properties-alphabetical-order": null,
+    "plugin/rational-order": [true, {
+      "border-in-box-model": false,
+      "empty-line-between-groups": true
+    }]
   }
 }
