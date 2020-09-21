@@ -1,6 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-const BackgroundLayout = ({ backgroundImage, children }) => {
+import defaultImage from 'images/auth_background.png';
+
+const BackgroundLayout = ({ dynamicImage, noBackground, children }) => {
+  const [backgroundImage, setBackgroundImage] = useState(defaultImage);
+
+  useEffect(() => {
+    if (noBackground) {
+      setBackgroundImage(null);
+    } else if (dynamicImage) {
+      setBackgroundImage(dynamicImage);
+    }
+  }, [dynamicImage, noBackground]);
+
   return (
     <div className="background-layout">
       <div
