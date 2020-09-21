@@ -1,0 +1,101 @@
+.skeleton-header {
+  display: flex;
+  height: auto;
+  margin-top: rem(32px);
+  padding: rem(0 32px);
+  width: 100%;
+
+  &__menu-bar {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__menu-bar .react-loading-skeleton {
+    border-radius: rem(12px);
+    height: rem(18px);
+    width: rem(117px);
+  }
+
+  &__user-image {
+    margin-left: auto;
+    order: 2;
+  }
+
+  &__user-img .react-loading-skeleton {
+    border-radius: 50%;
+    height: rem(36px);
+    width: rem(36px);
+  }
+}
+
+.skeleton-details {
+  display: flex;
+  flex-direction: column;
+  max-width: rem(704px);
+  padding: rem(50px 32px);
+  @include media-breakpoint-up(md) {
+    padding-top: rem(50px);
+  }
+
+  &__date .react-loading-skeleton {
+    border-radius: rem(12px);
+    height: rem(18px);
+    width: rem(117px);
+  }
+
+  &__day {
+    margin-top: rem(14px);
+  }
+
+  &__day .react-loading-skeleton {
+    border-radius: 12px;
+    height: rem(18px);
+    width: rem(90px);
+  }
+
+  &__survey-img {
+    margin-top: rem(65px);
+  }
+
+  &__survey-img .react-loading-skeleton {
+    border-radius: rem(12px);
+    height: rem(305px);
+  }
+
+  &__survey-title {
+    margin-top: rem(38px);
+    max-width: rem(318px);
+  }
+
+  &__survey-title .react-loading-skeleton {
+    border-radius: rem(12px);
+    height: rem(18px);
+    width: rem(318px);
+  }
+
+  &__survey-desc {
+    margin-top: rem(8px);
+  }
+
+  &__survey-desc .react-loading-skeleton {
+    border-radius: rem(12px);
+    height: rem(18px);
+    width: rem(207px);
+  }
+
+  &__navigation {
+    margin-left: auto;
+    order: 2;
+    position: relative;
+    @include media-breakpoint-up(md) {
+      bottom: rem(65px);
+    }
+  }
+
+  &__navigation .react-loading-skeleton {
+    border-radius: 50%;
+    height: rem(56px);
+    width: rem(56px);
+  }
+}
