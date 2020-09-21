@@ -7,7 +7,6 @@
 // Base
 @import 'base/layout';
 @import 'base/fonts';
-@import 'base/typography';
 // Mixins
 @import 'mixins/auth-container';
 // Components
@@ -15,5 +14,7 @@
 @import 'components/form-button';
 @import 'components/Auth/logo-auth';
 @import 'components/Auth/form-input-group';
+@import 'components/Auth/auth-alert';
 // Screens
 @import 'screens/login';
+@import 'screens/forgot-password';
