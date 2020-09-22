@@ -5,7 +5,7 @@ import Loader from 'screens/LazyLoader/loader';
 
 const Page = () => {
   return (
-    <BackgroundLayout noBackground={ true }>
+    <BackgroundLayout dynamicImage={ null }>
       <Loader />
     </BackgroundLayout>
   );
