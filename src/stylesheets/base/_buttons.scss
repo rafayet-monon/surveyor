@@ -21,4 +21,8 @@
     background: map-get($brand-white, 'primary');
     border-radius: 50%;
   }
+
+  &--circle-transparent {
+    background: transparent;
+  }
 }
