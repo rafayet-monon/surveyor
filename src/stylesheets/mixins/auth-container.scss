@@ -1,5 +1,6 @@
 @mixin auth-container() {
-  @extend .container;
+  @include make-container();
+
   display: flex;
   flex-direction: column;
 

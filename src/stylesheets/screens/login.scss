@@ -3,5 +3,5 @@
 }
 
 .form-login {
-  @extend .row;
+  @include make-row();
 }

@@ -1,5 +1,5 @@
 .loader-details {
-  @extend .container;
+  @include make-container();
 
   display: flex;
   flex-direction: column;

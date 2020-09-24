@@ -1,5 +1,5 @@
 .auth-alert {
-  @extend .row;
+  @include make-row();
 
   width: 100%;
   min-height: rem(96px);
@@ -12,13 +12,13 @@
   backdrop-filter: blur(rem(54px));
 
   &__icon {
-    @extend .col-2;
+    @include make-col(2);
+
+    text-align: center;
   }
 
   &__message {
-    @extend .col-10;
-
-    padding-left: 0;
+    @include make-col(10);
   }
 
   &__title {

@@ -1,5 +1,5 @@
 .auth-logo {
-  @extend .row;
+  @include make-row();
 
   display: flex;
   flex-direction: column;
