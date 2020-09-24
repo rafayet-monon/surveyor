@@ -4,9 +4,9 @@ import logo from 'images/logo_white.png';
 
 const Logo = ({ label }) => {
   return (
-    <div className="logo-auth">
-      <img src={ logo } alt="NIMBLE" className="logo-auth__img" />
-      <p className="logo-auth__label">{ label }</p>
+    <div className="auth-logo">
+      <img src={ logo } alt="NIMBLE" className="auth-logo__img" />
+      <p className="auth-logo__label">{ label }</p>
     </div>
   );
 };

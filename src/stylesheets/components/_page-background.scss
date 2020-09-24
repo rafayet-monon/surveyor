@@ -1,11 +1,5 @@
 .page-background {
   &__image {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
     overflow: auto;
     background: {
       color: $primary-color;
@@ -14,12 +8,6 @@
   }
 
   &__overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, $primary-color 100%);
     backdrop-filter: blur(rem(50px));
     mix-blend-mode: normal;
