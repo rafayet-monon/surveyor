@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
 
+import { useHistory } from 'react-router-dom';
 import Slider from 'react-slick';
 
 import SurveyAdapter from 'adapters/surveyAdapter';
@@ -13,10 +14,12 @@ const SurveyList = ({ surveyResponse }) => {
   const surveyMeta = surveyResponse.meta;
   const total_pages = surveyMeta.pages;
 
+  const history = useHistory();
   const sliderRef = useRef(null);
 
   const [currentPage, setCurrentPage] = useState(surveyMeta.page);
   const [list, setList] = useState(surveyData);
+  const [surveyId, setSurveyId] = useState(list[0].id);
   const [currentBackground, setCurrentBackground] = useState(
     list[0].attributes.cover_image_url
   );
@@ -46,8 +49,13 @@ const SurveyList = ({ surveyResponse }) => {
     });
   }, [currentBackground, dispatch]);
 
+  const showDetail = () => {
+    history.push(`/survey/${surveyId}`);
+  };
+
   const beforeSlideChange = (next) => {
     setCurrentBackground(list[next].attributes.cover_image_url);
+    setSurveyId(list[next].id);
   };
 
   const afterSlideChange = () => {

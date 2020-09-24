@@ -1,0 +1,66 @@
+.survey-detail {
+  width: 100vw;
+  height: 100vh;
+
+  &__header {
+    @include header-container();
+
+    padding: rem(16px 16px 0);
+  }
+
+  &__header-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__arrow-left {
+    display: block;
+    width: rem(15px);
+    height: rem(15px);
+    margin-left: rem(5px);
+
+    border-top: rem(2px) solid map-get($brand-white, 'primary');
+    border-left: rem(2px) solid map-get($brand-white, 'primary');
+    transform: rotate(-45deg);
+  }
+
+  &__description {
+    @include details-container();
+    position: relative;
+
+    flex: 1;
+  }
+
+  &__image {
+    width: 100%;
+    height: rem(302px);
+    margin-top: rem(55px);
+
+    border-radius: rem(12px);
+  }
+
+  &__title {
+    margin-top: rem(20px);
+
+    color: map-get($brand-white, 'primary');
+    font-weight: map-get($font-weight, 'bolder');
+    font-size: map-get($font-sizes, 'xxxl');
+    line-height: rem(28px);
+  }
+
+  &__subtitle {
+    margin-top: rem(8px);
+
+    color: map-get($brand-white, 'primary');
+    font-weight: map-get($font-weight, 'normal');
+    font-size: map-get($font-sizes, 'lg');
+    line-height: rem(22px);
+
+    opacity: 0.6;
+  }
+
+  &__start-survey {
+    margin-top: rem(20px);
+  }
+}
