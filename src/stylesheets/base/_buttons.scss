@@ -13,4 +13,16 @@
     background: map-get($brand-white, 'primary');
     border-radius: rem(10px);
   }
+
+  &--circle {
+    width: rem(56px);
+    height: rem(56px);
+
+    background: map-get($brand-white, 'primary');
+    border-radius: 50%;
+  }
+
+  &--circle-right {
+    float: right;
+  }
 }

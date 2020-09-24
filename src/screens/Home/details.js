@@ -1,6 +1,6 @@
 import React from 'react';
 
-import BlankSlate from 'screens/Home/blankSlate';
+import SurveyList from 'screens/Home/surveyList';
 
 const Details = () => {
   const date = new Date();
@@ -8,10 +8,10 @@ const Details = () => {
   const today = date.toLocaleString('en-EN', date_options).toUpperCase();
 
   return (
-    <div className="home-detail">
-      <span className="home-detail__date">{ today }</span>
-      <span className="home-detail__day">Today</span>
-      <BlankSlate />
+    <div className="home-details">
+      <span className="home-details__date">{ today }</span>
+      <span className="home-details__day">Today</span>
+      <SurveyList />
     </div>
   );
 };

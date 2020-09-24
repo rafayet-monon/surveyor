@@ -2,6 +2,7 @@ import React from 'react';
 
 import { render } from '@testing-library/react';
 
+import 'tests/mocks/matchMedia'
 import Details from 'screens/Home/details';
 
 describe('When Details component is mounted', () => {
