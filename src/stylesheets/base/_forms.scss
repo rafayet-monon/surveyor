@@ -1,0 +1,35 @@
+.input {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  padding: rem(6px) rem(12px);
+
+  color: map-get($brand-white, 'primary');
+  font-weight: map-get($font-weight, 'normal');
+  font-size: map-get($font-sizes, 'md');
+  line-height: rem(22px);
+
+  background: rgba(255, 255, 255, 0.18);
+  border: transparent;
+  border-radius: rem(12px);
+
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  &:focus {
+    color: map-get($brand-white, 'primary');
+
+    background: rgba(255, 255, 255, 0.18);
+    outline: none;
+    box-shadow: none;
+  }
+
+  &--text {
+    height: rem(55px);
+  }
+
+  &--textarea {
+    height: auto;
+  }
+}
+

@@ -18,7 +18,7 @@ const FormInputGroup = ({
         <Field
           type={ inputType }
           id={ inputId }
-          className="form-control form-input-group__input"
+          className="input input--text"
           name={ name }
         />
       </div>
