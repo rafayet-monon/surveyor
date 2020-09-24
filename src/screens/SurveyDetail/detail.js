@@ -2,13 +2,22 @@ import React, { useContext } from 'react';
 
 import { useHistory } from 'react-router-dom';
 
+import * as Constants from 'constants/surveyStatus';
 import { DetailsContext } from 'contexts/details';
 import backIcon from 'images/back-button-white.svg';
+import { SurveyStatusContext } from 'contexts/surveyStatus';
 
 const Detail = () => {
   const detailsContext = useContext(DetailsContext);
+  const { dispatch } = useContext(SurveyStatusContext);
   const history = useHistory();
   const goBack = () => history.push('/');
+
+  const startSurvey = () => {
+    dispatch({
+      type: Constants.SURVEY_START
+    });
+  };
 
   return (
     <div className="survey-detail">
@@ -35,7 +44,7 @@ const Detail = () => {
         <p className="survey-detail__subtitle">
           { detailsContext.attributes.description }
         </p>
-        <button className="button button--primary survey-detail__action">Start Survey</button>
+        <button className="button button--primary survey-detail__action" onClick={ startSurvey }>Start Survey</button>
       </div>
     </div>
   );

@@ -7,7 +7,8 @@ import Loader from 'components/Loader';
 import PageBackground from 'components/PageBackground';
 import { AuthContext } from 'contexts/auth';
 import { DetailsProvider } from 'contexts/details';
-import Detail from 'screens/SurveyDetail/detail';
+import { SurveyStatusProvider } from 'contexts/surveyStatus';
+import ShowSurvey from 'screens/SurveyDetail/showSurvey';
 
 const SurveyDetail = () => {
   const authContext = useContext(AuthContext);
@@ -43,7 +44,9 @@ const SurveyDetail = () => {
         <Loader />
       ) : (
         <DetailsProvider surveyDetail={ surveyDetail }>
-          <Detail />
+          <SurveyStatusProvider>
+            <ShowSurvey />
+          </SurveyStatusProvider>
         </DetailsProvider>
       ) }
     </PageBackground>

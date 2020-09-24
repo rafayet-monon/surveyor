@@ -1,0 +1,68 @@
+.wheel-select {
+  position: relative;
+
+  width: 100%;
+  margin-top: rem(64px);
+
+  &__selected-zone {
+    position: absolute;
+    top: 35%;
+
+    display: inline-block;
+    width: 100%;
+    height: rem(56px);
+
+    border-top: 0.5px solid map-get($brand-white, 'primary');
+    border-bottom: 0.5px solid map-get($brand-white, 'primary');
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: rem(55px);
+
+    opacity: 0.5;
+
+    pointer-events: none;
+  }
+
+  &__text {
+    color: map-get($brand-white, 'primary');
+    font-size: map-get($font-sizes, 'lg');
+    line-height: rem(25px);
+    text-align: center;
+  }
+
+  &__text--multiple-select {
+    @include make-col(6);
+
+    text-align: left;
+  }
+
+  &__checkbox-container {
+    @include make-col(6);
+
+    text-align: right;
+  }
+
+  &__checkbox-label {
+    width: rem(30px);
+    height: rem(30px);
+    margin-top: rem(10px);
+
+    border: rem(1px) solid map-get($brand-gray, 'primary');
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &__checkbox {
+    visibility: hidden;
+  }
+
+  &__checkbox:checked + label {
+    background-color: map-get($brand-white, 'primary');
+    background-image: url('../../images/icons/check-icon-white.png');
+  }
+}

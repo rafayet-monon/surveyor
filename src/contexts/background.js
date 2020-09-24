@@ -1,6 +1,6 @@
 import React, { createContext, useReducer } from 'react';
 
-import BackgroundReducer from 'contexts/background/reducer';
+import BackgroundReducer from 'reducers/background';
 
 const BackgroundContext = createContext();
 
