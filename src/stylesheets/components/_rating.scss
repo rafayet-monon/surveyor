@@ -1,0 +1,24 @@
+.rating {
+  margin-top: rem(45px);
+
+  text-align: center;
+
+  &__radio {
+    display: none;
+  }
+
+  &__emoji {
+    font-size: map-get($font-sizes, 'xxl');
+    line-height: rem(34px);
+    letter-spacing: rem(10px);
+
+    cursor: pointer;
+    opacity: 0.5;
+
+    transition: color 200ms;
+  }
+
+  &__emoji--selected {
+    opacity: 1;
+  }
+}
