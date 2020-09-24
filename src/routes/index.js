@@ -8,7 +8,6 @@ import {
 } from 'routes/protectedRoute';
 import ForgotPassword from 'screens/ForgotPassword';
 import Home from 'screens/Home';
-import LazyLoader from 'screens/LazyLoader';
 import Login from 'screens/Login';
 
 const RouteList = () => {
@@ -20,7 +19,6 @@ const RouteList = () => {
         path="/forgot-password"
         component={ ForgotPassword }
       />
-      <UnauthenticatedRoute path="/loader" component={ LazyLoader } />
     </Switch>
   );
 };

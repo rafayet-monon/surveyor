@@ -1,4 +1,7 @@
 .survey-list {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   margin-top: rem(32px);
 
   &__image {
@@ -6,10 +9,6 @@
     height: rem(305px);
 
     border-radius: rem(12px);
-  }
-
-  &__information {
-    display: flex;
   }
 
   &__title {
@@ -33,7 +32,14 @@
   }
 
   &__navigation {
+    position: relative;
+    bottom: rem(80px);
+
     margin: rem(15px 0 0 auto);
+
+    @include media-breakpoint-up(md) {
+      bottom: rem(220px);
+    }
   }
 
   &__detail-arrow {

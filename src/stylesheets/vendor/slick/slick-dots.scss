@@ -1,11 +1,5 @@
 .slick-dots {
-  position: fixed;
-  bottom: rem(25px);
-  left: 50%;
-
-  width: auto;
-  padding: 0;
-
+  bottom: -55px;
   /* stylelint-disable-next-line */
   li.slick-active button::before {
     color: map-get($brand-white, 'primary');
@@ -15,5 +9,9 @@
     color: map-get($brand-white, 'primary');
 
     opacity: 20%;
+  }
+
+  li button {
+    pointer-events: none;
   }
 }

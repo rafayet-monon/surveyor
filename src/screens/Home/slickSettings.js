@@ -6,7 +6,7 @@ const slickSettings = {
   arrows: false,
   fade: true,
   autoplay: true,
-  speed: 1500
+  speed: 1500,
 };
 
 export default slickSettings;

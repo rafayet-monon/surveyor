@@ -1,10 +1,11 @@
 import React from 'react';
 
 import { render, wait } from '@testing-library/react';
+import mockAxios from 'axios';
 import { createMemoryHistory } from 'history';
 import { Router } from 'react-router-dom';
 
-import { AuthProvider } from 'contexts/auth';
+import { AuthContext, AuthProvider } from 'contexts/auth';
 import backgroundImage from 'images/auth_background.png';
 import Login from 'screens/Login';
 import SubmitLoginForm from 'tests/shared_examples/submitLoginForm';
@@ -34,6 +35,9 @@ describe('When visited the Login Page', () => {
   });
 
   it('shows alert component if login credentials does not match', async () => {
+    mockAxios.post.mockImplementation(() =>
+      Promise.reject({ response: { status: 400, data: {} } })
+    );
     const mockEmail = 'mock@surveyor.com';
     const mockPass = 'mockpass';
     const loginError = 'Unable to login';
@@ -49,16 +53,22 @@ describe('When visited the Login Page', () => {
   });
 
   it('redirects if valid email and password given', async () => {
+    mockAxios.post.mockImplementation(() =>
+      Promise.resolve({ status: 200, data: {} })
+    );
+    const history = createMemoryHistory();
+    const state = { isAuthenticated: true };
+    const dispatch = null;
+
     const validEmail = process.env.REACT_APP_VALID_EMAIL;
     const validPass = process.env.REACT_APP_VALID_PASSWORD;
-    const history = createMemoryHistory();
     const loginError = 'Unable to login';
 
     const { container, queryByText } = render(
       <Router history={ history }>
-        <AuthProvider>
+        <AuthContext.Provider value={{ state, dispatch }}>
           <Login />
-        </AuthProvider>
+        </AuthContext.Provider>
       </Router>
     );
     await wait(() => {
