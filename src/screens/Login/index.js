@@ -1,9 +1,21 @@
 import React from 'react';
 
-import Page from 'screens/Login/page';
+import Logo from 'components/Auth/Logo';
+import PageBackground from 'components/PageBackground';
+import Form from 'screens/Login/form';
 
 const Login = () => {
-  return <Page />;
+  const logoLabel = 'Sign in to Nimble';
+
+  return (
+    <PageBackground>
+      <div className="container container-login">
+        <Logo label={ logoLabel } />
+
+        <Form />
+      </div>
+    </PageBackground>
+  );
 };
 
 export default Login;

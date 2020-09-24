@@ -1,9 +1,14 @@
 import React from 'react';
 
-import Page from 'screens/LazyLoader/page';
+import PageBackground from 'components/PageBackground';
+import Loader from 'screens/LazyLoader/loader';
 
 const LazyLoader = () => {
-  return <Page />;
+  return (
+    <PageBackground dynamicImage={ null }>
+      <Loader />
+    </PageBackground>
+  );
 };
 
 export default LazyLoader;

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import defaultImage from 'images/auth_background.png';
 
-const BackgroundLayout = ({ dynamicImage, children }) => {
+const PageBackground = ({ dynamicImage, children }) => {
   const [backgroundImage, setBackgroundImage] = useState(defaultImage);
 
   useEffect(() => {
@@ -12,16 +12,16 @@ const BackgroundLayout = ({ dynamicImage, children }) => {
   }, [dynamicImage]);
 
   return (
-    <div className="background-layout">
+    <div className="page-background">
       <div
-        className="background-layout__image"
+        className="page-background__image"
         style={{ backgroundImage: `url(${backgroundImage})` }}
-        aria-label="background-layout-image"
+        aria-label="page-background-image"
       >
-        <div className="background-layout__overlay">{ children }</div>
+        <div className="page-background__overlay">{ children }</div>
       </div>
     </div>
   );
 };
 
-export default BackgroundLayout;
+export default PageBackground;
