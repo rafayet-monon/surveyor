@@ -1,6 +1,8 @@
 import React from 'react';
 
-import Rating from 'components/Rating';
+import NetPromotingScore from 'components/NetPromotingScore';
+// import Rating from 'components/Rating';
+// import WheelSelect from 'components/WheelSelect';
 import closeIcon from 'images/close-button-white.svg';
 import nextIcon from 'images/next-button-black.svg';
 
@@ -19,7 +21,7 @@ const Questions = () => {
         <div className="questions__details">
           <div className="questions__number">1/5</div>
           <h1 className="questions__title"> { question }</h1>
-          <Rating initialRating={ 3 } maxRating={ 5 } ratingEmoji="smiley" />
+          <NetPromotingScore start={ 1 } end={ 10 } />
         </div>
       </div>
 

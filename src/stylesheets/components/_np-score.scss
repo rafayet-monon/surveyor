@@ -1,0 +1,69 @@
+.np-score {
+  margin-top: rem(45px);
+
+  text-align: center;
+
+  &__radio {
+    display: none;
+  }
+
+  &__number-container {
+    width: max-content;
+    height: rem(56px);
+    margin-right: auto;
+    margin-left: auto;
+
+    border: rem(0.5px) solid map-get($brand-white, 'primary');
+    border-radius: rem(12px);
+  }
+
+  &__number-label {
+    height: rem(55px);
+    margin: 0;
+
+    border-right: rem(0.5px) solid map-get($brand-white, 'primary');
+  }
+
+  &__number-label--no-border {
+    border-right: 0;
+  }
+
+  &__number {
+    margin: rem(15px 13px);
+
+    color: map-get($brand-white, 'primary');
+    font-weight: map-get($font-weight, 'bolder');
+    font-size: rem(20px);
+    line-height: rem(25px);
+
+    cursor: pointer;
+    opacity: 0.5;
+
+    transition: color 200ms;
+  }
+
+  &__number--selected {
+    opacity: 1;
+  }
+
+  &__identifier {
+    @include make-row();
+
+    margin-top: rem(15px);
+    padding: rem(0 15px);
+  }
+
+  &__low-score {
+    @include make-col(6);
+
+    color: map-get($brand-white, 'primary');
+    text-align: start;
+  }
+
+  &__high-score {
+    @include make-col(6);
+
+    color: map-get($brand-white, 'primary');
+    text-align: end;
+  }
+}
