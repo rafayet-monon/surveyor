@@ -1,10 +1,17 @@
 import React from 'react';
 
+import PageBackground from 'components/PageBackground';
+import Details from 'screens/Home/details';
+import Header from 'screens/Home/header';
+
 const Home = () => {
   return (
-    <div>
-      <h1>Home</h1>
-    </div>
+    <PageBackground>
+      <div className="container-home">
+        <Header />
+        <Details />
+      </div>
+    </PageBackground>
   );
 };
 

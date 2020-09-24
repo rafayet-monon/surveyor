@@ -1,25 +1,23 @@
-.loader-header {
+.home-header {
   @include header-container();
 
-  &__menu-bar {
+  &__left {
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  &__menu-bar .react-loading-skeleton {
-    width: rem(117px);
-    height: rem(18px);
-
-    border-radius: rem(12px);
+  &__logo {
+    width: rem(134px);
+    height: rem(32px);
   }
 
-  &__user-image {
+  &__right {
     order: 2;
     margin-left: auto;
   }
 
-  &__user-img .react-loading-skeleton {
+  &__user-image {
     width: rem(36px);
     height: rem(36px);
 
