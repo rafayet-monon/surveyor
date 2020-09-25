@@ -1,6 +1,4 @@
 .auth-logo {
-  @include make-row();
-
   display: flex;
   flex-direction: column;
   margin-bottom: rem(24px);
@@ -11,7 +9,6 @@
   }
 
   &__label {
-    display: flex;
     align-self: center;
 
     color: map-get($brand-white, 'primary');

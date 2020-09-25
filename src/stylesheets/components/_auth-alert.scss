@@ -1,6 +1,5 @@
 .auth-alert {
-  @include make-row();
-
+  display: flex;
   width: 100%;
   min-height: rem(96px);
   margin-bottom: rem(24px);
