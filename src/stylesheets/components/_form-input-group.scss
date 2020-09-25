@@ -8,7 +8,7 @@
   &__label {
     margin: rem(0 0 10px);
 
-    color: $secondary-color;
+    color: map-get($brand-white, 'primary');;
     font-weight: map-get($font-weight, 'bolder');
     font-size: map-get($font-sizes, 'md');
     line-height: rem(20px);
@@ -23,7 +23,7 @@
     margin: auto;
     padding: 0.375rem 0.75rem;
 
-    color: $secondary-color;
+    color: map-get($brand-white, 'primary');;
     font-weight: map-get($font-weight, 'normal');
     font-size: map-get($font-sizes, 'lg');
     line-height: rem(22px);
@@ -37,7 +37,7 @@
   }
 
   &__input:focus {
-    color: $secondary-color;
+    color: map-get($brand-white, 'primary');;
 
     background: rgba(255, 255, 255, 0.18);
     outline: none;
@@ -52,7 +52,7 @@
     display: flex;
     margin-left: auto;
 
-    color: $secondary-color;
+    color: map-get($brand-white, 'primary');;
     font-weight: map-get($font-weight, 'normal');
     font-size: map-get($font-sizes, 'md');
     line-height: rem(20px);
@@ -62,7 +62,7 @@
   }
 
   &__forgot-password:hover {
-    color: $secondary-color;
+    color: map-get($brand-white, 'primary');;
     text-decoration: none;
   }
 }

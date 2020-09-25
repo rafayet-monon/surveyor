@@ -8,13 +8,13 @@
 
     overflow: auto;
     background: {
-      color: $primary-color;
+      color: map-get($brand-black, 'primary');;
       size: cover;
     }
   }
 
   &__overlay {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, $primary-color 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, map-get($brand-black, 'primary') 100%);
     backdrop-filter: blur(rem(50px));
     mix-blend-mode: normal;
   }

@@ -14,7 +14,7 @@
     display: flex;
     align-self: center;
 
-    color: $secondary-color;
+    color: map-get($brand-white, 'primary');;
     font-size: map-get($font-sizes, 'lg');
     line-height: rem(22px);
     letter-spacing: -0.41px;

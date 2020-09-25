@@ -6,7 +6,7 @@
   margin-bottom: rem(24px);
   padding-top: rem(15px);
 
-  background: map-get($brand-gray, 'primary');
+  background: map-get($brand-black, 'light');
   border-radius: rem(12px);
 
   backdrop-filter: blur(rem(54px));
@@ -24,7 +24,7 @@
   &__title {
     margin-bottom: rem(10px);
 
-    color: $secondary-color;
+    color: map-get($brand-white, 'primary');;
     font-weight: map-get($font-weight, 'bolder');
     font-size: map-get($font-sizes, 'md');
     line-height: rem(20px);
@@ -33,7 +33,7 @@
 
   &__info,
   &__error {
-    color: $secondary-color;
+    color: map-get($brand-white, 'primary');;
     font-weight: map-get($font-weight, 'normal');
     font-size: map-get($font-sizes, 'sm');
     line-height: rem(18px);

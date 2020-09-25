@@ -11,7 +11,7 @@
     font-size: map-get($font-sizes, 'lg');
     letter-spacing: -0.41px;
 
-    background: $secondary-color;
+    background: map-get($brand-white, 'primary');;
     border-radius: rem(10px);
   }
 }

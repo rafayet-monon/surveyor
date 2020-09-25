@@ -1,9 +1,14 @@
 // Colors
-$primary-color: #000 !default;
-$secondary-color: #fff !default;
+$brand-black: (
+  light: hsl(240, 11%, 9%),
+  primary: hsl(0, 0%, 0%)
+);
+
+$brand-white: (
+  primary: hsl(0, 0%, 100%),
+);
 
 $brand-gray: (
-  primary: hsl(240, 11%, 9%),
   transparent: hsla(0, 0%, 15%, 0.6)
 );
 
