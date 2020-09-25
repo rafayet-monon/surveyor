@@ -1,7 +1,7 @@
-.form-button {
-  &__button--white {
-    @extend .btn;
+.button {
+  @extend .btn;
 
+  &--white {
     align-items: center;
     width: 100%;
     height: rem(55px);

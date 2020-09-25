@@ -7,11 +7,11 @@
 // Base
 @import 'base/layout';
 @import 'base/fonts';
+@import 'base/buttons';
 // Mixins
 @import 'mixins/auth-container';
 // Components
 @import 'components/page-background';
-@import 'components/form-button';
 @import 'components/logo-auth';
 @import 'components/form-input-group';
 @import 'components/auth-alert';
