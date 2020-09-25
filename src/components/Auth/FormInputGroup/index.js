@@ -1,16 +1,25 @@
 import React from 'react';
 
-const FormInputGroup = ({ label, inputType, inputId, forgotPassLink }) => {
+import { Field } from 'formik';
+
+const FormInputGroup = ({
+                          label,
+                          inputType,
+                          inputId,
+                          name,
+                          forgotPassLink,
+                        }) => {
   return (
     <div className="form-input-group">
       <div className="form-input-group__container">
         <label htmlFor={ inputId } className="form-input-group__label">
           { label }
         </label>
-        <input
+        <Field
           type={ inputType }
           id={ inputId }
-          className="form-input-group__input"
+          className="form-control form-input-group__input"
+          name={ name }
         />
       </div>
       { forgotPassLink && (

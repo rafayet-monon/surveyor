@@ -3,7 +3,7 @@ import React from 'react';
 import Alert from 'components/Auth/Alert';
 import Logo from 'components/Auth/Logo';
 import PageBackground from 'components/PageBackground';
-import Form from 'screens/ForgotPassword/form';
+import ForgotPasswordForm from 'screens/ForgotPassword/forgotPasswordForm';
 
 const ForgotPassword = () => {
   const logoLabel =
@@ -17,7 +17,7 @@ const ForgotPassword = () => {
           title="Check your email."
           description="We've emailed you instruction to reset your password."
         />
-        <Form />
+        <ForgotPasswordForm />
       </div>
     </PageBackground>
   );
