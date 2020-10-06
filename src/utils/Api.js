@@ -13,17 +13,4 @@ const instance = axios.create({
   responseType: 'json',
 });
 
-instance.interceptors.request.use(
-  (req) => {
-    req.data.client_id = process.env.REACT_APP_CLIENT_ID;
-    req.data.client_secret = process.env.REACT_APP_CLIENT_SECRET;
-
-    return req;
-  },
-  (error) => {
-    console.log(error);
-    return Promise.reject(error);
-  }
-);
-
 export default instance;

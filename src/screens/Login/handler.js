@@ -14,6 +14,8 @@ const Handler = () => {
         grant_type: 'password',
         email: values.email,
         password: values.password,
+        client_id: process.env.REACT_APP_CLIENT_ID,
+        client_secret: process.env.REACT_APP_CLIENT_SECRET,
       })
         .then(function (response) {
           if (response.status === 200) {
