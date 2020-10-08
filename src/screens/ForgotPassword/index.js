@@ -2,16 +2,15 @@ import React from 'react';
 
 import Alert from 'components/Auth/Alert';
 import Logo from 'components/Auth/Logo';
-import BackgroundLayout from 'components/BackgroundLayout';
-import Form from 'containers/ForgotPassword/form';
-import backgroundImage from 'images/auth_background.png';
+import PageBackground from 'components/PageBackground';
+import Form from 'screens/ForgotPassword/form';
 
-const Page = () => {
+const ForgotPassword = () => {
   const logoLabel =
     'Enter your email to receive instructions for resetting your password.';
 
   return (
-    <BackgroundLayout backgroundImage={ backgroundImage }>
+    <PageBackground type="default">
       <div className="container container-forgot-password">
         <Logo label={ logoLabel } />
         <Alert
@@ -20,8 +19,8 @@ const Page = () => {
         />
         <Form />
       </div>
-    </BackgroundLayout>
+    </PageBackground>
   );
 };
 
-export default Page;
+export default ForgotPassword;

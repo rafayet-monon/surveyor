@@ -4,9 +4,9 @@ import { render } from '@testing-library/react';
 import { createMemoryHistory } from 'history';
 import { Router } from 'react-router-dom';
 
-import Home from 'containers/Home';
 import { AuthProvider } from 'contexts/auth';
 import { AuthenticatedRoute } from 'routes/protectedRoute';
+import Home from 'screens/Home';
 
 describe('when AuthenticaedRoute component is mounted', () => {
   it('returns to login page if not authorized', () => {

@@ -2,14 +2,14 @@ import React from 'react';
 
 import { Switch } from 'react-router-dom';
 
-import ForgotPassword from 'containers/ForgotPassword';
-import Home from 'containers/Home';
-import LazyLoader from 'containers/LazyLoader';
-import Login from 'containers/Login';
 import {
   AuthenticatedRoute,
   UnauthenticatedRoute,
 } from 'routes/protectedRoute';
+import ForgotPassword from 'screens/ForgotPassword';
+import Home from 'screens/Home';
+import LazyLoader from 'screens/LazyLoader';
+import Login from 'screens/Login';
 
 const RouteList = () => {
   return (
