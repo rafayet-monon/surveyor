@@ -27,7 +27,6 @@
     font-weight: map-get($font-weight, 'bolder');
     font-size: map-get($font-sizes, 'md');
     line-height: rem(20px);
-    letter-spacing: -0.24px;
   }
 
   &__info,
@@ -36,7 +35,6 @@
     font-weight: map-get($font-weight, 'normal');
     font-size: map-get($font-sizes, 'sm');
     line-height: rem(18px);
-    letter-spacing: -0.08px;
 
     opacity: 0.6;
   }
