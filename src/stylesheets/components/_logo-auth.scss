@@ -1,4 +1,4 @@
-.logo-auth {
+.auth-logo {
   display: flex;
   flex-direction: column;
   margin-bottom: rem(24px);
@@ -10,12 +10,12 @@
 
   &__label {
     align-self: center;
-    color: $secondary-color;
-    display: flex;
+
+    color: map-get($brand-white, 'primary');
     font-size: map-get($font-sizes, 'lg');
-    letter-spacing: -0.41px;
     line-height: rem(22px);
-    opacity: 0.6;
     text-align: center;
+
+    opacity: 0.6;
   }
 }

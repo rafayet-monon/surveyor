@@ -1,0 +1,32 @@
+.loader-header {
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin-top: rem(32px);
+  padding: rem(0 32px);
+
+  &__menu-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__menu-bar .react-loading-skeleton {
+    width: rem(117px);
+    height: rem(18px);
+
+    border-radius: rem(12px);
+  }
+
+  &__user-image {
+    order: 2;
+    margin-left: auto;
+  }
+
+  &__user-img .react-loading-skeleton {
+    width: rem(36px);
+    height: rem(36px);
+
+    border-radius: 50%;
+  }
+}

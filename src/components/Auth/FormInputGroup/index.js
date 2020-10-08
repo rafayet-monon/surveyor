@@ -10,7 +10,7 @@ const FormInputGroup = ({ label, inputType, inputId, forgotPassLink }) => {
         <input
           type={ inputType }
           id={ inputId }
-          className="form-control form-input-group__input"
+          className="form-input-group__input"
         />
       </div>
       { forgotPassLink && (

@@ -13,18 +13,15 @@ const Alert = ({ alertType, title, description }) => {
   }, [alertType]);
 
   return (
-    <div className="row auth-alert">
-      <div className="col-2">
-        <div className="auth-alert__icon">
-          <img src={ alert.icon } alt={ alert.type } />
-        </div>
+    <div className="auth-alert">
+      <div className="auth-alert__icon">
+        <img src={ alert.icon } alt={ alert.type } />
       </div>
-      <div className="col-10 pl-0">
-        <div className="auth-alert__message">
-          <p className="auth-alert__title">{ title }</p>
 
-          <p className={ `auth-alert__${alert.type}` }>{ description }</p>
-        </div>
+      <div className="auth-alert__message">
+        <p className="auth-alert__title">{ title }</p>
+
+        <p className={ `auth-alert__${alert.type}` }>{ description }</p>
       </div>
     </div>
   );

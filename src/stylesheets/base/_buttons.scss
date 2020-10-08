@@ -1,0 +1,16 @@
+.button {
+  @extend .btn;
+
+  &--white {
+    align-items: center;
+    width: 100%;
+    height: rem(55px);
+
+    color: map-get($brand-gray, 'transparent');
+    font-weight: map-get($font-weight, 'bolder');
+    font-size: map-get($font-sizes, 'lg');
+
+    background: map-get($brand-white, 'primary');
+    border-radius: rem(10px);
+  }
+}

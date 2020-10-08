@@ -1,35 +1,6 @@
-.skeleton-header {
-  display: flex;
-  height: auto;
-  margin-top: rem(32px);
-  padding: rem(0 32px);
-  width: 100%;
+.loader-details {
+  @include make-container();
 
-  &__menu-bar {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-  }
-
-  &__menu-bar .react-loading-skeleton {
-    border-radius: rem(12px);
-    height: rem(18px);
-    width: rem(117px);
-  }
-
-  &__user-image {
-    margin-left: auto;
-    order: 2;
-  }
-
-  &__user-img .react-loading-skeleton {
-    border-radius: 50%;
-    height: rem(36px);
-    width: rem(36px);
-  }
-}
-
-.skeleton-details {
   display: flex;
   flex-direction: column;
   max-width: rem(704px);
@@ -39,9 +10,10 @@
   }
 
   &__date .react-loading-skeleton {
-    border-radius: rem(12px);
-    height: rem(18px);
     width: rem(117px);
+    height: rem(18px);
+
+    border-radius: rem(12px);
   }
 
   &__day {
@@ -49,9 +21,10 @@
   }
 
   &__day .react-loading-skeleton {
-    border-radius: 12px;
-    height: rem(18px);
     width: rem(90px);
+    height: rem(18px);
+
+    border-radius: rem(12px);
   }
 
   &__survey-img {
@@ -59,19 +32,21 @@
   }
 
   &__survey-img .react-loading-skeleton {
-    border-radius: rem(12px);
     height: rem(305px);
+
+    border-radius: rem(12px);
   }
 
   &__survey-title {
-    margin-top: rem(38px);
     max-width: rem(318px);
+    margin-top: rem(38px);
   }
 
   &__survey-title .react-loading-skeleton {
-    border-radius: rem(12px);
-    height: rem(18px);
     width: rem(318px);
+    height: rem(18px);
+
+    border-radius: rem(12px);
   }
 
   &__survey-desc {
@@ -79,23 +54,26 @@
   }
 
   &__survey-desc .react-loading-skeleton {
-    border-radius: rem(12px);
-    height: rem(18px);
     width: rem(207px);
+    height: rem(18px);
+
+    border-radius: rem(12px);
   }
 
   &__navigation {
-    margin-left: auto;
-    order: 2;
     position: relative;
+
+    order: 2;
+    margin-left: auto;
     @include media-breakpoint-up(md) {
       bottom: rem(65px);
     }
   }
 
   &__navigation .react-loading-skeleton {
-    border-radius: 50%;
-    height: rem(56px);
     width: rem(56px);
+    height: rem(56px);
+
+    border-radius: 50%;
   }
 }

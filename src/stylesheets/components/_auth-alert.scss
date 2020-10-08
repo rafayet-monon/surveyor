@@ -1,28 +1,41 @@
 .auth-alert {
-  backdrop-filter: blur(rem(54px));
-  background: map-get($brand-gray, 'primary');
-  border-radius: rem(12px);
-  margin-bottom: rem(24px);
-  min-height: rem(96px);
-  padding-top: rem(15px);
+  display: flex;
   width: 100%;
+  min-height: rem(96px);
+  margin-bottom: rem(24px);
+  padding-top: rem(15px);
+
+  background: map-get($brand-black, 'light');
+  border-radius: rem(12px);
+
+  backdrop-filter: blur(rem(54px));
+
+  &__icon {
+    @include make-col(2);
+
+    text-align: center;
+  }
+
+  &__message {
+    @include make-col(10);
+  }
 
   &__title {
-    color: $secondary-color;
-    font-size: map-get($font-sizes, 'md');
-    font-weight: map-get($font-weight, 'bolder');
-    letter-spacing: -0.24px;
-    line-height: rem(20px);
     margin-bottom: rem(10px);
+
+    color: map-get($brand-white, 'primary');
+    font-weight: map-get($font-weight, 'bolder');
+    font-size: map-get($font-sizes, 'md');
+    line-height: rem(20px);
   }
 
   &__info,
   &__error {
-    color: $secondary-color;
-    font-size: map-get($font-sizes, 'sm');
+    color: map-get($brand-white, 'primary');
     font-weight: map-get($font-weight, 'normal');
-    letter-spacing: -0.08px;
+    font-size: map-get($font-sizes, 'sm');
     line-height: rem(18px);
+
     opacity: 0.6;
   }
 }
