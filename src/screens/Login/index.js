@@ -8,7 +8,7 @@ const Login = () => {
   const logoLabel = 'Sign in to Nimble';
 
   return (
-    <PageBackground>
+    <PageBackground type="default">
       <div className="container container-login">
         <Logo label={ logoLabel } />
 

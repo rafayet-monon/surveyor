@@ -10,7 +10,7 @@ const ForgotPassword = () => {
     'Enter your email to receive instructions for resetting your password.';
 
   return (
-    <PageBackground>
+    <PageBackground type="default">
       <div className="container container-forgot-password">
         <Logo label={ logoLabel } />
         <Alert

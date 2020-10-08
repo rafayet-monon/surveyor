@@ -2,14 +2,23 @@ import React, { useEffect, useState } from 'react';
 
 import defaultImage from 'images/auth_background.png';
 
-const PageBackground = ({ dynamicImage, children }) => {
-  const [backgroundImage, setBackgroundImage] = useState(defaultImage);
+const PageBackground = ({ type, imagePath, children }) => {
+  const [backgroundImage, setBackgroundImage] = useState(null);
 
   useEffect(() => {
-    if (dynamicImage !== undefined) {
-      setBackgroundImage(dynamicImage);
+    switch (type) {
+      case 'default': {
+        setBackgroundImage(defaultImage);
+
+        break;
+      }
+      case 'image': {
+        setBackgroundImage(imagePath);
+
+        break;
+      }
     }
-  }, [dynamicImage]);
+  }, [backgroundImage, imagePath, type]);
 
   return (
     <div className="page-background">
