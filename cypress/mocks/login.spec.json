@@ -56,5 +56,90 @@
         }
       }
     ]
+  },
+  "Redirects to home page": {
+    "timestamp": 1602610813849,
+    "routes": [
+      {
+        "url": "https://nimble-survey-web-staging.herokuapp.com/api/v1/oauth/token",
+        "method": "POST",
+        "status": 200,
+        "headers": {},
+        "body": {
+          "grant_type": "password",
+          "email": "dev@nimblehq.co",
+          "password": "12345678",
+          "client_id": "gvPMQMGcHRu372ebdT4rVxNmIxkK82smGcFuzJh0t8Q",
+          "client_secret": "de5aT_bs2KEOvij-rV9qQKwWWfjPz64p1ige58q6nDM"
+        },
+        "response": {
+          "data": {
+            "id": 427,
+            "type": "token",
+            "attributes": {
+              "access_token": "JgnLOsZEIg64BNm6wTHLcM6XGfq-IFjDeoR-P7FXIJ0",
+              "token_type": "Bearer",
+              "expires_in": 7200,
+              "refresh_token": "G-CsLZvcgQ5YmhgWODdXP2EUTu9uIm66gjcAT30fv-w",
+              "created_at": 1602610816
+            }
+          }
+        }
+      }
+    ]
+  },
+  "shows an error message": {
+    "timestamp": 1602610817305,
+    "routes": [
+      {
+        "url": "https://nimble-survey-web-staging.herokuapp.com/api/v1/oauth/token",
+        "method": "POST",
+        "status": 400,
+        "headers": {},
+        "body": {
+          "grant_type": "password",
+          "email": "mock@surveyor.co",
+          "password": "1221121",
+          "client_id": "gvPMQMGcHRu372ebdT4rVxNmIxkK82smGcFuzJh0t8Q",
+          "client_secret": "de5aT_bs2KEOvij-rV9qQKwWWfjPz64p1ige58q6nDM"
+        },
+        "response": {
+          "errors": [
+            {
+              "source": "Doorkeeper::OAuth::Error",
+              "detail": "The provided authorization grant is invalid, expired, revoked, does not match the redirection URI used in the authorization request, or was issued to another client.",
+              "code": "invalid_grant"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "does not redirect to another page": {
+    "timestamp": 1602610849699,
+    "routes": [
+      {
+        "url": "https://nimble-survey-web-staging.herokuapp.com/api/v1/oauth/token",
+        "method": "POST",
+        "status": 400,
+        "headers": {},
+        "body": {
+          "grant_type": "password",
+          "email": "mock@surveyor.co",
+          "password": "1221121",
+          "client_id": "gvPMQMGcHRu372ebdT4rVxNmIxkK82smGcFuzJh0t8Q",
+          "client_secret": "de5aT_bs2KEOvij-rV9qQKwWWfjPz64p1ige58q6nDM"
+        },
+        "response": {
+          "errors": [
+            {
+              "source": "Doorkeeper::OAuth::Error",
+              "detail": "The provided authorization grant is invalid, expired, revoked, does not match the redirection URI used in the authorization request, or was issued to another client.",
+              "code": "invalid_grant"
+            }
+          ]
+        }
+      }
+    ]
   }
 }
