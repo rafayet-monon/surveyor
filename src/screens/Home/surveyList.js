@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import Slider from 'react-slick';
 
 import testSurvey from 'images/auth_background.png';
+import slickSettings from 'screens/Home/slickSettings';
 
 const SurveyList = () => {
   const sliderRef = useRef(null);
@@ -13,28 +14,17 @@ const SurveyList = () => {
     })
   }, []);
 
-  const slideList = (y) => {
-    y > 0 ? (
+  const slideList = (wheel) => {
+    wheel > 0 ? (
       sliderRef.current.slickNext()
     ) : (
       sliderRef.current.slickPrev()
     )
   }
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    fade: true,
-    autoplay: true,
-    speed: 1500
-  };
-
   return (
     <div className="survey-list">
-      <Slider { ...settings } ref={ sliderRef }>
+      <Slider { ...slickSettings } ref={ sliderRef }>
         <div>
           <img src={ testSurvey } alt="test" className="survey-list__image" />
         </div>
