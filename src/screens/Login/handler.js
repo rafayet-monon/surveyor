@@ -34,7 +34,7 @@ const Handler = () => {
       if (error.response.status === 400) {
         setError('Invalid email or password');
       } else {
-        setError(error);
+        setError('Something went wrong. Please try again!');
       }
     }
   };
