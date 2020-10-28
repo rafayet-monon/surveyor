@@ -1,23 +1,20 @@
 const AuthReducer = (state, action) => {
   switch (action.type) {
     case 'AUTH': {
-      const user = action.payload.attributes;
-      const { token } = action.payload.attributes;
-      localStorage.setItem('user', user);
-      localStorage.setItem('token', token);
+      const { access_token, token_type } = action.payload.attributes;
+      const authorization_token = `${token_type} ${access_token}`;
+      localStorage.setItem('authorization_token', authorization_token);
       return {
         ...state,
         isAuthenticated: true,
-        user: user,
-        token: token,
+        authorization_token: authorization_token,
       };
     }
     case 'REFRESH': {
       return {
         ...state,
         isAuthenticated: true,
-        user: localStorage.getItem('user'),
-        token: localStorage.getItem('token'),
+        authorization_token: localStorage.getItem('authorization_token'),
       };
     }
     case 'LOGOUT': {
@@ -25,8 +22,7 @@ const AuthReducer = (state, action) => {
       return {
         ...state,
         isAuthenticated: false,
-        user: null,
-        token: null,
+        authorization_token: null,
       };
     }
     default:

@@ -26,3 +26,5 @@ yarn-error.log*
 .env
 test-results.json
 eslint-output.json
+cypress.env.json
+cypress/videos

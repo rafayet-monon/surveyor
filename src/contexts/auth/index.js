@@ -6,17 +6,16 @@ const AuthContext = createContext();
 
 const initialState = {
   isAuthenticated: false,
-  user: null,
-  token: null,
+  authorization_token: null,
 };
 
 const AuthProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AuthReducer, initialState);
 
   useEffect(() => {
-    let token = localStorage.getItem('token');
+    let authorization_token = localStorage.getItem('authorization_token');
 
-    if (token && !state.isAuthenticated) {
+    if (authorization_token && !state.isAuthenticated) {
       dispatch({ type: 'REFRESH' });
     }
   });
