@@ -1,18 +1,18 @@
 .home-header {
   @include header-container();
 
-  &__left {
+  &__logo {
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  &__logo {
+  &__site-logo {
     width: rem(134px);
     height: rem(32px);
   }
 
-  &__right {
+  &__menu {
     order: 2;
     margin-left: auto;
   }

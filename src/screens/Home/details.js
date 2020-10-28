@@ -9,8 +9,8 @@ const Details = () => {
 
   return (
     <div className="home-detail">
-      <p className="home-detail__date">{ today }</p>
-      <h1 className="home-detail__day">Today</h1>
+      <span className="home-detail__date">{ today }</span>
+      <span className="home-detail__day">Today</span>
       <BlankSlate />
     </div>
   );

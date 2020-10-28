@@ -10,8 +10,8 @@ const BlankSlate = () => {
       >
         😎
       </span>
-      <h3 className="blank-slate__message">You’ve completed all the survey.</h3>
-      <h3 className="blank-slate__message">Take a moment.</h3>
+      <p className="blank-slate__message">You’ve completed all the survey.</p>
+      <p className="blank-slate__message">Take a moment.</p>
     </div>
   );
 };

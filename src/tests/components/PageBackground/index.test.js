@@ -4,7 +4,7 @@ import { render } from '@testing-library/react';
 
 import PageBackground from 'components/PageBackground';
 import defaultBackgroundImage from 'images/auth_background.png';
-import testBackgroundImage from 'tests/fixtures/images/test-background.jpeg'
+import testBackgroundImage from 'tests/fixtures/images/test-background.jpeg';
 
 describe('When PageBackground component is mounted', () => {
   it('shows default image in background', () => {
