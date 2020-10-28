@@ -8,6 +8,10 @@
     border-radius: rem(12px);
   }
 
+  &__information {
+    display: flex;
+  }
+
   &__title {
     margin-top: rem(20px);
 
@@ -29,11 +33,7 @@
   }
 
   &__navigation {
-    position: relative;
-
-    @include media-breakpoint-up(md) {
-      bottom: rem(76px);
-    }
+    margin: rem(15px 0 0 auto);
   }
 
   &__detail-arrow {

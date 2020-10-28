@@ -36,15 +36,18 @@ const SurveyList = () => {
         </div>
       </Slider>
 
-      <h3 className="survey-list__title">Working from home Check-In</h3>
-      <p className="survey-list__description">
-        We would like to know about how you feel about our work from home.
-      </p>
-
-      <div className="survey-list__navigation">
-        <button className="button button--circle button--circle-right">
-          <span className="survey-list__detail-arrow" />
-        </button>
+      <div className="survey-list__information">
+        <div>
+          <h3 className="survey-list__title">Working from home Check-In</h3>
+          <p className="survey-list__description">
+            We would like to know about how you feel about our work from home.
+          </p>
+        </div>
+        <div className="survey-list__navigation">
+          <button className="button button--circle">
+            <span className="survey-list__detail-arrow" />
+          </button>
+        </div>
       </div>
     </div>
   );

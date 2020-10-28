@@ -8,9 +8,9 @@ const Details = () => {
   const today = date.toLocaleString('en-EN', date_options).toUpperCase();
 
   return (
-    <div className="home-details">
-      <span className="home-details__date">{ today }</span>
-      <span className="home-details__day">Today</span>
+    <div className="home-detail">
+      <span className="home-detail__date">{ today }</span>
+      <span className="home-detail__day">Today</span>
       <SurveyList />
     </div>
   );
