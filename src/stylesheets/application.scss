@@ -1,9 +1,11 @@
-// Framework
-@import 'vendor/bootstrap';
-// functions
-@import 'functions/sizing';
 // Variables
 @import 'variables';
+// functions
+@import 'functions/sizing';
+// Dependencies
+@import 'vendor/bootstrap/bootstrap';
+@import 'vendor/slick/slick';
+@import 'vendor/slick/slick-dots';
 // Base
 @import 'base/layout';
 @import 'base/fonts';
@@ -27,3 +29,4 @@
 @import 'screens/home-header';
 @import 'screens/home-detail';
 @import 'screens/blank-slate';
+@import 'screens/survey-list';

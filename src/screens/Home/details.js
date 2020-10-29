@@ -1,6 +1,6 @@
 import React from 'react';
 
-import BlankSlate from 'screens/Home/blankSlate';
+import SurveyList from 'screens/Home/surveyList';
 
 const Details = () => {
   const date = new Date();
@@ -11,7 +11,7 @@ const Details = () => {
     <div className="home-detail">
       <span className="home-detail__date">{ today }</span>
       <span className="home-detail__day">Today</span>
-      <BlankSlate />
+      <SurveyList />
     </div>
   );
 };

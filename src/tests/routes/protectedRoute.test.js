@@ -4,6 +4,7 @@ import { render } from '@testing-library/react';
 import { createMemoryHistory } from 'history';
 import { Router } from 'react-router-dom';
 
+import 'tests/mocks/matchMedia'
 import { AuthContext, AuthProvider } from 'contexts/auth';
 import {
   AuthenticatedRoute,

@@ -1,0 +1,49 @@
+.survey-list {
+  margin-top: rem(32px);
+
+  &__image {
+    width: 100%;
+    height: rem(305px);
+
+    border-radius: rem(12px);
+  }
+
+  &__information {
+    display: flex;
+  }
+
+  &__title {
+    margin-top: rem(20px);
+
+    color: map-get($brand-white, 'primary');
+    font-weight: map-get($font-weight, 'bolder');
+    font-size: map-get($font-sizes, 'xl');
+    line-height: rem(28px);
+  }
+
+  &__description {
+    margin-top: rem(8px);
+
+    color: map-get($brand-white, 'primary');
+    font-weight: map-get($font-weight, 'normal');
+    font-size: map-get($font-sizes, 'lg');
+    line-height: rem(22px);
+
+    opacity: 0.6;
+  }
+
+  &__navigation {
+    margin: rem(15px 0 0 auto);
+  }
+
+  &__detail-arrow {
+    display: block;
+    width: rem(15px);
+    height: rem(15px);
+    margin-left: rem(5px);
+
+    border-top: rem(2px) solid;
+    border-left: rem(2px) solid map-get($brand-black, 'primary');
+    transform: rotate(135deg);
+  }
+}

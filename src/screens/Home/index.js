@@ -6,7 +6,7 @@ import Header from 'screens/Home/header';
 
 const Home = () => {
   return (
-    <PageBackground>
+    <PageBackground type="default">
       <div className="container-home">
         <Header />
         <Details />
