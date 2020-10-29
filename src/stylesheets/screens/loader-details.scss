@@ -1,13 +1,5 @@
 .loader-details {
-  @extend .container;
-
-  display: flex;
-  flex-direction: column;
-  max-width: rem(704px);
-  padding: rem(50px 32px);
-  @include media-breakpoint-up(md) {
-    padding-top: rem(50px);
-  }
+  @include details-container();
 
   &__date .react-loading-skeleton {
     width: rem(117px);

@@ -1,0 +1,12 @@
+@mixin details-container() {
+  @include make-container();
+
+  display: flex;
+  flex-direction: column;
+  max-width: rem(704px);
+  padding: rem(50px 32px);
+
+  @include media-breakpoint-up(md) {
+    padding-top: rem(50px);
+  }
+}

@@ -1,0 +1,23 @@
+.blank-slate {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 100%;
+  margin: 0;
+
+  text-align: center;
+
+  transform: translate(-50%, -50%);
+
+  &__emoji {
+    font-size: map-get($font-sizes, 'xxxl');
+  }
+
+  &__message {
+    color: map-get($brand-white, 'primary');
+    font-weight: map-get($font-weight, 'bolder');
+    font-size: map-get($font-sizes, 'xl');
+    line-height: rem(34px);
+  }
+}
