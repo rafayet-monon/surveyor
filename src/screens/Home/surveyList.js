@@ -83,7 +83,9 @@ const SurveyList = ({ surveyResponse }) => {
   };
 
   const slideList = (wheel) => {
-    wheel > 0 ? sliderRef.current.slickNext() : sliderRef.current.slickPrev();
+    if (sliderRef.current) {
+      wheel > 0 ? sliderRef.current.slickNext() : sliderRef.current.slickPrev();
+    }
   };
 
   return (
