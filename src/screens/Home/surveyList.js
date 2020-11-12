@@ -2,10 +2,10 @@ import React, { useContext, useEffect, useRef, useState } from 'react';
 
 import Slider from 'react-slick';
 
+import SurveyDetailAdapter from 'adapters/surveyDetailAdapter';
 import { AuthContext } from 'contexts/auth';
 import { BackgroundContext } from 'contexts/background';
 import slickSettings from 'screens/Home/slickSettings';
-import Api from 'utils/Api';
 
 const SurveyList = ({ surveyResponse }) => {
   const surveyData = surveyResponse.data;
@@ -58,11 +58,10 @@ const SurveyList = ({ surveyResponse }) => {
   const getList = async () => {
     const next_page = currentPage + 1;
     try {
-      await Api.get(`api/v1/surveys?page[number]=${next_page}`, {
-        headers: {
-          Authorization: authContext.state.authorization_token,
-        },
-      }).then(function (response) {
+      await SurveyDetailAdapter(
+        next_page,
+        authContext.state.authorization_token
+      ).then(function (response) {
         if (response.status === 200) {
           const new_list = [...list, ...response.data.data];
           setList(new_list);
