@@ -30,8 +30,13 @@ const SurveyList = ({ surveyResponse }) => {
   const slickConfig = { ...slickSettings, ...sliderEvents };
 
   useEffect(() => {
+    var _scrollTimeout = null;
+
     window.addEventListener('wheel', (e) => {
-      slideList(e.wheelDelta);
+      clearTimeout(_scrollTimeout);
+      _scrollTimeout = setTimeout(function () {
+        slideList(e.wheelDelta);
+      }, 250);
     });
 
     dispatch({
