@@ -33,13 +33,11 @@
 
   &__navigation {
     position: relative;
-    bottom: rem(80px);
+    bottom: rem(96px);
+
+    float: right;
 
     margin: rem(15px 0 0 auto);
-
-    @include media-breakpoint-up(md) {
-      bottom: rem(220px);
-    }
   }
 
   &__detail-arrow {

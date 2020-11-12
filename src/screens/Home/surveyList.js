@@ -92,16 +92,16 @@ const SurveyList = ({ surveyResponse }) => {
               <p className="survey-list__description">
                 { slide.attributes.description }
               </p>
+
+              <div className="survey-list__navigation">
+                <button className="button button--circle">
+                  <span className="survey-list__detail-arrow" />
+                </button>
+              </div>
             </div>
           );
         }) }
       </Slider>
-
-      <div className="survey-list__navigation">
-        <button className="button button--circle">
-          <span className="survey-list__detail-arrow" />
-        </button>
-      </div>
     </div>
   );
 };
