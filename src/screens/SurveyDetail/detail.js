@@ -3,18 +3,23 @@ import React, { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import { DetailsContext } from 'contexts/details';
+import backIcon from 'images/back-button-white.png';
 
 const Detail = () => {
   const detailsContext = useContext(DetailsContext);
   const history = useHistory();
-  const goBack = () => history.goBack();
+  const goBack = () => history.push('/');
 
   return (
     <div className="survey-detail">
       <div className="survey-detail__header">
         <div className="survey-detail__header-left">
-          <button className="button button--circle button--circle-transparent" onClick={ goBack }>
-            <span className="survey-detail__arrow-left" />
+          <button className="button" onClick={ goBack }>
+            <img
+              src={ backIcon }
+              alt="close"
+              className="survey-detail__back-icon"
+            />
           </button>
         </div>
       </div>
@@ -31,9 +36,7 @@ const Detail = () => {
           { detailsContext.attributes.description }
         </p>
         <div className="survey-detail__start-survey">
-          <button className="button button--white">
-            Start Survey
-          </button>
+          <button className="button button--primary">Start Survey</button>
         </div>
       </div>
     </div>
