@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 
-import SurveyListAdapter from 'adapters/surveyListAdapter';
+import SurveyAdapter from 'adapters/surveyAdapter';
 import Loader from 'components/Loader';
 import { AuthContext } from 'contexts/auth';
 import { BackgroundProvider } from 'contexts/background';
@@ -18,7 +18,7 @@ const Home = () => {
 
   const getList = async () => {
     try {
-      await SurveyListAdapter(1, authContext.state.authorization_token).then(
+      await SurveyAdapter.getList(1, authContext.state.authorization_token).then(
         function (response) {
           if (response.status === 200) {
             setResponse(response.data);

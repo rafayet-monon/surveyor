@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from 'react';
 
 import Slider from 'react-slick';
 
-import SurveyListAdapter from 'adapters/surveyListAdapter';
+import SurveyAdapter from 'adapters/surveyAdapter';
 import { AuthContext } from 'contexts/auth';
 import { BackgroundContext } from 'contexts/background';
 import slickSettings from 'screens/Home/slickSettings';
@@ -58,7 +58,7 @@ const SurveyList = ({ surveyResponse }) => {
   const getList = async () => {
     const next_page = currentPage + 1;
     try {
-      await SurveyListAdapter(
+      await SurveyAdapter.getList(
         next_page,
         authContext.state.authorization_token
       ).then(function (response) {
