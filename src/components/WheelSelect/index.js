@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 
 import slickSettings from 'components/WheelSelect/slickSettings';
 
-const MultipleWheelSelect = ({ data, multipleSelect }) => {
+const WheelSelect = ({ data, multipleSelect }) => {
   const sliderRef = useRef(null);
   const elementTextClass = multipleSelect ? 'wheel-select__text wheel-select__text--multiple-select' : 'wheel-select__text'
 
@@ -76,4 +76,4 @@ const MultipleWheelSelect = ({ data, multipleSelect }) => {
   );
 };
 
-export default MultipleWheelSelect;
+export default WheelSelect;
