@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 
 import { useParams, Redirect } from 'react-router-dom';
 
-import SurveyDetailAdapter from 'adapters/surveyDetailAdapter';
+import SurveyAdapter from 'adapters/surveyAdapter';
 import Loader from 'components/Loader';
 import PageBackground from 'components/PageBackground';
 import { AuthContext } from 'contexts/auth';
@@ -18,7 +18,7 @@ const SurveyDetail = () => {
 
   const getSurveyDetail = async () => {
     try {
-      await SurveyDetailAdapter(
+      await SurveyAdapter.get(
         surveyId,
         authContext.state.authorization_token
       ).then(function (response) {
