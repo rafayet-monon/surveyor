@@ -2,6 +2,7 @@ import React from 'react';
 
 import WheelSelect from 'components/WheelSelect';
 import closeIcon from 'images/close-button-white.png';
+import nextIcon from 'images/next-button-black.png';
 
 const Questions = () => {
   const question = 'How fulfilled did you feel during this WFH period?';
@@ -40,8 +41,12 @@ const Questions = () => {
 
       <div className="questions__footer">
         <div className="questions__footer-right">
-          <button className="button button--arrow">
-            <span className="questions__arrow-right" />
+          <button className="button button--circle">
+            <img
+              src={ nextIcon }
+              alt="close"
+              className="questions__navigation-icon"
+            />
           </button>
         </div>
       </div>

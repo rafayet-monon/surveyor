@@ -57,14 +57,7 @@
     margin-left: auto;
   }
 
-  &__arrow-right {
-    display: block;
-    width: rem(15px);
-    height: rem(15px);
-    margin-left: rem(5px);
-
-    border-top: rem(2px) solid;
-    border-left: rem(2px) solid map-get($brand-black, 'primary');
-    transform: rotate(135deg);
+  &__navigation-icon {
+    margin-left: rem(3px);
   }
 }
