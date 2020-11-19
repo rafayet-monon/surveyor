@@ -95,13 +95,10 @@ const SurveyList = ({ surveyResponse }) => {
               </p>
 
               <div className="survey-list__navigation">
-                <button className="button button--circle">
-                  <img
-                    src={ nextIcon }
-                    alt="close"
-                    className="survey-list__navigation-icon"
-                  />
-                </button>
+                <img
+                  src={ nextIcon }
+                  alt="close"
+                />
               </div>
             </div>
           );
