@@ -5,7 +5,7 @@ import Slider from 'react-slick';
 import SurveyAdapter from 'adapters/surveyAdapter';
 import { AuthContext } from 'contexts/auth';
 import { BackgroundContext } from 'contexts/background';
-import nextIcon from 'images/next-button-black.png';
+import nextIcon from 'images/next-button-black.svg';
 import slickSettings from 'screens/Home/slickSettings';
 
 const SurveyList = ({ surveyResponse }) => {
