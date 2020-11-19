@@ -12,7 +12,7 @@
   }
 
   &__title {
-    margin-top: rem(20px);
+    margin-top: rem(32px);
 
     color: map-get($brand-white, 'primary');
     font-weight: map-get($font-weight, 'bolder');
@@ -33,21 +33,12 @@
 
   &__navigation {
     position: relative;
-    bottom: rem(96px);
+    bottom: rem(72px);
 
     float: right;
-
-    margin: rem(15px 0 0 auto);
   }
 
-  &__detail-arrow {
-    display: block;
-    width: rem(15px);
-    height: rem(15px);
-    margin-left: rem(5px);
-
-    border-top: rem(2px) solid;
-    border-left: rem(2px) solid map-get($brand-black, 'primary');
-    transform: rotate(135deg);
+  &__navigation-icon {
+    margin-left: rem(3px);
   }
 }

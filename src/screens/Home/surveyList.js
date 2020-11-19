@@ -5,6 +5,7 @@ import Slider from 'react-slick';
 import SurveyAdapter from 'adapters/surveyAdapter';
 import { AuthContext } from 'contexts/auth';
 import { BackgroundContext } from 'contexts/background';
+import nextIcon from 'images/next-button-black.png';
 import slickSettings from 'screens/Home/slickSettings';
 
 const SurveyList = ({ surveyResponse }) => {
@@ -95,7 +96,11 @@ const SurveyList = ({ surveyResponse }) => {
 
               <div className="survey-list__navigation">
                 <button className="button button--circle">
-                  <span className="survey-list__detail-arrow" />
+                  <img
+                    src={ nextIcon }
+                    alt="close"
+                    className="survey-list__navigation-icon"
+                  />
                 </button>
               </div>
             </div>
