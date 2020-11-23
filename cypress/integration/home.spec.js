@@ -15,6 +15,6 @@ describe('The Home Page', () => {
   it('shows home screen after successful login', function () {
     cy.url().should('include', '/')
     cy.get('div[class="home-header__logo"]').find('img').should('be.visible');
-    cy.get('div[class="survey-list__navigation"]').find('button').should('be.visible');
+    cy.get('[alt="navigation detail icon"]').should('be.visible');
   })
 })

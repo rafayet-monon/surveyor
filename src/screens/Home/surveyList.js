@@ -97,7 +97,7 @@ const SurveyList = ({ surveyResponse }) => {
               <div className="survey-list__navigation">
                 <img
                   src={ nextIcon }
-                  alt="close"
+                  alt="navigation detail icon"
                 />
               </div>
             </div>
