@@ -4,8 +4,8 @@ import { useHistory } from 'react-router-dom';
 
 import * as Constants from 'constants/surveyStatus';
 import { DetailsContext } from 'contexts/details';
-import backIcon from 'images/back-button-white.svg';
 import { SurveyStatusContext } from 'contexts/surveyStatus';
+import backIcon from 'images/back-button-white.svg';
 
 const Detail = () => {
   const detailsContext = useContext(DetailsContext);

@@ -1,8 +1,8 @@
 import React from 'react';
 
 import WheelSelect from 'components/WheelSelect';
-import closeIcon from 'images/close-button-white.png';
-import nextIcon from 'images/next-button-black.png';
+import closeIcon from 'images/close-button-white.svg';
+import nextIcon from 'images/next-button-black.svg';
 
 const Questions = () => {
   const question = 'How fulfilled did you feel during this WFH period?';
@@ -24,10 +24,8 @@ const Questions = () => {
   return (
     <div className="questions">
       <div className="questions__header">
-        <div className="questions__header-right">
-          <button className="button">
-            <img src={ closeIcon } alt="close" />
-          </button>
+        <div className="questions__quit-survey">
+          <img src={ closeIcon } alt="close" />
         </div>
       </div>
 
@@ -40,14 +38,11 @@ const Questions = () => {
       </div>
 
       <div className="questions__footer">
-        <div className="questions__footer-right">
-          <button className="button button--circle">
-            <img
-              src={ nextIcon }
-              alt="close"
-              className="questions__navigation-icon"
-            />
-          </button>
+        <div
+          className="questions__next-question"
+          role="presentation"
+        >
+          <img src={ nextIcon } alt="next question" />
         </div>
       </div>
     </div>
