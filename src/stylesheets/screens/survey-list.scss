@@ -1,4 +1,7 @@
 .survey-list {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   margin-top: rem(32px);
 
   &__image {
@@ -8,12 +11,8 @@
     border-radius: rem(12px);
   }
 
-  &__information {
-    display: flex;
-  }
-
   &__title {
-    margin-top: rem(20px);
+    margin-top: rem(32px);
 
     color: map-get($brand-white, 'primary');
     font-weight: map-get($font-weight, 'bolder');
@@ -33,17 +32,19 @@
   }
 
   &__navigation {
-    margin: rem(15px 0 0 auto);
-  }
+    position: relative;
+    bottom: rem(72px);
 
-  &__detail-arrow {
-    display: block;
-    width: rem(15px);
-    height: rem(15px);
-    margin-left: rem(5px);
+    display: flex;
+    align-content: center;
+    justify-content: center;
 
-    border-top: rem(2px) solid;
-    border-left: rem(2px) solid map-get($brand-black, 'primary');
-    transform: rotate(135deg);
+    float: right;
+    width: rem(56px);
+    height: rem(56px);
+
+    background-color: map-get($brand-white, 'primary');
+    border-radius: 50%;
+    cursor: pointer;
   }
 }

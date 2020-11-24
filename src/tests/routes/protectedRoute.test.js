@@ -1,10 +1,11 @@
 import React from 'react';
 
 import { render } from '@testing-library/react';
+import mockAxios from 'axios';
 import { createMemoryHistory } from 'history';
 import { Router } from 'react-router-dom';
 
-import 'tests/mocks/matchMedia'
+import '__mocks__/matchMedia';
 import { AuthContext, AuthProvider } from 'contexts/auth';
 import {
   AuthenticatedRoute,
@@ -12,6 +13,7 @@ import {
 } from 'routes/protectedRoute';
 import Home from 'screens/Home';
 import Login from 'screens/Login';
+import SurveyListResponse from 'tests/fixtures/surveyListResponse';
 
 describe('when AuthenticaedRoute component is mounted', () => {
   it('returns to login page if not authorized', () => {
@@ -28,6 +30,10 @@ describe('when AuthenticaedRoute component is mounted', () => {
   });
 
   it('returns to the desired authenticated route if authorized', () => {
+    mockAxios.get.mockImplementation(() =>
+      Promise.resolve({ data: SurveyListResponse })
+    );
+
     const history = createMemoryHistory();
     const state = { isAuthenticated: true };
     const dispatch = null;

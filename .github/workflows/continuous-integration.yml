@@ -1,4 +1,4 @@
-name: CI
+name: test
 
 on:
   pull_request:
@@ -39,7 +39,7 @@ jobs:
 
       - name: Run UI test
         if: always()
-        uses: cypress-io/github-action@v1
+        uses: cypress-io/github-action@v2
         with:
           start: npm start
           wait-on: http://localhost:3000
