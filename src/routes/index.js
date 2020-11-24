@@ -4,7 +4,7 @@ import { Switch } from 'react-router-dom';
 
 import {
   AuthenticatedRoute,
-  UnauthenticatedRoute,
+  UnauthenticatedRoute
 } from 'routes/protectedRoute';
 import ForgotPassword from 'screens/ForgotPassword';
 import Home from 'screens/Home';

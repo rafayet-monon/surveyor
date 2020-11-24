@@ -29,7 +29,7 @@ const SurveyList = ({ surveyResponse }) => {
 
   const sliderEvents = {
     beforeChange: (current, next) => beforeSlideChange(next),
-    afterChange: (current) => afterSlideChange(current),
+    afterChange: (current) => afterSlideChange(current)
   };
   const slickConfig = { ...slickSettings, ...sliderEvents };
 
@@ -45,7 +45,7 @@ const SurveyList = ({ surveyResponse }) => {
 
     dispatch({
       type: 'SURVEY',
-      payload: currentBackground,
+      payload: currentBackground
     });
   }, [currentBackground, dispatch]);
 

@@ -6,7 +6,7 @@ const AuthContext = createContext();
 
 const initialState = {
   isAuthenticated: false,
-  authorization_token: null,
+  authorization_token: null
 };
 
 const AuthProvider = ({ children }) => {

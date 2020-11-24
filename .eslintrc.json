@@ -45,7 +45,8 @@
           "caseInsensitive": true
         }
       }
-    ]
+    ],
+    "comma-dangle": ["error", "never"]
   },
   "plugins": ["react", "import", "jsx-a11y", "react-hooks", "jest", "cypress"],
   "parser": "babel-eslint",
