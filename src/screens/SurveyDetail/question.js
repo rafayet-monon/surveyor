@@ -9,16 +9,16 @@ const Questions = () => {
   const data = [
     {
       display: 'Very fulfilled',
-      value: 0,
+      value: 0
     },
     {
       display: 'Somewhat fulfilled',
-      value: 1,
+      value: 1
     },
     {
       display: 'Unfulfilled',
-      value: 1,
-    },
+      value: 1
+    }
   ];
 
   return (

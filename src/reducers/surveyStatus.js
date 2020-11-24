@@ -3,7 +3,7 @@ const SurveyStatusReducer = (state, action) => {
     case 'START': {
       return {
         ...state,
-        started: true,
+        started: true
       };
     }
     default:

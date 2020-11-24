@@ -6,10 +6,14 @@ import slickSettings from 'components/WheelSelect/slickSettings';
 
 const WheelSelect = ({ data, multipleSelect }) => {
   const sliderRef = useRef(null);
-  const elementTextClass = multipleSelect ? 'wheel-select__text wheel-select__text--multiple-select' : 'wheel-select__text'
+  const elementTextClass = multipleSelect
+    ? 'wheel-select__text wheel-select__text--multiple-select'
+    : 'wheel-select__text';
 
   useEffect(() => {
-    const selectedElement = document.getElementById('wheel-select__container--0');
+    const selectedElement = document.getElementById(
+      'wheel-select__container--0'
+    );
     selectedElement.style.opacity = 1;
 
     window.addEventListener('wheel', (e) => {
@@ -18,18 +22,23 @@ const WheelSelect = ({ data, multipleSelect }) => {
   }, []);
 
   const beforeSlideChange = (currentSlide, nextSlide) => {
-    const nextElement = document.getElementById(`wheel-select__container--${nextSlide}`);
-    const currentElement = document.getElementById(`wheel-select__container--${currentSlide}`);
+    const nextElement = document.getElementById(
+      `wheel-select__container--${nextSlide}`
+    );
+    const currentElement = document.getElementById(
+      `wheel-select__container--${currentSlide}`
+    );
     nextElement.style.opacity = 1;
     nextElement.style.pointerEvents = 'auto';
-    if( currentSlide !== nextSlide ){
+    if (currentSlide !== nextSlide) {
       currentElement.style.opacity = 0.5;
       currentElement.style.pointerEvents = 'none';
     }
   };
 
   const sliderEvents = {
-    beforeChange: (currentSlide, nextSlide) => beforeSlideChange(currentSlide, nextSlide),
+    beforeChange: (currentSlide, nextSlide) =>
+      beforeSlideChange(currentSlide, nextSlide)
   };
 
   const slickConfig = { ...slickSettings, ...sliderEvents };
@@ -41,13 +50,17 @@ const WheelSelect = ({ data, multipleSelect }) => {
   };
 
   return (
-    <div className='wheel-select'>
-      <span className='wheel-select__selected-zone'/>
+    <div className="wheel-select">
+      <span className="wheel-select__selected-zone" />
       <Slider { ...slickConfig } ref={ sliderRef }>
         { data.map(function (element, index) {
           return (
             <div className="wheel-select__element" key={ index }>
-              <div id={ `wheel-select__container--${index}` } className="wheel-select__container" key={ index }>
+              <div
+                id={ `wheel-select__container--${index}` }
+                className="wheel-select__container"
+                key={ index }
+              >
                 <div className={ elementTextClass }>{ element.display }</div>
 
                 { multipleSelect && (

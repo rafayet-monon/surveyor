@@ -5,7 +5,7 @@ import SurveyStatusReducer from 'reducers/surveyStatus';
 const SurveyStatusContext = createContext();
 
 const initialState = {
-  started: false,
+  started: false
 };
 
 const SurveyStatusProvider = ({ children }) => {
