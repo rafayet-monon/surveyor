@@ -104,11 +104,13 @@ const SurveyList = ({ surveyResponse }) => {
                 { slide.attributes.description }
               </p>
 
-              <div className="survey-list__navigation">
-                <img
-                  src={ nextIcon }
-                  alt="navigation detail icon"
-                />
+              <div
+                className="survey-list__navigation"
+                onClick={ showDetail }
+                onKeyPress={ showDetail }
+                role="presentation"
+              >
+                <img src={ nextIcon } alt="navigation detail icon" />
               </div>
             </div>
           );

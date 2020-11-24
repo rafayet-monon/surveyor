@@ -6,6 +6,7 @@ import { AuthContext } from 'contexts/auth';
 
 const AuthenticatedRoute = ({ component: Component, ...rest }) => {
   const { state } = useContext(AuthContext);
+  localStorage.setItem('visitedRoute', window.location.pathname);
 
   return (
     <Route
@@ -23,6 +24,7 @@ const AuthenticatedRoute = ({ component: Component, ...rest }) => {
 
 const UnauthenticatedRoute = ({ component: Component, ...rest }) => {
   const { state } = useContext(AuthContext);
+  const visitedRoute = localStorage.getItem('visitedRoute');
 
   return (
     <Route
@@ -31,7 +33,7 @@ const UnauthenticatedRoute = ({ component: Component, ...rest }) => {
         !state.isAuthenticated ? (
           <Component { ...props } />
         ) : (
-          <Redirect to={{ pathname: '/' }} />
+          <Redirect to={{ pathname: visitedRoute }} />
         )
       }
     />
