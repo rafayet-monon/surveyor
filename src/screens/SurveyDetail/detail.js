@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import { DetailsContext } from 'contexts/details';
-import backIcon from 'images/back-button-white.png';
+import backIcon from 'images/back-button-white.svg';
 
 const Detail = () => {
   const detailsContext = useContext(DetailsContext);
