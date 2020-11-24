@@ -1,4 +1,6 @@
 .questions {
+  display: flex;
+  flex-flow: column;
   width: 100vw;
   height: 100vh;
 
@@ -6,7 +8,7 @@
     @include header-container();
     height: rem(60px);
 
-    padding: rem(16px 16px 0);
+    padding: rem(32px 32px 0);
   }
 
   &__quit-survey {
@@ -21,7 +23,6 @@
     position: relative;
 
     flex: 1 1 auto;
-    height: calc(100vh - #{rem(135px)});
   }
 
   &__details {
@@ -47,11 +48,9 @@
 
   &__footer {
     display: flex;
-    flex: 0 1 auto;
+    flex: 0 1 rem(88px);
     width: 100%;
-    height: rem(75px);
-    padding-right: rem(16px);
-    padding-left: rem(16px);
+    padding-right: rem(32px);
   }
 
   &__navigation {
