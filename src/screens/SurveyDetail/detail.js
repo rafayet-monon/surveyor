@@ -13,7 +13,7 @@ const Detail = () => {
   return (
     <div className="survey-detail">
       <div className="survey-detail__header">
-        <div className="survey-detail__header-left">
+        <div className="survey-detail__back-action">
           <button className="button" onClick={ goBack }>
             <img
               src={ backIcon }
@@ -35,9 +35,7 @@ const Detail = () => {
         <p className="survey-detail__subtitle">
           { detailsContext.attributes.description }
         </p>
-        <div className="survey-detail__start-survey">
-          <button className="button button--primary">Start Survey</button>
-        </div>
+        <button className="button button--primary survey-detail__action">Start Survey</button>
       </div>
     </div>
   );
