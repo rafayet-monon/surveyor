@@ -25,10 +25,7 @@ const Questions = () => {
       </div>
 
       <div className="questions__footer">
-        <div
-          className="questions__next-question"
-          role="presentation"
-        >
+        <div className="questions__next-question" role="presentation">
           <img src={ nextIcon } alt="next question" />
         </div>
       </div>

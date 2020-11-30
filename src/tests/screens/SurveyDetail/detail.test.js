@@ -22,7 +22,9 @@ describe('When Detail component is mounted', () => {
         </DetailsContext.Provider>
       </Router>
     );
-    const surveyImage = container.querySelector('img[class="survey-detail__image"]');
+    const surveyImage = container.querySelector(
+      'img[class="survey-detail__image"]'
+    );
 
     expect(surveyImage).not.toBe(null);
   });
