@@ -7,14 +7,14 @@ const SubmitLoginForm = (email, password, container) => {
 
   fireEvent.change(email_field, {
     target: {
-      value: email,
-    },
+      value: email
+    }
   });
 
   fireEvent.change(password_field, {
     target: {
-      value: password,
-    },
+      value: password
+    }
   });
   fireEvent.click(submit);
 };

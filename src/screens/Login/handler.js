@@ -15,7 +15,7 @@ const Handler = () => {
         email: values.email,
         password: values.password,
         client_id: process.env.REACT_APP_CLIENT_ID,
-        client_secret: process.env.REACT_APP_CLIENT_SECRET,
+        client_secret: process.env.REACT_APP_CLIENT_SECRET
       })
         .then(function (response) {
           if (response.status === 200) {
@@ -27,7 +27,7 @@ const Handler = () => {
         .then((resData) => {
           dispatch({
             type: 'AUTH',
-            payload: resData.data,
+            payload: resData.data
           });
         });
     } catch (error) {
@@ -42,7 +42,7 @@ const Handler = () => {
   return {
     handleSubmit,
     requestSuccess,
-    error,
+    error
   };
 };
 

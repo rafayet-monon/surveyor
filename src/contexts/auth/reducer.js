@@ -7,14 +7,14 @@ const AuthReducer = (state, action) => {
       return {
         ...state,
         isAuthenticated: true,
-        authorization_token: authorization_token,
+        authorization_token: authorization_token
       };
     }
     case 'REFRESH': {
       return {
         ...state,
         isAuthenticated: true,
-        authorization_token: localStorage.getItem('authorization_token'),
+        authorization_token: localStorage.getItem('authorization_token')
       };
     }
     case 'LOGOUT': {
@@ -22,7 +22,7 @@ const AuthReducer = (state, action) => {
       return {
         ...state,
         isAuthenticated: false,
-        authorization_token: null,
+        authorization_token: null
       };
     }
     default:

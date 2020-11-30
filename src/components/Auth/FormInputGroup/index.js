@@ -7,7 +7,7 @@ const FormInputGroup = ({
   inputType,
   inputId,
   name,
-  forgotPassLink,
+  forgotPassLink
 }) => {
   return (
     <div className="form-input-group">

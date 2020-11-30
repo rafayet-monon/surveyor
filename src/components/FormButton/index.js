@@ -5,7 +5,7 @@ const FormButton = ({ label, isDisabled }) => {
     <div>
       <button
         type="submit"
-        className="button button--white"
+        className="button button--primary"
         disabled={ isDisabled }
       >
         { label }

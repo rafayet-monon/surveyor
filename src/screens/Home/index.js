@@ -18,14 +18,15 @@ const Home = () => {
 
   const getList = async () => {
     try {
-      await SurveyAdapter.getList(1, authContext.state.authorization_token).then(
-        function (response) {
-          if (response.status === 200) {
-            setResponse(response.data);
-            setIsLoading(false);
-          }
+      await SurveyAdapter.getList(
+        1,
+        authContext.state.authorization_token
+      ).then(function (response) {
+        if (response.status === 200) {
+          setResponse(response.data);
+          setIsLoading(false);
         }
-      );
+      });
     } catch (error) {
       console.log(error);
     }

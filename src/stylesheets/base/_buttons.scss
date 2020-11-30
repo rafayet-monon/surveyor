@@ -1,7 +1,7 @@
 .button {
   @extend .btn;
 
-  &--white {
+  &--primary {
     align-items: center;
     width: 100%;
     height: rem(55px);

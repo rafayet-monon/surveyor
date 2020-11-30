@@ -9,12 +9,12 @@ import FormButton from 'components/FormButton';
 const LoginForm = ({ onSubmitHandler }) => {
   const initialValues = {
     email: '',
-    password: '',
+    password: ''
   };
 
   const validationSchema = Yup.object({
     email: Yup.string().email('Invalid email address').required('Required'),
-    password: Yup.string().required('Required'),
+    password: Yup.string().required('Required')
   });
   return (
     <Formik

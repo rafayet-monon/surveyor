@@ -4,7 +4,7 @@ const BackgroundReducer = (state, action) => {
       const image = action.payload;
       return {
         ...state,
-        currentBackground: image,
+        currentBackground: image
       };
     }
     default:

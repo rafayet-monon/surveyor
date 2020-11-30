@@ -5,7 +5,7 @@ import BackgroundReducer from 'contexts/background/reducer';
 const BackgroundContext = createContext();
 
 const initialState = {
-  currentBackground: null,
+  currentBackground: null
 };
 
 const BackgroundProvider = ({ children }) => {

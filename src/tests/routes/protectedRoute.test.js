@@ -9,7 +9,7 @@ import '__mocks__/matchMedia';
 import { AuthContext, AuthProvider } from 'contexts/auth';
 import {
   AuthenticatedRoute,
-  UnauthenticatedRoute,
+  UnauthenticatedRoute
 } from 'routes/protectedRoute';
 import Home from 'screens/Home';
 import Login from 'screens/Login';

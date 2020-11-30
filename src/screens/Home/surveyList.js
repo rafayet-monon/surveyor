@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
 
+import { useHistory } from 'react-router-dom';
 import Slider from 'react-slick';
 
 import SurveyAdapter from 'adapters/surveyAdapter';
@@ -13,10 +14,12 @@ const SurveyList = ({ surveyResponse }) => {
   const surveyMeta = surveyResponse.meta;
   const total_pages = surveyMeta.pages;
 
+  const history = useHistory();
   const sliderRef = useRef(null);
 
   const [currentPage, setCurrentPage] = useState(surveyMeta.page);
   const [list, setList] = useState(surveyData);
+  const [surveyId, setSurveyId] = useState(list[0].id);
   const [currentBackground, setCurrentBackground] = useState(
     list[0].attributes.cover_image_url
   );
@@ -26,7 +29,7 @@ const SurveyList = ({ surveyResponse }) => {
 
   const sliderEvents = {
     beforeChange: (current, next) => beforeSlideChange(next),
-    afterChange: (current) => afterSlideChange(current),
+    afterChange: (current) => afterSlideChange(current)
   };
   const slickConfig = { ...slickSettings, ...sliderEvents };
 
@@ -42,12 +45,17 @@ const SurveyList = ({ surveyResponse }) => {
 
     dispatch({
       type: 'SURVEY',
-      payload: currentBackground,
+      payload: currentBackground
     });
   }, [currentBackground, dispatch]);
 
+  const showDetail = () => {
+    history.push(`/survey/${surveyId}`);
+  };
+
   const beforeSlideChange = (next) => {
     setCurrentBackground(list[next].attributes.cover_image_url);
+    setSurveyId(list[next].id);
   };
 
   const afterSlideChange = () => {
@@ -75,7 +83,9 @@ const SurveyList = ({ surveyResponse }) => {
   };
 
   const slideList = (wheel) => {
-    wheel > 0 ? sliderRef.current.slickNext() : sliderRef.current.slickPrev();
+    if (sliderRef.current) {
+      wheel > 0 ? sliderRef.current.slickNext() : sliderRef.current.slickPrev();
+    }
   };
 
   return (
@@ -94,11 +104,13 @@ const SurveyList = ({ surveyResponse }) => {
                 { slide.attributes.description }
               </p>
 
-              <div className="survey-list__navigation">
-                <img
-                  src={ nextIcon }
-                  alt="navigation detail icon"
-                />
+              <div
+                className="survey-list__navigation"
+                onClick={ showDetail }
+                onKeyPress={ showDetail }
+                role="presentation"
+              >
+                <img src={ nextIcon } alt="navigation detail icon" />
               </div>
             </div>
           );
