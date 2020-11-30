@@ -65,16 +65,14 @@
     background-color: map-get($brand-white, 'primary');
     background-image: url('../../images/icons/check-icon-white.png');
   }
-}
 
-/* stylelint-disable */
-.slick-active .wheel-select {
-  &__element {
+  /* stylelint-disable */
+  .slick-active &__element {
     cursor: pointer;
   }
 
-  &__container {
+  .slick-active &__container {
     opacity: 1;
   }
+  /* stylelint-enable */
 }
-/* stylelint-enable */
