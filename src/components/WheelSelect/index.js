@@ -1,38 +1,24 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef, useState } from 'react';
 
 import Slider from 'react-slick';
 
 import slickSettings from 'components/WheelSelect/slickSettings';
 
 const WheelSelect = ({ data, multipleSelect }) => {
+  const [isClicked, setIsClicked] = useState(false);
   const sliderRef = useRef(null);
   const elementTextClass = multipleSelect
     ? 'wheel-select__text wheel-select__text--multiple-select'
     : 'wheel-select__text';
 
-  useEffect(() => {
-    const selectedElement = document.getElementById(
-      'wheel-select__container--0'
-    );
-    selectedElement.style.opacity = 1;
-
-    window.addEventListener('wheel', (e) => {
-      slideList(e.wheelDelta);
-    });
-  }, []);
+  window.addEventListener('wheel', (e) => {
+    slideList(e.wheelDelta);
+  });
 
   const beforeSlideChange = (currentSlide, nextSlide) => {
-    const nextElement = document.getElementById(
-      `wheel-select__container--${nextSlide}`
-    );
-    const currentElement = document.getElementById(
-      `wheel-select__container--${currentSlide}`
-    );
-    nextElement.style.opacity = 1;
-    nextElement.style.pointerEvents = 'auto';
-    if (currentSlide !== nextSlide) {
-      currentElement.style.opacity = 0.5;
-      currentElement.style.pointerEvents = 'none';
+    if (isClicked && multipleSelect && currentSlide === nextSlide) {
+      const checkElement = document.getElementById(`checkbox-${currentSlide}`);
+      checkElement.click();
     }
   };
 
@@ -55,7 +41,13 @@ const WheelSelect = ({ data, multipleSelect }) => {
       <Slider { ...slickConfig } ref={ sliderRef }>
         { data.map(function (element, index) {
           return (
-            <div className="wheel-select__element" key={ index }>
+            <div
+              className="wheel-select__element"
+              key={ index }
+              role={ index }
+              onClick={ () => setIsClicked(true) }
+              onKeyPress={ () => setIsClicked(true) }
+            >
               <div
                 id={ `wheel-select__container--${index}` }
                 className="wheel-select__container"
