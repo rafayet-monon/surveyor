@@ -17,7 +17,7 @@ const Questions = () => {
     { name: 'Bhutan', value: 'BH' },
     { name: 'Thailand', value: 'TH' },
     { name: 'Singapore', value: 'SG' },
-    { name: 'Vietnam', value: 'VN' },
+    { name: 'Vietnam', value: 'VN' }
   ];
 
   return (
