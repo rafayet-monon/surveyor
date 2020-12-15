@@ -11,10 +11,9 @@
   &__nav-menu {
     position: fixed;
     top: 0;
-    right: -100%;
     z-index: 1;
 
-    display: flex;
+    display: none;
     justify-content: center;
     width: rem(264px);
     height: 100vh;
@@ -27,6 +26,8 @@
 
   &__nav-menu-active {
     right: 0;
+
+    display: flex;
 
     transition: 350ms;
   }
