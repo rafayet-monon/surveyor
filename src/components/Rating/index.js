@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 const Rating = ({ initialRating, maxRating, ratingEmoji }) => {
   const [rating, setRating] = useState(initialRating);
-  const [hover, setHover] = useState(null);
   const emojiElements = [...Array(maxRating || 5)];
 
   let emoji;
@@ -34,33 +33,27 @@ const Rating = ({ initialRating, maxRating, ratingEmoji }) => {
 
   return (
     <div className="rating">
-      { emojiElements.map((_key, index) => {
-        const ratingValue = index + 1;
+      <ul className="rating__list">
+        { emojiElements.map((_key, index) => {
+          const ratingValue = index + 1;
 
-        return (
-          <label key={ index }>
-            <input
-              type="radio"
-              className="rating__radio"
-              value={ ratingValue }
-              onClick={ () => setRating(ratingValue) }
-            />
-            <span
-              role="img"
-              aria-label="emoji"
+          return (
+            <li
+              role="presentation"
+              key={ index }
               className={
-                ratingValue <= (hover || rating)
+                ratingValue <= rating
                   ? 'rating__emoji rating__emoji--selected'
                   : 'rating__emoji'
               }
-              onMouseEnter={ () => setHover(ratingValue) }
-              onMouseLeave={ () => setHover(null) }
+              onClick={ () => setRating(ratingValue) }
+              onKeyDown={ () => setRating(ratingValue) }
             >
               { emoji }
-            </span>
-          </label>
-        );
-      }) }
+            </li>
+          );
+        }) }
+      </ul>
     </div>
   );
 };

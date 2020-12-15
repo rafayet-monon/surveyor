@@ -1,21 +1,33 @@
 .rating {
   margin-top: rem(45px);
 
-  text-align: center;
+  &__list {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0;
 
-  &__radio {
-    display: none;
+    list-style: none;
   }
 
   &__emoji {
+    display: inline;
+
     font-size: map-get($font-sizes, 'xxl');
     line-height: rem(34px);
-    letter-spacing: rem(10px);
+    letter-spacing: rem(16px);
 
     cursor: pointer;
     opacity: 0.5;
 
     transition: color 200ms;
+  }
+
+  &__list:hover > &__emoji {
+    opacity: 1;
+  }
+
+  &__list > &__emoji:hover ~ &__emoji {
+    opacity: 0.5;
   }
 
   &__emoji--selected {
