@@ -36,7 +36,7 @@ const Sidebar = () => {
             <span className="sidebar__nav-menu-image">
               <img
                 src={ userImage }
-                alt="USER"
+                alt="USER-NAV"
                 className="sidebar__user-image"
                 onClick={ showSidebar }
                 onKeyDown={ showSidebar }
