@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react';
 
+import AuthAdapter from 'adapters/authAdapter';
 import { AuthContext } from 'contexts/auth';
-import Api from 'utils/Api';
 
 const Handler = () => {
   const [requestSuccess, setRequestSuccess] = useState(false);
@@ -10,13 +10,7 @@ const Handler = () => {
 
   const handleSubmit = async (values) => {
     try {
-      await Api.post('api/v1/oauth/token', {
-        grant_type: 'password',
-        email: values.email,
-        password: values.password,
-        client_id: process.env.REACT_APP_CLIENT_ID,
-        client_secret: process.env.REACT_APP_CLIENT_SECRET
-      })
+      await AuthAdapter.login(values.email, values.password)
         .then(function (response) {
           if (response.status === 200) {
             setRequestSuccess(true);
