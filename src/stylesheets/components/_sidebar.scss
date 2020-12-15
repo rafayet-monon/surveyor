@@ -1,0 +1,77 @@
+.sidebar {
+  &__user-image {
+    width: rem(36px);
+    height: rem(36px);
+
+    border-radius: 50%;
+
+    cursor: pointer;
+  }
+
+  &__nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+    width: rem(264px);
+    height: 100vh;
+
+    background-color: map-get($brand-black, 'lighter');
+    backdrop-filter: blur(rem(82px));
+
+    transition: 850ms;
+  }
+
+  &__nav-menu-active {
+    right: 0;
+
+    transition: 350ms;
+  }
+
+  &__nav-menu-items {
+    width: 100%;
+    margin: rem(32px);
+    padding: 0;
+
+    list-style: none;
+  }
+
+  &__nav-menu-information {
+    display: flex;
+    align-items: center;
+    height: rem(36px);
+    margin-bottom: rem(20px);
+  }
+
+  &__nav-menu-username {
+    color: map-get($brand-white, 'primary');
+    font-weight: map-get($font-weight, 'bolder');
+    font-size: map-get($font-sizes, 'xl');
+    line-height: rem(28px);
+  }
+
+  &__nav-menu-image {
+    margin-left: auto;
+  }
+
+  &__nav-menu-line {
+    border-top: 0.5px solid map-get($brand-white, 'primary');
+    opacity: 0.2;
+  }
+
+  &__nav-menu-logout {
+    margin-top: rem(35px);
+
+    color: map-get($brand-white, 'primary');
+    font-weight: map-get($font-weight, 'normal');
+    font-size: map-get($font-sizes, 'lg');
+    line-height: rem(25px);
+
+    cursor: pointer;
+
+    opacity: 0.5;
+  }
+}
