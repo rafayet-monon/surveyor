@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Field } from 'formik';
+import { NavLink } from 'react-router-dom';
 
 const FormInputGroup = ({
   label,
@@ -23,9 +24,12 @@ const FormInputGroup = ({
         />
       </div>
       { forgotPassLink && (
-        <a href="/" className="form-input-group__forgot-password">
+        <NavLink
+          to="/forgot-password"
+          className="form-input-group__forgot-password"
+        >
           Forgot?
-        </a>
+        </NavLink>
       ) }
     </div>
   );

@@ -1,8 +1,10 @@
 import React from 'react';
 
-import { render } from '@testing-library/react';
+import { render, wait } from '@testing-library/react';
 
+import { AuthProvider } from 'contexts/auth';
 import ForgotPasswordForm from 'screens/ForgotPassword/forgotPasswordForm';
+import SubmitForgotPasswordForm from 'tests/shared_examples/submitForgotPasswordForm';
 
 describe('When the forgot password form is mounted', () => {
   it('shows email label', () => {
@@ -29,5 +31,37 @@ describe('When the forgot password form is mounted', () => {
 
     expect(formButton).toBeInTheDocument();
     expect(formLabel).toBeInTheDocument();
+  });
+
+  describe('When the forgot password form is submitted', () => {
+    it('shows validation error if no email given', async () => {
+      const mockEmail = '';
+      const emailRequired = 'Required';
+      const { container, findByText } = render(
+        <AuthProvider>
+          <ForgotPasswordForm />
+        </AuthProvider>
+      );
+
+      SubmitForgotPasswordForm(mockEmail, container);
+
+      const errorTitle = await findByText(emailRequired);
+      expect(errorTitle).toBeInTheDocument();
+    });
+
+    test('submits form with email', async () => {
+      const handleSubmit = jest.fn();
+      const mockEmail = 'mock@surveyor.com';
+      const { container } = render(
+        <AuthProvider>
+          <ForgotPasswordForm onSubmitHandler={ handleSubmit } />
+        </AuthProvider>
+      );
+      SubmitForgotPasswordForm(mockEmail, container);
+
+      await wait(() => {
+        expect(handleSubmit).toHaveBeenCalledTimes(1);
+      });
+    });
   });
 });

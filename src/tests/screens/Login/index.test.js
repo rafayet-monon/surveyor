@@ -12,11 +12,15 @@ import SubmitLoginForm from 'tests/shared_examples/submitLoginForm';
 
 describe('When visited the Login Page', () => {
   const logoLabel = 'Sign in to Nimble';
+  const history = createMemoryHistory();
+
   it('shows a background image', () => {
     const { getByLabelText } = render(
-      <AuthProvider>
-        <Login />
-      </AuthProvider>
+      <Router history={ history }>
+        <AuthProvider>
+          <Login />
+        </AuthProvider>
+      </Router>
     );
     const imageDiv = getByLabelText('page-background-image');
 
@@ -25,9 +29,11 @@ describe('When visited the Login Page', () => {
 
   it('shows a logo label', () => {
     const { getByText } = render(
-      <AuthProvider>
-        <Login />
-      </AuthProvider>
+      <Router history={ history }>
+        <AuthProvider>
+          <Login />
+        </AuthProvider>
+      </Router>
     );
     const labelText = getByText(logoLabel);
 
@@ -42,9 +48,11 @@ describe('When visited the Login Page', () => {
     const mockPass = 'mockpass';
     const loginError = 'Unable to login';
     const { container, findByText } = render(
-      <AuthProvider>
-        <Login />
-      </AuthProvider>
+      <Router history={ history }>
+        <AuthProvider>
+          <Login />
+        </AuthProvider>
+      </Router>
     );
     SubmitLoginForm(mockEmail, mockPass, container);
 
@@ -56,7 +64,6 @@ describe('When visited the Login Page', () => {
     mockAxios.post.mockImplementation(() =>
       Promise.resolve({ status: 200, data: {} })
     );
-    const history = createMemoryHistory();
     const state = { isAuthenticated: true };
     const dispatch = null;
 

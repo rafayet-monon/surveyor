@@ -1,19 +1,25 @@
 import React from 'react';
 
 import { render, wait } from '@testing-library/react';
+import { createMemoryHistory } from 'history';
+import { Router } from 'react-router-dom';
 
 import { AuthProvider } from 'contexts/auth';
 import LoginForm from 'screens/Login/loginForm';
 import SubmitLoginForm from 'tests/shared_examples/submitLoginForm';
 
 describe('When the Login Form is mounted', () => {
+  const history = createMemoryHistory();
+
   it('shows email and password label', () => {
     const emailLabel = 'Email';
     const passwordLabel = 'Password';
     const { getByLabelText } = render(
-      <AuthProvider>
-        <LoginForm />
-      </AuthProvider>
+      <Router history={ history }>
+        <AuthProvider>
+          <LoginForm />
+        </AuthProvider>
+      </Router>
     );
     const emailInputLabel = getByLabelText(emailLabel);
     const passInputLabel = getByLabelText(passwordLabel);
@@ -26,9 +32,11 @@ describe('When the Login Form is mounted', () => {
     const emailType = 'email';
     const passwordType = 'password';
     const { getByRole } = render(
-      <AuthProvider>
-        <LoginForm />
-      </AuthProvider>
+      <Router history={ history }>
+        <AuthProvider>
+          <LoginForm />
+        </AuthProvider>
+      </Router>
     );
     const emailInputType = getByRole('textbox', { type: emailType });
     const passInputType = getByRole('textbox', { type: passwordType });
@@ -40,9 +48,11 @@ describe('When the Login Form is mounted', () => {
   it('shows submit button', () => {
     const label = 'Sign in';
     const { getByRole, getByText } = render(
-      <AuthProvider>
-        <LoginForm />
-      </AuthProvider>
+      <Router history={ history }>
+        <AuthProvider>
+          <LoginForm />
+        </AuthProvider>
+      </Router>
     );
     const formButton = getByRole('button', { type: 'submit' });
     const formLabel = getByText(label);
@@ -57,9 +67,11 @@ describe('When the Login Form is mounted', () => {
       const mockPass = 'mockpass';
       const emailRequired = 'Required';
       const { container, findByText } = render(
-        <AuthProvider>
-          <LoginForm />
-        </AuthProvider>
+        <Router history={ history }>
+          <AuthProvider>
+            <LoginForm />
+          </AuthProvider>
+        </Router>
       );
 
       SubmitLoginForm(mockEmail, mockPass, container);
@@ -73,9 +85,11 @@ describe('When the Login Form is mounted', () => {
       const mockPass = '';
       const passwordRequired = 'Required';
       const { container, findByText } = render(
-        <AuthProvider>
-          <LoginForm />
-        </AuthProvider>
+        <Router history={ history }>
+          <AuthProvider>
+            <LoginForm />
+          </AuthProvider>
+        </Router>
       );
 
       SubmitLoginForm(mockEmail, mockPass, container);
@@ -89,9 +103,11 @@ describe('When the Login Form is mounted', () => {
       const mockEmail = 'mock@surveyor.com';
       const mockPass = '123123';
       const { container } = render(
-        <AuthProvider>
-          <LoginForm onSubmitHandler={ handleSubmit } />
-        </AuthProvider>
+        <Router history={ history }>
+          <AuthProvider>
+            <LoginForm onSubmitHandler={ handleSubmit } />
+          </AuthProvider>
+        </Router>
       );
       SubmitLoginForm(mockEmail, mockPass, container);
 

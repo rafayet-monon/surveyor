@@ -2,18 +2,6 @@
   width: 100vw;
   height: 100vh;
 
-  &__header {
-    @include header-container();
-
-    padding: rem(16px 16px 0);
-  }
-
-  &__back-action {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
   &__description {
     @include details-container();
     position: relative;

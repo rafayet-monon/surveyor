@@ -1,0 +1,11 @@
+.back-button {
+  @include header-container();
+
+  padding: rem(16px 16px 0);
+
+  &__back-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

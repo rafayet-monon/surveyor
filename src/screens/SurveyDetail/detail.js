@@ -1,17 +1,13 @@
 import React, { useContext } from 'react';
 
-import { useHistory } from 'react-router-dom';
-
+import BackButton from 'components/BackButton';
 import * as Constants from 'constants/surveyStatus';
 import { DetailsContext } from 'contexts/details';
 import { SurveyStatusContext } from 'contexts/surveyStatus';
-import backIcon from 'images/back-button-white.svg';
 
 const Detail = () => {
   const detailsContext = useContext(DetailsContext);
   const { dispatch } = useContext(SurveyStatusContext);
-  const history = useHistory();
-  const goBack = () => history.push('/');
 
   const startSurvey = () => {
     dispatch({
@@ -21,17 +17,7 @@ const Detail = () => {
 
   return (
     <div className="survey-detail">
-      <div className="survey-detail__header">
-        <div className="survey-detail__back-action">
-          <button className="button" onClick={ goBack }>
-            <img
-              src={ backIcon }
-              alt="close"
-              className="survey-detail__back-icon"
-            />
-          </button>
-        </div>
-      </div>
+      <BackButton />
       <div className="survey-detail__description">
         <img
           className="survey-detail__image"
