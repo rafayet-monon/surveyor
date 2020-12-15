@@ -23,6 +23,7 @@
 @import 'components/validation-error';
 @import 'components/loader-header';
 @import 'components/loader-details';
+@import 'components/wheel-select';
 // Screens
 @import 'screens/login';
 @import 'screens/forgot-password';
@@ -31,3 +32,4 @@
 @import 'screens/blank-slate';
 @import 'screens/survey-list';
 @import 'screens/survey-detail';
+@import 'screens/question';

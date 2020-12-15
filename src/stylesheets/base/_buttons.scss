@@ -8,7 +8,7 @@
 
     color: map-get($brand-gray, 'transparent');
     font-weight: map-get($font-weight, 'bolder');
-    font-size: map-get($font-sizes, 'lg');
+    font-size: map-get($font-sizes, 'md');
 
     background: map-get($brand-white, 'primary');
     border-radius: rem(10px);
@@ -20,5 +20,9 @@
 
     background: map-get($brand-white, 'primary');
     border-radius: 50%;
+  }
+
+  &--circle-transparent {
+    background: transparent;
   }
 }

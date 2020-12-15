@@ -6,6 +6,7 @@ import { createMemoryHistory } from 'history';
 import { Router } from 'react-router-dom';
 
 import { DetailsContext } from 'contexts/details';
+import { SurveyStatusProvider } from 'contexts/surveyStatus';
 import Detail from 'screens/SurveyDetail/detail';
 import SurveyDetailResponse from 'tests/fixtures/surveyDetailResponse.json';
 
@@ -15,7 +16,9 @@ describe('When Detail component is mounted', () => {
     const { container } = render(
       <Router history={ history }>
         <DetailsContext.Provider value={ SurveyDetailResponse.data }>
-          <Detail />
+          <SurveyStatusProvider>
+            <Detail />
+          </SurveyStatusProvider>
         </DetailsContext.Provider>
       </Router>
     );
@@ -29,7 +32,9 @@ describe('When Detail component is mounted', () => {
     const { getByText } = render(
       <Router history={ history }>
         <DetailsContext.Provider value={ SurveyDetailResponse.data }>
-          <Detail />
+          <SurveyStatusProvider>
+            <Detail />
+          </SurveyStatusProvider>
         </DetailsContext.Provider>
       </Router>
     );
@@ -44,7 +49,9 @@ describe('When Detail component is mounted', () => {
     const { getByText } = render(
       <Router history={ history }>
         <DetailsContext.Provider value={ SurveyDetailResponse.data }>
-          <Detail />
+          <SurveyStatusProvider>
+            <Detail />
+          </SurveyStatusProvider>
         </DetailsContext.Provider>
       </Router>
     );

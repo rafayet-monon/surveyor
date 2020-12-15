@@ -9,6 +9,7 @@ $brand-white: (
 );
 
 $brand-gray: (
+  primary: hsl(240, 5%, 79%),
   transparent: hsla(0, 0%, 15%, 0.6)
 );
 
@@ -18,13 +19,14 @@ $brand-red: (
 
 // Font Size
 $font-sizes: (
-  sm: 0.8125rem,
-  md: 0.9375rem,
-  lg: 1.0625rem,
-  xl: 1.375rem,
-  xxl: 1.75rem,
-  xxxl: 2.125rem,
-  xxxxl: 4rem
+  xsm: 0.8125rem, // 13px
+  sm: 0.9375rem,  // 15px
+  md: 1.0625rem,  // 17px
+  lg: 1.25rem,    // 20px
+  xl: 1.375rem,   // 22px
+  xxl: 1.75rem,   // 28px
+  xxxl: 2.125rem, // 34px
+  xxxxl: 4rem     // 64px
 );
 
 // Font Weight
