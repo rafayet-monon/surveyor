@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 const NetPromotingScore = ({ start, end }) => {
-  const [hover, setHover] = useState(null);
   const startScore = start || 1;
   const endScore = end || 10;
   const [nps, setNps] = useState(Math.ceil((startScore + endScore) / 2));
@@ -12,38 +11,33 @@ const NetPromotingScore = ({ start, end }) => {
 
   return (
     <div className="np-score">
-      <div className="np-score__number-container">
+      <ul className="np-score__number-container">
         { scoreElements.map((score, index) => {
           const ratingValue = index + 1;
 
           return (
-            <label
-              key={ index }
+
+          <li
+            role="presentation"
+            key={ index }
+            className={
+              ratingValue === scoreElements.length
+                ? 'np-score__number-label np-score__number-label--no-border'
+                : 'np-score__number-label'
+            }
+            onClick={ () => setNps(score) }
+            onKeyDown={ () => setNps(score) }
+          >
+            <p
               className={
-                ratingValue === scoreElements.length
-                  ? 'np-score__number-label np-score__number-label--no-border'
-                  : 'np-score__number-label'
+                ratingValue <= nps
+                  ? 'np-score__number np-score__number--selected'
+                  : 'np-score__number'
               }
             >
-              <input
-                type="radio"
-                className="np-score__radio"
-                value={ score }
-                onClick={ () => setNps(score) }
-              />
-
-              <p
-                className={
-                  ratingValue <= (hover || nps)
-                    ? 'np-score__number np-score__number--selected'
-                    : 'np-score__number'
-                }
-                onMouseEnter={ () => setHover(score) }
-                onMouseLeave={ () => setHover(null) }
-              >
-                { score }
-              </p>
-            </label>
+              { score }
+            </p>
+          </li>
           );
         }) }
         <div className="np-score__identifier">
@@ -54,7 +48,7 @@ const NetPromotingScore = ({ start, end }) => {
             <p>Extremely Likely</p>
           </div>
         </div>
-      </div>
+      </ul>
     </div>
   );
 };

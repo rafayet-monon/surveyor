@@ -1,8 +1,6 @@
 import React from 'react';
 
 import NetPromotingScore from 'components/NetPromotingScore';
-// import Rating from 'components/Rating';
-// import WheelSelect from 'components/WheelSelect';
 import closeIcon from 'images/close-button-white.svg';
 import nextIcon from 'images/next-button-black.svg';
 

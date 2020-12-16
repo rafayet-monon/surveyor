@@ -3,25 +3,24 @@
 
   text-align: center;
 
-  &__radio {
-    display: none;
-  }
-
   &__number-container {
-    width: max-content;
+    width: fit-content;
     height: rem(56px);
-    margin-right: auto;
-    margin-left: auto;
+    margin: 0 auto;
+    padding: 0;
 
-    border: rem(0.5px) solid map-get($brand-white, 'primary');
+    list-style: none;
+
+    border: 0.5px solid map-get($brand-white, 'primary');
     border-radius: rem(12px);
   }
 
   &__number-label {
+    display: inline-block;
     height: rem(55px);
     margin: 0;
 
-    border-right: rem(0.5px) solid map-get($brand-white, 'primary');
+    border-right: 0.5px solid map-get($brand-white, 'primary');
   }
 
   &__number-label--no-border {
@@ -40,6 +39,14 @@
     opacity: 0.5;
 
     transition: color 200ms;
+  }
+
+  &__number-container:hover > &__number-label &__number {
+    opacity: 1;
+  }
+
+  &__number-container > &__number-label:hover ~ &__number-label &__number {
+    opacity: 0.5;
   }
 
   &__number--selected {
