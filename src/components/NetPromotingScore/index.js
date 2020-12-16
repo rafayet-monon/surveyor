@@ -16,28 +16,27 @@ const NetPromotingScore = ({ start, end }) => {
           const ratingValue = index + 1;
 
           return (
-
-          <li
-            role="presentation"
-            key={ index }
-            className={
-              ratingValue === scoreElements.length
-                ? 'np-score__number-label np-score__number-label--no-border'
-                : 'np-score__number-label'
-            }
-            onClick={ () => setNps(score) }
-            onKeyDown={ () => setNps(score) }
-          >
-            <p
+            <li
+              role="presentation"
+              key={ index }
               className={
-                ratingValue <= nps
-                  ? 'np-score__number np-score__number--selected'
-                  : 'np-score__number'
+                ratingValue === scoreElements.length
+                  ? 'np-score__number-label np-score__number-label--no-border'
+                  : 'np-score__number-label'
               }
+              onClick={ () => setNps(score) }
+              onKeyDown={ () => setNps(score) }
             >
-              { score }
-            </p>
-          </li>
+              <p
+                className={
+                  ratingValue <= nps
+                    ? 'np-score__number np-score__number--selected'
+                    : 'np-score__number'
+                }
+              >
+                { score }
+              </p>
+            </li>
           );
         }) }
         <div className="np-score__identifier">

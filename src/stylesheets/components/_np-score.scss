@@ -45,7 +45,7 @@
     opacity: 1;
   }
 
-  &__number-container > &__number-label:hover ~ &__number-label &__number {
+  &__number-container > &__number-label:hover ~ &__number-label &__number { /* stylelint-disable-line */
     opacity: 0.5;
   }
 
