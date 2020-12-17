@@ -45,10 +45,12 @@
     opacity: 1;
   }
 
-  &__number, /* stylelint-disable-line */
+  /* stylelint-disable */
+  &__number,
   &__number-container > &__number-label:hover ~ &__number-label &__number {
     opacity: 0.5;
   }
+  /* stylelint-enable */
 
   &__identifier {
     @include make-row();
