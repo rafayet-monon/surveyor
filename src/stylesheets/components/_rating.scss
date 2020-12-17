@@ -17,20 +17,17 @@
     letter-spacing: rem(16px);
 
     cursor: pointer;
-    opacity: 0.5;
 
     transition: color 200ms;
   }
 
-  &__list:hover > &__emoji {
-    opacity: 1;
-  }
-
-  &__list > &__emoji:hover ~ &__emoji {
-    opacity: 0.5;
-  }
-
+  &__list:hover > &__emoji,
   &__emoji--selected {
     opacity: 1;
+  }
+
+  &__emoji,
+  &__list > &__emoji:hover ~ &__emoji {
+    opacity: 0.5;
   }
 }
