@@ -1,25 +1,11 @@
 import React from 'react';
 
-import WheelSelect from 'components/WheelSelect';
+import Rating from 'components/Rating';
 import closeIcon from 'images/close-button-white.svg';
 import nextIcon from 'images/next-button-black.svg';
 
 const Questions = () => {
   const question = 'How fulfilled did you feel during this WFH period?';
-  const data = [
-    {
-      display: 'Very fulfilled',
-      value: 0
-    },
-    {
-      display: 'Somewhat fulfilled',
-      value: 1
-    },
-    {
-      display: 'Unfulfilled',
-      value: 1
-    }
-  ];
 
   return (
     <div className="questions">
@@ -33,15 +19,12 @@ const Questions = () => {
         <div className="questions__details">
           <div className="questions__number">1/5</div>
           <h1 className="questions__title"> { question }</h1>
-          <WheelSelect data={ data } multipleSelect={ true } />
+          <Rating initialRating={ 3 } maxRating={ 5 } ratingEmoji="smiley" />
         </div>
       </div>
 
       <div className="questions__footer">
-        <div
-          className="questions__next-question"
-          role="presentation"
-        >
+        <div className="questions__next-question" role="presentation">
           <img src={ nextIcon } alt="next question" />
         </div>
       </div>
