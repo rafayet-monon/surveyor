@@ -2,7 +2,7 @@
   position: relative;
 
   &__value {
-    height: rem(55px);
+    height: rem(56px);
   }
 
   &__value::after {
@@ -27,7 +27,7 @@
   &__input {
     @extend .input;
 
-    height: rem(55px);
+    height: 100%;
   }
 
   &__select {

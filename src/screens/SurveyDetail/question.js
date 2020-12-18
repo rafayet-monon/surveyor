@@ -1,13 +1,11 @@
 import React from 'react';
 
 import SurveySelectField from 'components/SurveySelectField';
-// import SurveyTextAreaField from 'components/SurveyTextAreaField';
-// import SurveyTextField from 'components/SurveyTextField';
-// import NetPromotingScore from 'components/NetPromotingScore';
-// import ThumbRating from 'components/ThumbRating';
-// import WheelSelect from 'components/WheelSelect';
+import SurveyTextAreaField from 'components/SurveyTextAreaField';
+import SurveyTextField from 'components/SurveyTextField';
 import closeIcon from 'images/close-button-white.svg';
 import nextIcon from 'images/next-button-black.svg';
+
 const Questions = () => {
   const question = 'How fulfilled did you feel during this WFH period?';
   const options = [
@@ -33,6 +31,8 @@ const Questions = () => {
           <div className="questions__number">1/5</div>
           <h1 className="questions__title"> { question }</h1>
           <SurveySelectField options={ options } />
+          <SurveyTextAreaField />
+          <SurveyTextField />
         </div>
       </div>
 
