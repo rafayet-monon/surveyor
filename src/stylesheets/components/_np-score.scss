@@ -1,0 +1,77 @@
+.np-score {
+  margin-top: rem(45px);
+
+  text-align: center;
+
+  &__number-container {
+    width: fit-content;
+    height: rem(56px);
+    margin: 0 auto;
+    padding: 0;
+
+    list-style: none;
+
+    border: 1px solid map-get($brand-white, 'primary');
+    border-radius: rem(12px);
+  }
+
+  &__number-label {
+    display: inline-block;
+    height: rem(55px);
+    margin: 0;
+
+    border-right: 1px solid map-get($brand-white, 'primary');
+  }
+
+  &__number-label:last-of-type {
+    border-right: 0;
+  }
+
+  &__number {
+    margin: rem(15px 13px);
+
+    color: map-get($brand-white, 'primary');
+    font-weight: map-get($font-weight, 'bolder');
+    font-size: rem(20px);
+    line-height: rem(25px);
+
+    cursor: pointer;
+
+    transition: color 200ms;
+  }
+
+  &__number-container:hover > &__number-label &__number,
+  &__number--selected {
+    opacity: 1;
+  }
+
+  /* stylelint-disable */
+  &__number,
+  &__number-container > &__number-label:hover ~ &__number-label &__number {
+    opacity: 0.5;
+  }
+  /* stylelint-enable */
+
+  &__identifier {
+    @include make-row();
+
+    margin-top: rem(15px);
+    padding: rem(0 15px);
+  }
+
+  &__low-score,
+  &__high-score {
+    @include make-col(6);
+
+    color: map-get($brand-white, 'primary');
+    text-align: center;
+  }
+
+  &__low-score {
+    padding-left: rem(70px);
+  }
+
+  &__high-score {
+    padding-right: rem(70px);
+  }
+}
