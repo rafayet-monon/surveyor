@@ -15,8 +15,8 @@
     margin-right: rem(20px);
     margin-left: auto;
 
-    border-right: rem(1px) solid map-get($brand-white, 'primary');
-    border-bottom: rem(1px) solid map-get($brand-white, 'primary');
+    border-right: 1px solid map-get($brand-white, 'primary');
+    border-bottom: 1px solid map-get($brand-white, 'primary');
 
     transform: rotate(45deg);
 
@@ -35,12 +35,12 @@
 
     width: 100%;
 
-    max-height: 180px;
+    max-height: rem(180px);
     overflow: auto;
 
     background: rgba(255, 255, 255, 0.18);
-    border-radius: 12px;
-    box-shadow: 0 rem(1px) rem(2px) map-get($brand-gray, 'transparent');
+    border-radius: rem(12px);
+    box-shadow: 0 1px 2px map-get($brand-gray, 'transparent');
   }
 
   &__options {
@@ -66,6 +66,6 @@
   }
 
   &__row:not(:first-child) {
-    border-top: rem(1px) solid map-get($brand-gray, 'transparent');
+    border-top: 1px solid map-get($brand-gray, 'transparent');
   }
 }
