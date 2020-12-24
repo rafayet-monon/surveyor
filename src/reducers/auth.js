@@ -1,9 +1,18 @@
+import LocalStorage from 'services/localStorage';
+
 const AuthReducer = (state, action) => {
+  const localStorageService = LocalStorage.getService();
+
   switch (action.type) {
     case 'AUTH': {
-      const { access_token, token_type } = action.payload.attributes;
+      const {
+        access_token,
+        token_type,
+        refresh_token
+      } = action.payload.attributes;
       const authorization_token = `${token_type} ${access_token}`;
-      localStorage.setItem('authorization_token', authorization_token);
+      localStorageService.setToken(authorization_token, refresh_token);
+
       return {
         ...state,
         isAuthenticated: true,
@@ -14,11 +23,11 @@ const AuthReducer = (state, action) => {
       return {
         ...state,
         isAuthenticated: true,
-        authorization_token: localStorage.getItem('authorization_token')
+        authorization_token: localStorageService.getAuthToken()
       };
     }
     case 'LOGOUT': {
-      localStorage.clear();
+      localStorageService.clearToken();
       return {
         ...state,
         isAuthenticated: false,
