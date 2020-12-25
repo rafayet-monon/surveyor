@@ -1,11 +1,22 @@
 import React from 'react';
 
-import NetPromotingScore from 'components/NetPromotingScore';
+import SurveySelectField from 'components/SurveySelectField';
+import SurveyTextAreaField from 'components/SurveyTextAreaField';
+import SurveyTextField from 'components/SurveyTextField';
 import closeIcon from 'images/close-button-white.svg';
 import nextIcon from 'images/next-button-black.svg';
 
 const Questions = () => {
   const question = 'How fulfilled did you feel during this WFH period?';
+  const options = [
+    { name: 'Bangladesh', value: 'BD' },
+    { name: 'India', value: 'IN' },
+    { name: 'Nepal', value: 'NP' },
+    { name: 'Bhutan', value: 'BH' },
+    { name: 'Thailand', value: 'TH' },
+    { name: 'Singapore', value: 'SG' },
+    { name: 'Vietnam', value: 'VN' }
+  ];
 
   return (
     <div className="questions">
@@ -19,7 +30,9 @@ const Questions = () => {
         <div className="questions__details">
           <div className="questions__number">1/5</div>
           <h1 className="questions__title"> { question }</h1>
-          <NetPromotingScore start={ 1 } end={ 10 } />
+          <SurveySelectField options={ options } />
+          <SurveyTextAreaField />
+          <SurveyTextField />
         </div>
       </div>
 
