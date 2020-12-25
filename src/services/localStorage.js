@@ -22,8 +22,7 @@ const LocalStorage = (() => {
   }
 
   function _clearToken() {
-    localStorage.removeItem('authorization_token');
-    localStorage.removeItem('refresh_token');
+    localStorage.clear();
   }
 
   return {
