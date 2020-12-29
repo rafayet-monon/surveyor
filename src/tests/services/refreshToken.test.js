@@ -1,43 +1,55 @@
 import mockAxios from 'axios';
 
+import LocalStorage from 'services/localStorage';
 import RefreshToken from 'services/refreshToken';
 import RefreshTokenResponse from 'tests/fixtures/refreshTokenResponse.json';
 
 describe('when refresh token is performed', () => {
-  beforeEach(() => {
-    localStorage.clear();
-  });
-
   delete window.location;
-  window.location = { reload: jest.fn() };
+  window.location = { href: jest.fn() };
 
-  it('renders the login page if refresh token is not successful', async () => {
-    mockAxios.post.mockImplementation(() =>
-      Promise.resolve({ data: null, status: 400 })
-    );
+  describe('if refresh token is missing', () => {
+    beforeEach(async () => {
+      mockAxios.post.mockImplementation(() =>
+        Promise.resolve({ data: null, status: 400 })
+      );
+    });
 
-    RefreshToken();
+    it('renders the login page', async () => {
+      await RefreshToken();
 
-    expect(localStorage.__STORE__['authorization_token']).toBe(undefined);
-    expect(localStorage.__STORE__['refresh_token']).toBe(undefined);
-  });
+      expect(window.location.href).toBe('/login');
+    });
 
-  it('updates storage with new token if refresh token is successful', async () => {
-    const refreshToken = RefreshTokenResponse.data.attributes.refresh_token;
-    const accessToken = RefreshTokenResponse.data.attributes.access_token;
-    mockAxios.post.mockImplementation(() =>
-      Promise.resolve({ data: RefreshTokenResponse, status: 200 })
-    );
+    it('the tokens in the storage are cleared', async () => {
+      const localStorageService = LocalStorage.getService();
+      localStorageService.setToken('mock', 'mock');
+      await RefreshToken();
 
-    RefreshToken();
+      expect(localStorage.getItem('authorization_token')).toBe(null);
+      expect(localStorage.getItem('refresh_token')).toBe(null);
+    });
+  })
 
-    expect(localStorage.setItem).not.toHaveBeenLastCalledWith(
-      'refresh_token',
-      refreshToken
-    );
-    expect(localStorage.setItem).not.toHaveBeenLastCalledWith(
-      'authorization_token',
-      accessToken
-    );
-  });
+  describe('if refresh token is valid', () => {
+    beforeEach(async () => {
+      mockAxios.post.mockImplementation(() =>
+        Promise.resolve({ data: RefreshTokenResponse, status: 200 })
+      );
+
+      await RefreshToken();
+    });
+
+    it('renders the home page', () => {
+      expect(window.location.href).toBe('/');
+    });
+
+    it('updates the storage with new tokens', () => {
+      const refreshToken = RefreshTokenResponse.data.attributes.refresh_token;
+      const accessToken = RefreshTokenResponse.data.attributes.access_token;
+
+      expect(localStorage.getItem('authorization_token')).toBe(`Bearer ${accessToken}`);
+      expect(localStorage.getItem('refresh_token')).toBe(refreshToken);
+    });
+  })
 });

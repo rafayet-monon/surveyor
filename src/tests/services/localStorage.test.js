@@ -13,8 +13,8 @@ describe('when LocalStorage service is called', () => {
   afterAll(() => localStorage.clear());
 
   it('sets token to localStorage', async () => {
-    expect(localStorage.__STORE__['authorization_token']).toBe(mockAuthToken);
-    expect(localStorage.__STORE__['refresh_token']).toBe(mockRefreshToken);
+    expect(localStorage.getItem('authorization_token')).toBe(mockAuthToken);
+    expect(localStorage.getItem('refresh_token')).toBe(mockRefreshToken);
   });
 
   it('returns the authorization_token', async () => {
@@ -32,7 +32,7 @@ describe('when LocalStorage service is called', () => {
   it('clears localStorage', async () => {
     localStorageService.clearToken();
 
-    expect(localStorage.__STORE__['authorization_token']).toBe(undefined);
-    expect(localStorage.__STORE__['refresh_token']).toBe(undefined);
+    expect(localStorage.getItem('authorization_token')).toBe(null);
+    expect(localStorage.getItem('refresh_token')).toBe(null);
   });
 });
