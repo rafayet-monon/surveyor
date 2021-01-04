@@ -44,12 +44,7 @@ const Detail = () => {
         <p className="survey-detail__subtitle">
           { detailsContext.attributes.description }
         </p>
-        <button
-          className="button button--primary survey-detail__action"
-          onClick={ startSurvey }
-        >
-          Start Survey
-        </button>
+        <button className="button button--primary survey-detail__action" onClick={ startSurvey }>Start Survey</button>
       </div>
     </div>
   );

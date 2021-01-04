@@ -12,7 +12,7 @@ const WheelSelect = ({ data, multipleSelect }) => {
     : 'wheel-select__text';
 
   window.addEventListener('wheel', (e) => {
-    setIsClicked(false);
+    setIsClicked(false)
     slideList(e.wheelDelta);
   });
 
