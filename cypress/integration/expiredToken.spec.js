@@ -7,7 +7,7 @@ describe('Expired Login', () => {
     cy.login()
   })
 
-  it('refreshes auth token if token is invalid', function () {
+  it('refreshes auth token if token is invalid', () => {
     cy.getCookie('authorization_token').then(() => {
       localStorage.setItem('authorization_token', null);
     });
@@ -15,7 +15,7 @@ describe('Expired Login', () => {
     cy.url().should('include', '/')
   })
 
-  it('redirects to login page if refresh token is invalid', function () {
+  it('redirects to login page if refresh token is invalid', () => {
     cy.getCookie('authorization_token').then(() => {
       localStorage.setItem('authorization_token', null);
       localStorage.setItem('refresh_token', null);
