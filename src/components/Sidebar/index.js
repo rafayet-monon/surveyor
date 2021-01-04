@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 
+import { AuthContext } from 'contexts/auth';
 import userImage from 'images/user-placeholder.jpg';
 
 const Sidebar = () => {
+  const { dispatch } = useContext(AuthContext);
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
 
   const logout = () => {
-    localStorage.clear();
+    dispatch({ type: 'LOGOUT' });
 
     window.location.href = '/login';
   };
