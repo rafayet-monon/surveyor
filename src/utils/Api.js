@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+import UnauthorizedInterceptor from 'utils/unauthorizedInterceptor';
+
 const instance = axios.create({
   baseURL: process.env.REACT_APP_BACKEND_URL,
   headers: {
@@ -7,5 +9,7 @@ const instance = axios.create({
   },
   responseType: 'json'
 });
+
+UnauthorizedInterceptor(instance);
 
 export default instance;
