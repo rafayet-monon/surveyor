@@ -29,7 +29,7 @@ describe('when refresh token is performed', () => {
       expect(localStorage.getItem('authorization_token')).toBe(null);
       expect(localStorage.getItem('refresh_token')).toBe(null);
     });
-  })
+  });
 
   describe('if refresh token is valid', () => {
     beforeEach(async () => {
@@ -48,8 +48,10 @@ describe('when refresh token is performed', () => {
       const refreshToken = RefreshTokenResponse.data.attributes.refresh_token;
       const accessToken = RefreshTokenResponse.data.attributes.access_token;
 
-      expect(localStorage.getItem('authorization_token')).toBe(`Bearer ${accessToken}`);
+      expect(localStorage.getItem('authorization_token')).toBe(
+        `Bearer ${accessToken}`
+      );
       expect(localStorage.getItem('refresh_token')).toBe(refreshToken);
     });
-  })
+  });
 });

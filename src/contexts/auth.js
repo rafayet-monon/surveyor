@@ -1,6 +1,7 @@
 import React, { createContext, useEffect, useReducer } from 'react';
 
 import AuthReducer from 'reducers/auth';
+import LocalStorage from 'services/localStorage';
 
 const AuthContext = createContext();
 
@@ -10,12 +11,17 @@ const initialState = {
 };
 
 const AuthProvider = ({ children }) => {
+  const localStorageService = LocalStorage.getService();
   const [state, dispatch] = useReducer(AuthReducer, initialState);
 
   useEffect(() => {
-    let authorization_token = localStorage.getItem('authorization_token');
+    let authorizationToken = localStorageService.getAuthToken();
+    let refreshToken = localStorageService.getRefreshToken();
 
-    if (authorization_token && !state.isAuthenticated) {
+    if (
+      (authorizationToken && !state.isAuthenticated) ||
+      (!authorizationToken && refreshToken)
+    ) {
       dispatch({ type: 'REFRESH' });
     }
   });
