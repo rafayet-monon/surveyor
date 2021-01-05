@@ -2,57 +2,32 @@ import React from 'react';
 
 import { render } from '@testing-library/react';
 import '__mocks__/matchMedia';
-import mockAxios from 'axios';
 
 import Sidebar from 'components/Sidebar';
 import { AuthContext } from 'contexts/auth';
-import ProfileResponse from 'tests/fixtures/profileResponse.json';
 
 describe('When Sidebar component is mounted', () => {
   const state = { isAuthenticated: true };
   const dispatch = null;
 
-  mockAxios.get.mockImplementation(() =>
-    Promise.resolve({ data: ProfileResponse, status: 200 })
-  );
-
-  it('shows user avatar', async () => {
-    const { findByAltText } = render(
+  it('shows user name in the menu', async () => {
+    const { getByText } = render(
       <AuthContext.Provider value={{ state, dispatch }}>
-        <Sidebar />
+        <Sidebar name={ 'mockName' } />
       </AuthContext.Provider>
     );
-    const userImage = await findByAltText('USER');
+    const userName = await getByText('mockName');
 
-    expect(userImage).toHaveAttribute(
-      'src',
-      ProfileResponse.data.attributes.avatar_url
-    );
-  });
-
-  it('shows user name and avatar in the menu', async () => {
-    const { findByAltText, findByText } = render(
-      <AuthContext.Provider value={{ state, dispatch }}>
-        <Sidebar />
-      </AuthContext.Provider>
-    );
-    const navImage = await findByAltText('USER-NAV');
-    const userName = await findByText(ProfileResponse.data.type);
-
-    expect(navImage).toHaveAttribute(
-      'src',
-      ProfileResponse.data.attributes.avatar_url
-    );
     expect(userName).toBeInTheDocument();
   });
 
   it('shows logout link', async () => {
-    const { findByText } = render(
+    const { getByText } = render(
       <AuthContext.Provider value={{ state, dispatch }}>
         <Sidebar />
       </AuthContext.Provider>
     );
-    const logoutText = await findByText('Logout');
+    const logoutText = await getByText('Logout');
 
     expect(logoutText).toBeInTheDocument();
   });
