@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 
 import PageBackground from 'components/PageBackground';
 import Sidebar from 'components/Sidebar';
@@ -9,6 +9,8 @@ import SurveyList from 'screens/Home/surveyList';
 
 const Details = ({ surveyResponse }) => {
   const backgroundContext = useContext(BackgroundContext);
+  const [sidebar, setSidebar] = useState(false);
+  const showSidebar = () => setSidebar(!sidebar);
 
   const date = new Date();
   const date_options = { weekday: 'long', month: 'long', day: 'numeric' };
@@ -20,8 +22,8 @@ const Details = ({ surveyResponse }) => {
       imagePath={ backgroundContext.state.currentBackground }
     >
       <div className="home">
-        <Header />
-        <Sidebar />
+        <Header onClickUser={ showSidebar } />
+        <Sidebar openSidebar={ sidebar } />
         <div className="home__detail">
           <p className="home__date">{ today }</p>
           <h1 className="home__day">Today</h1>

@@ -1,12 +1,9 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 
 import { AuthContext } from 'contexts/auth';
-import userImage from 'images/user-placeholder.jpg';
 
-const Sidebar = () => {
+const Sidebar = ( { openSidebar }) => {
   const { dispatch } = useContext(AuthContext);
-  const [sidebar, setSidebar] = useState(false);
-  const showSidebar = () => setSidebar(!sidebar);
 
   const logout = () => {
     dispatch({ type: 'LOGOUT' });
@@ -16,18 +13,9 @@ const Sidebar = () => {
 
   return (
     <div className="sidebar">
-      <img
-        src={ userImage }
-        alt="USER"
-        className="sidebar__user-image"
-        onClick={ showSidebar }
-        onKeyDown={ showSidebar }
-        role="presentation"
-      />
-
       <nav
         className={
-          sidebar
+          openSidebar
             ? 'sidebar__nav-menu sidebar__nav-menu-active'
             : 'sidebar__nav-menu'
         }
@@ -35,16 +23,7 @@ const Sidebar = () => {
         <ul className="sidebar__nav-menu-items">
           <li className="sidebar__nav-menu-information">
             <span className="sidebar__nav-menu-username">Mai</span>
-            <span className="sidebar__nav-menu-image">
-              <img
-                src={ userImage }
-                alt="USER-NAV"
-                className="sidebar__user-image"
-                onClick={ showSidebar }
-                onKeyDown={ showSidebar }
-                role="presentation"
-              />
-            </span>
+
           </li>
           <li className="sidebar__nav-menu-line" />
           <li
