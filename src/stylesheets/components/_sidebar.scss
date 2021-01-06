@@ -37,8 +37,8 @@
 
   &__nav-menu-items {
     width: 100%;
-    margin: rem(32px) 0;
-    padding: 0;
+    margin: 0;
+    padding: rem(32px);
 
     list-style: none;
   }
@@ -46,11 +46,15 @@
   &__nav-menu-information {
     display: flex;
     align-items: center;
-    height: rem(36px);
-    margin: 0 rem(32px) rem(20px);
+    height: rem(56px);
+    margin-bottom: rem(20px);
+
+    border-bottom: 1px solid map-get($brand-white, 'light');
   }
 
   &__nav-menu-username {
+    margin-bottom: rem(10px);
+
     color: map-get($brand-white, 'primary');
     font-weight: map-get($font-weight, 'bolder');
     font-size: map-get($font-sizes, 'xl');
@@ -61,13 +65,8 @@
     margin-left: auto;
   }
 
-  &__nav-menu-line {
-    border-top: 0.5px solid map-get($brand-white, 'primary');
-    opacity: 0.2;
-  }
-
   &__nav-menu-logout {
-    margin: rem(35px) 0 0 rem(32px);
+    margin-top: rem(35px);
 
     color: map-get($brand-white, 'primary');
     font-weight: map-get($font-weight, 'normal');

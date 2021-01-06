@@ -3,7 +3,7 @@ import React from 'react';
 import logo from 'images/logo_white.png';
 import userImage from 'images/user-placeholder.jpg';
 
-const Header = ( { onClickUser }) => {
+const Header = ({ onAvatarClick }) => {
   return (
     <div className="home-header">
       <div className="home-header__logo">
@@ -14,8 +14,8 @@ const Header = ( { onClickUser }) => {
           src={ userImage }
           alt="USER"
           className="home-header__user-image"
-          onClick={ onClickUser }
-          onKeyDown={ onClickUser }
+          onClick={ onAvatarClick }
+          onKeyDown={ onAvatarClick }
           role="presentation"
         />
       </div>

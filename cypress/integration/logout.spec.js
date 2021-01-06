@@ -7,10 +7,12 @@ describe('User can logout', () => {
     cy.login()
   })
 
-  it('when click in logout redirects user to login', function () {
-    cy.get('[alt="USER"]').click()
-    cy.contains('Logout').click();
+  describe('when click on logout link', () => {
+    it('redirects user to login page', () => {
+      cy.get('[alt="USER"]').click()
+      cy.contains('Logout').click();
 
-    cy.url().should('include', '/login')
+      cy.url().should('include', '/login')
+    })
   })
 })

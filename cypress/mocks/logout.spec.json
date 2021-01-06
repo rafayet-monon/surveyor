@@ -1,6 +1,6 @@
 {
-  "when click in logout redirects user to login": {
-    "timestamp": 1609814541152,
+  "redirects user to login page": {
+    "timestamp": 1609925868137,
     "routes": [
       {
         "url": "https://nimble-survey-web-staging.herokuapp.com/api/v1/oauth/token",
@@ -16,14 +16,14 @@
         },
         "response": {
           "data": {
-            "id": 1209,
+            "id": 1231,
             "type": "token",
             "attributes": {
-              "access_token": "CB-cKhPWMdOm6rankbYhs8Q4IW7jiCzqmtshZGWOLOw",
+              "access_token": "1MrIbzUSoM0AAQzmugFkp76r82Gpg_Ay8Ig-DwIAhg0",
               "token_type": "Bearer",
               "expires_in": 7200,
-              "refresh_token": "6mshKeg3GFJu2N5CeGYtpVKCML1OyQLweYnEJ6QnPVI",
-              "created_at": 1609814544
+              "refresh_token": "c3BwvMxxalMnnmXVNFFrvadByYYJWVRsFftkjb11SXk",
+              "created_at": 1609925872
             }
           }
         }

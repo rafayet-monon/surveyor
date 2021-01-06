@@ -7,15 +7,20 @@ describe('The Sidebar', () => {
     cy.login()
   })
 
-  it('click in the user avatar opens sidebar', function () {
-    cy.get('[alt="USER"]').click()
 
-    cy.get('.sidebar__nav-menu-active').should('exist');
+  describe('when click on the user avatar', () => {
+    it('opens the sidebar', () => {
+      cy.get('[alt="USER"]').click();
+
+      cy.get('.sidebar__nav-menu-active').should('exist');
+    })
   })
 
-  it('click in the user avatar in the sidebar closes the sidebar', function () {
-    cy.get('[alt="USER"]').click()
+  describe('when the sidebar is already open and click on the user avatar', () => {
+    it('closes the sidebar', () => {
+      cy.get('[alt="USER"]').click();
 
-    cy.get('.sidebar__nav-menu-active').should('not.exist');
+      cy.get('.sidebar__nav-menu-active').should('not.exist');
+    })
   })
 })

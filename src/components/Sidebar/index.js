@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 
 import { AuthContext } from 'contexts/auth';
 
-const Sidebar = ( { openSidebar }) => {
+const Sidebar = ({ openSidebar }) => {
   const { dispatch } = useContext(AuthContext);
 
   const logout = () => {
@@ -23,7 +23,6 @@ const Sidebar = ( { openSidebar }) => {
         <ul className="sidebar__nav-menu-items">
           <li className="sidebar__nav-menu-information">
             <span className="sidebar__nav-menu-username">Mai</span>
-
           </li>
           <li className="sidebar__nav-menu-line" />
           <li

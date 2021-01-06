@@ -22,7 +22,7 @@ const Details = ({ surveyResponse }) => {
       imagePath={ backgroundContext.state.currentBackground }
     >
       <div className="home">
-        <Header onClickUser={ showSidebar } />
+        <Header onAvatarClick={ showSidebar } />
         <Sidebar openSidebar={ sidebar } />
         <div className="home__detail">
           <p className="home__date">{ today }</p>
