@@ -3,10 +3,9 @@ const autoRecord = require('cypress-autorecord');
 describe('The Sidebar', () => {
   autoRecord();
 
-  before(() => {
+  beforeEach(() => {
     cy.login()
   })
-
 
   describe('when click on the user avatar', () => {
     it('opens the sidebar', () => {
@@ -18,6 +17,7 @@ describe('The Sidebar', () => {
 
   describe('when the sidebar is already open and click on the user avatar', () => {
     it('closes the sidebar', () => {
+      cy.get('[alt="USER"]').click();
       cy.get('[alt="USER"]').click();
 
       cy.get('.sidebar__nav-menu-active').should('not.exist');

@@ -1,7 +1,33 @@
 {
-  "closes the sidebar": {
-    "timestamp": 1609925886193,
+  "opens the sidebar": {
+    "timestamp": 1610106966049,
     "routes": [
+      {
+        "url": "https://nimble-survey-web-staging.herokuapp.com/api/v1/oauth/token",
+        "method": "POST",
+        "status": 200,
+        "headers": {},
+        "body": {
+          "grant_type": "password",
+          "email": "dev@nimblehq.co",
+          "password": "12345678",
+          "client_id": "gvPMQMGcHRu372ebdT4rVxNmIxkK82smGcFuzJh0t8Q",
+          "client_secret": "de5aT_bs2KEOvij-rV9qQKwWWfjPz64p1ige58q6nDM"
+        },
+        "response": {
+          "data": {
+            "id": 1246,
+            "type": "token",
+            "attributes": {
+              "access_token": "3A0r3m6oc-VzQOfVP7cnf_aG9SbRK77OBradHhvsWPM",
+              "token_type": "Bearer",
+              "expires_in": 7200,
+              "refresh_token": "1iOHIBROhrri0VdDdiTd3C6l4zaJ6oajE-FrGLyjUas",
+              "created_at": 1610106969
+            }
+          }
+        }
+      },
       {
         "url": "https://nimble-survey-web-staging.herokuapp.com/api/v1/surveys?page[number]=1",
         "method": "GET",
@@ -319,9 +345,35 @@
       }
     ]
   },
-  "opens the sidebar": {
-    "timestamp": 1609925922388,
+  "closes the sidebar": {
+    "timestamp": 1610106970150,
     "routes": [
+      {
+        "url": "https://nimble-survey-web-staging.herokuapp.com/api/v1/oauth/token",
+        "method": "POST",
+        "status": 200,
+        "headers": {},
+        "body": {
+          "grant_type": "password",
+          "email": "dev@nimblehq.co",
+          "password": "12345678",
+          "client_id": "gvPMQMGcHRu372ebdT4rVxNmIxkK82smGcFuzJh0t8Q",
+          "client_secret": "de5aT_bs2KEOvij-rV9qQKwWWfjPz64p1ige58q6nDM"
+        },
+        "response": {
+          "data": {
+            "id": 1247,
+            "type": "token",
+            "attributes": {
+              "access_token": "pPUDS2upZfhv1hTSjwOXKwNM_-XlezCXC6KZYSFLYVg",
+              "token_type": "Bearer",
+              "expires_in": 7200,
+              "refresh_token": "Lle7gyfpBaahQkCDSWuSCN8AnHt0aIpGuEznvkS6yfw",
+              "created_at": 1610106971
+            }
+          }
+        }
+      },
       {
         "url": "https://nimble-survey-web-staging.herokuapp.com/api/v1/surveys?page[number]=1",
         "method": "GET",
