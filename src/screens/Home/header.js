@@ -1,9 +1,8 @@
 import React from 'react';
 
 import logo from 'images/logo_white.png';
-import userImage from 'images/user-placeholder.jpg';
 
-const Header = ({ onAvatarClick }) => {
+const Header = ({ onAvatarClick, avatar }) => {
   return (
     <div className="home-header">
       <div className="home-header__logo">
@@ -11,7 +10,7 @@ const Header = ({ onAvatarClick }) => {
       </div>
       <div className="home-header__menu">
         <img
-          src={ userImage }
+          src={ avatar }
           alt="USER"
           className="home-header__user-image"
           onClick={ onAvatarClick }

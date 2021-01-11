@@ -7,6 +7,7 @@ import mockAxios from 'axios';
 import { AuthContext } from 'contexts/auth';
 import logo from 'images/logo_white.png';
 import Home from 'screens/Home';
+import ProfileResponse from 'tests/fixtures/profileResponse.json';
 import SurveyListResponse from 'tests/fixtures/surveyListResponse';
 
 describe('When Home component is mounted', () => {
@@ -14,7 +15,7 @@ describe('When Home component is mounted', () => {
   const dispatch = null;
 
   it('renders the loader while fetching survey list', async () => {
-    mockAxios.get.mockImplementation(() =>
+    mockAxios.get.mockImplementationOnce(() =>
       Promise.resolve({ data: SurveyListResponse, status: 400 })
     );
 
@@ -32,9 +33,14 @@ describe('When Home component is mounted', () => {
   });
 
   it('renders the details component after fetching survey list', async () => {
-    mockAxios.get.mockImplementation(() =>
-      Promise.resolve({ data: SurveyListResponse, status: 200 })
-    );
+    mockAxios.get
+      .mockImplementationOnce(() =>
+        Promise.resolve({ data: SurveyListResponse, status: 200 })
+      )
+      .mockImplementationOnce(() =>
+        Promise.resolve({ data: ProfileResponse, status: 200 })
+      );
+
     const { findByAltText } = render(
       <AuthContext.Provider value={{ state, dispatch }}>
         <Home />
@@ -47,9 +53,13 @@ describe('When Home component is mounted', () => {
   });
 
   it('renders the blank slate if no survey list', async () => {
-    mockAxios.get.mockImplementation(() =>
-      Promise.resolve({ data: { meta: { records: 0 } }, status: 200 })
-    );
+    mockAxios.get
+      .mockImplementationOnce(() =>
+        Promise.resolve({ data: { meta: { records: 0 } }, status: 200 })
+      )
+      .mockImplementationOnce(() =>
+        Promise.resolve({ data: ProfileResponse, status: 200 })
+      );
     const { findByText } = render(
       <AuthContext.Provider value={{ state, dispatch }}>
         <Home />
