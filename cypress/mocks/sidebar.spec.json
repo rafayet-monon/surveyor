@@ -690,5 +690,735 @@
         }
       }
     ]
+  },
+  "click in the user avatar in the sidebar closes the sidebar": {
+    "timestamp": 1609814558436,
+    "routes": [
+      {
+        "url": "https://nimble-survey-web-staging.herokuapp.com/api/v1/oauth/token",
+        "method": "POST",
+        "status": 200,
+        "headers": {},
+        "body": {
+          "grant_type": "password",
+          "email": "dev@nimblehq.co",
+          "password": "12345678",
+          "client_id": "gvPMQMGcHRu372ebdT4rVxNmIxkK82smGcFuzJh0t8Q",
+          "client_secret": "de5aT_bs2KEOvij-rV9qQKwWWfjPz64p1ige58q6nDM"
+        },
+        "response": {
+          "data": {
+            "id": 1210,
+            "type": "token",
+            "attributes": {
+              "access_token": "LZBFMbtIYOBlOe2LMM-M0PL8SxvG1rcV0acB9CtpEr8",
+              "token_type": "Bearer",
+              "expires_in": 7200,
+              "refresh_token": "ly1LuzEyfFBL56oVFfJiRBLgAm-fRkt3MubiFHlFnhA",
+              "created_at": 1609814561
+            }
+          }
+        }
+      },
+      {
+        "url": "https://nimble-survey-web-staging.herokuapp.com/api/v1/surveys?page[number]=1",
+        "method": "GET",
+        "status": 200,
+        "headers": {},
+        "body": null,
+        "response": {
+          "data": [
+            {
+              "id": "d5de6a8f8f5f1cfe51bc",
+              "type": "survey",
+              "attributes": {
+                "title": "Scarlett Bangkok",
+                "description": "We'd love ot hear from you!",
+                "thank_email_above_threshold": "<span style=\"font-family:arial,helvetica,sans-serif\"><span style=\"font-size:14px\">Dear {name},<br /><br />Thank you for visiting Scarlett Wine Bar &amp; Restaurant at Pullman Bangkok Hotel G &nbsp;and for taking the time to complete our guest feedback survey!<br /><br />Your feedback is very important to us and each survey is read individually by the management and owners shortly after it is sent. We discuss comments and suggestions at our daily meetings and use them to constantly improve our services.<br /><br />We would very much appreciate it if you could take a few more moments and review us on TripAdvisor regarding your recent visit. By <a href=\"https://www.tripadvisor.com/Restaurant_Review-g293916-d2629404-Reviews-Scarlett_Wine_Bar_Restaurant-Bangkok.html\">clicking here</a> you will be directed to our page.&nbsp;<br /><br />Thank you once again and we look forward to seeing you soon!<br /><br />The Team at Scarlett Wine Bar &amp; Restaurant&nbsp;</span></span><span style=\"font-family:arial,helvetica,sans-serif; font-size:14px\">Pullman Bangkok Hotel G</span>",
+                "thank_email_below_threshold": "<span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">Dear {name},<br /><br />Thank you for visiting&nbsp;</span></span><span style=\"font-family:arial,helvetica,sans-serif; font-size:14px\">Uno Mas at Centara Central World&nbsp;</span><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">&nbsp;and for taking the time to complete our customer&nbsp;feedback survey.</span></span><br /><br /><span style=\"font-family:arial,helvetica,sans-serif; font-size:14px\">The Team at&nbsp;</span><span style=\"font-family:arial,helvetica,sans-serif\"><span style=\"font-size:14px\">Scarlett Wine Bar &amp; Restaurant&nbsp;</span></span><span style=\"font-family:arial,helvetica,sans-serif; font-size:14px\">Pullman Bangkok Hotel G</span>",
+                "is_active": true,
+                "cover_image_url": "https://dhdbhh0jsld0o.cloudfront.net/m/1ea51560991bcb7d00d0_",
+                "created_at": "2017-01-23T07:48:12.991Z",
+                "active_at": "2015-10-08T07:04:00.000Z",
+                "inactive_at": null,
+                "survey_type": "Restaurant"
+              },
+              "relationships": {
+                "questions": {
+                  "data": [
+                    {
+                      "id": "d3afbcf2b1d60af845dc",
+                      "type": "question"
+                    },
+                    {
+                      "id": "940d229e4cd87cd1e202",
+                      "type": "question"
+                    },
+                    {
+                      "id": "ea0555f328b3b0124127",
+                      "type": "question"
+                    },
+                    {
+                      "id": "16e68f5610ef0e0fa4db",
+                      "type": "question"
+                    },
+                    {
+                      "id": "bab38ad82eaf22afcdfe",
+                      "type": "question"
+                    },
+                    {
+                      "id": "85275a0bf28a6f3b1e63",
+                      "type": "question"
+                    },
+                    {
+                      "id": "642770376f7cd0c87d3c",
+                      "type": "question"
+                    },
+                    {
+                      "id": "b093a6ad9a6a466fa787",
+                      "type": "question"
+                    },
+                    {
+                      "id": "e593b2fa2f81891a2b1e",
+                      "type": "question"
+                    },
+                    {
+                      "id": "c3a9b8ce5c2356010703",
+                      "type": "question"
+                    },
+                    {
+                      "id": "fbf5d260de1ee6195473",
+                      "type": "question"
+                    },
+                    {
+                      "id": "4372463ce56db58c0983",
+                      "type": "question"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "ed1d4f0ff19a56073a14",
+              "type": "survey",
+              "attributes": {
+                "title": "ibis Bangkok Riverside",
+                "description": "We'd love to hear from you!",
+                "thank_email_above_threshold": "Dear {name},<br /><br />Thank you for visiting Beach Republic and for taking the time to complete our brief survey. We are thrilled that you enjoyed your time with us! If you have a moment, we would be greatly appreciate it if you could leave a short review on <a href=\"http://www.tripadvisor.com/Hotel_Review-g1188000-d624070-Reviews-Beach_Republic_The_Residences-Lamai_Beach_Maret_Ko_Samui_Surat_Thani_Province.html\">TripAdvisor</a>. It helps to spread the word and let others know about the Beach Republic Revolution!<br /><br />Thank you again and we look forward to welcoming you back soon.<br /><br />Sincerely,<br /><br />Beach Republic Team",
+                "thank_email_below_threshold": "Dear {name},<br /><br />Thank you for visiting Beach Republic and for taking the time to complete our brief survey. We are constantly striving to improve and your feedback allows us to help improve the experience for you on your next visit. Each survey is read individually by senior staff and discussed with the team in daily meetings.&nbsp;<br /><br />Thank you again and we look forward to welcoming you back soon.<br /><br />Sincerely,<br /><br />Beach Republic Team",
+                "is_active": true,
+                "cover_image_url": "https://dhdbhh0jsld0o.cloudfront.net/m/287db81c5e4242412cc0_",
+                "created_at": "2017-01-23T03:32:24.585Z",
+                "active_at": "2016-01-22T04:12:00.000Z",
+                "inactive_at": null,
+                "survey_type": "Hotel"
+              },
+              "relationships": {
+                "questions": {
+                  "data": [
+                    {
+                      "id": "fa385b75617d98e069a3",
+                      "type": "question"
+                    },
+                    {
+                      "id": "1b03688d4af8a5c6b1e0",
+                      "type": "question"
+                    },
+                    {
+                      "id": "6e2b6ee71d3011cc0ac1",
+                      "type": "question"
+                    },
+                    {
+                      "id": "29272d3bac5725b4c2cf",
+                      "type": "question"
+                    },
+                    {
+                      "id": "7f164dd6150e6113f8ad",
+                      "type": "question"
+                    },
+                    {
+                      "id": "1d13ef20807de4f752c7",
+                      "type": "question"
+                    },
+                    {
+                      "id": "d06378d7ab2925282ecd",
+                      "type": "question"
+                    },
+                    {
+                      "id": "4c1e9486cf95ba54dac8",
+                      "type": "question"
+                    },
+                    {
+                      "id": "b8f06895134eb1da2d13",
+                      "type": "question"
+                    },
+                    {
+                      "id": "e9e2518333211ee2e5c8",
+                      "type": "question"
+                    },
+                    {
+                      "id": "81c9ae82f32f93c2967d",
+                      "type": "question"
+                    },
+                    {
+                      "id": "2ecd2926eb02e7a58024",
+                      "type": "question"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "270130035d415c1d90bb",
+              "type": "survey",
+              "attributes": {
+                "title": "21 on Rajah",
+                "description": "We'd love to hear from you!",
+                "thank_email_above_threshold": null,
+                "thank_email_below_threshold": null,
+                "is_active": true,
+                "cover_image_url": "https://dhdbhh0jsld0o.cloudfront.net/m/0221e768b99dc3576210_",
+                "created_at": "2017-01-20T10:08:42.531Z",
+                "active_at": "2017-01-20T10:08:42.512Z",
+                "inactive_at": null,
+                "survey_type": "Restaurant"
+              },
+              "relationships": {
+                "questions": {
+                  "data": [
+                    {
+                      "id": "2cfd989b3a4875cfb8b6",
+                      "type": "question"
+                    },
+                    {
+                      "id": "4595f25d0346b2abe2c9",
+                      "type": "question"
+                    },
+                    {
+                      "id": "e74cd0cbd29d4510b053",
+                      "type": "question"
+                    },
+                    {
+                      "id": "3b6565114bc6260b101a",
+                      "type": "question"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "a83d91f5518e5c14a8bf",
+              "type": "survey",
+              "attributes": {
+                "title": "Let's Chick",
+                "description": "We'd love to hear from you!",
+                "thank_email_above_threshold": "<div><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">Dear {name},</span></span></div><div>&nbsp;</div><div><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">Thank you for visiting Bei Otto and taking the time to complete our brief survey. We constantly strive to improve our guests&#39; experience and your essential feedback will go a long way in helping us achieve our aim. Each and every survey is read carefully and discussed by our team in daily meetings.</span></span></div><div>&nbsp;</div><div><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">We would deeply appreciate it if you would be willing to share some recommendations from our menu, the service you received from our team and some memorable pictures of your meal on TripAdvisor by <a href=\"https://www.tripadvisor.com/Restaurant_Review-g293916-d833538-Reviews-Bei_Otto-Bangkok.html\">clicking here</a> ; you will then be directed to our page.&nbsp;</span></span></div><div><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">&nbsp;</span></span></div><div><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">We are looking forward to welcoming you again to Bei Otto hopefully in the very near future.</span></span></div><div><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">&nbsp;</span></span></div><div><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">Warm regards,</span></span></div><div><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">Bei Otto</span></span></div><br />&nbsp;",
+                "thank_email_below_threshold": "<div><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">Dear {name},</span></span></div><div>&nbsp;</div><div><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">Thank you for visiting Bei Otto and for taking the time to complete our brief survey.&nbsp;</span></span></div><div><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">&nbsp;</span></span></div><div><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">We would like to sincerely apologise that we failed to delight you while dining with us and truly regret that you found our service not up to our usual high standards. Your comments on your survey have been well noted and will be shared with our team for immediate improvement as we consider the points you raised to be one of our priorities. Please do not hesitate to share more details of your dining experience directly &nbsp;with me via info@beiotto.com so as we can improve our services for your next visit.&nbsp;</span></span></div><div><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">&nbsp;</span></span></div><div><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">We hope you will give us another chance to show you a true Bei Otto experience in hopefully the not too distant future.</span></span></div><div><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">&nbsp;</span></span></div><div><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">Sincerely,</span></span></div><div><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">Bei Otto</span></span></div><div>&nbsp;</div>",
+                "is_active": true,
+                "cover_image_url": "https://dhdbhh0jsld0o.cloudfront.net/m/6ea42840403875928db3_",
+                "created_at": "2017-01-19T06:03:42.220Z",
+                "active_at": "2016-12-15T02:39:00.000Z",
+                "inactive_at": null,
+                "survey_type": "Restaurant"
+              },
+              "relationships": {
+                "questions": {
+                  "data": [
+                    {
+                      "id": "1d5add1b3a3efd3c7bfe",
+                      "type": "question"
+                    },
+                    {
+                      "id": "a7750286a6df197ef365",
+                      "type": "question"
+                    },
+                    {
+                      "id": "ec2f097892af5c4feb75",
+                      "type": "question"
+                    },
+                    {
+                      "id": "3d23ada78f2be888bbd3",
+                      "type": "question"
+                    },
+                    {
+                      "id": "6ed38b1be11597807781",
+                      "type": "question"
+                    },
+                    {
+                      "id": "a32f29d143ebcd39aa4a",
+                      "type": "question"
+                    },
+                    {
+                      "id": "933a424605bf4b9cad57",
+                      "type": "question"
+                    },
+                    {
+                      "id": "14c2dc4173ac48258681",
+                      "type": "question"
+                    },
+                    {
+                      "id": "825c94b12bee9a08fcf7",
+                      "type": "question"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "5d2538f53ca50536292c",
+              "type": "survey",
+              "attributes": {
+                "title": "Health Land Spa",
+                "description": "We'd love to hear from you!",
+                "thank_email_above_threshold": null,
+                "thank_email_below_threshold": null,
+                "is_active": true,
+                "cover_image_url": "https://dhdbhh0jsld0o.cloudfront.net/m/59e9e7327354006c1ebc_",
+                "created_at": "2017-01-18T09:13:55.081Z",
+                "active_at": "2017-01-18T09:13:00.000Z",
+                "inactive_at": null,
+                "survey_type": "Wellness"
+              },
+              "relationships": {
+                "questions": {
+                  "data": [
+                    {
+                      "id": "6d788e28f7b3730e7e4a",
+                      "type": "question"
+                    },
+                    {
+                      "id": "dfca51c6be36d3519fe3",
+                      "type": "question"
+                    },
+                    {
+                      "id": "55298425db5d686d8d56",
+                      "type": "question"
+                    },
+                    {
+                      "id": "77d88af72c454531af24",
+                      "type": "question"
+                    },
+                    {
+                      "id": "c6f8b0757c1e704823d1",
+                      "type": "question"
+                    },
+                    {
+                      "id": "dd4e3a011a6059b7c469",
+                      "type": "question"
+                    },
+                    {
+                      "id": "12fc670b50e012ce79a2",
+                      "type": "question"
+                    },
+                    {
+                      "id": "55ff73b35a7b5784317a",
+                      "type": "question"
+                    },
+                    {
+                      "id": "d6b133cf862dd3d90dc1",
+                      "type": "question"
+                    },
+                    {
+                      "id": "cc26fa7b93d8535904b4",
+                      "type": "question"
+                    }
+                  ]
+                }
+              }
+            }
+          ],
+          "meta": {
+            "page": 1,
+            "pages": 4,
+            "page_size": 5,
+            "records": 20
+          }
+        }
+      },
+      {
+        "url": "https://nimble-survey-web-staging.herokuapp.com/api/v1/me",
+        "method": "GET",
+        "status": 200,
+        "headers": {},
+        "body": null,
+        "response": {
+          "data": {
+            "id": "2",
+            "type": "user",
+            "attributes": {
+              "email": "dev@nimblehq.co",
+              "avatar_url": "https://api.adorable.io/avatar/dev@nimblehq.co"
+            }
+          }
+        }
+      },
+      {
+        "url": "https://nimble-survey-web-staging.herokuapp.com/api/v1/surveys?page[number]=2",
+        "method": "GET",
+        "status": 200,
+        "headers": {},
+        "body": null,
+        "response": {
+          "data": [
+            {
+              "id": "2512e3e18156b7f55b0d",
+              "type": "survey",
+              "attributes": {
+                "title": "Sunset Bar",
+                "description": "Customer Experience Survey",
+                "thank_email_above_threshold": null,
+                "thank_email_below_threshold": null,
+                "is_active": true,
+                "cover_image_url": "https://dhdbhh0jsld0o.cloudfront.net/m/0221e768b99dc3576210_",
+                "created_at": "2017-01-16T08:15:40.274Z",
+                "active_at": "2017-01-16T08:15:40.260Z",
+                "inactive_at": null,
+                "survey_type": "Restaurant"
+              },
+              "relationships": {
+                "questions": {
+                  "data": [
+                    {
+                      "id": "3fa87981311c46d5b9af",
+                      "type": "question"
+                    },
+                    {
+                      "id": "e975a036e59e84153d0f",
+                      "type": "question"
+                    },
+                    {
+                      "id": "206e43871b11397f3f86",
+                      "type": "question"
+                    },
+                    {
+                      "id": "c2120341ef2cdf14c4d0",
+                      "type": "question"
+                    },
+                    {
+                      "id": "30042eea287af1e8d8ed",
+                      "type": "question"
+                    },
+                    {
+                      "id": "c6dbb27178850c288829",
+                      "type": "question"
+                    },
+                    {
+                      "id": "703d4ab59990c148baa3",
+                      "type": "question"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "05fded2d55dc94e08a5c",
+              "type": "survey",
+              "attributes": {
+                "title": "Rice Paper Scissors",
+                "description": "Guest Satisfaction Survey",
+                "thank_email_above_threshold": "<span style=\"font-family:arial,helvetica,sans-serif\"><span style=\"font-size:14px\">Dear {name},<br /><br />Thank you for visiting Rice Paper Scissors and for taking the time to complete our guest feedback survey!<br /><br />Your feedback is very important to us and each survey is read individually by the management and owners shortly after it is sent. We discuss comments and suggestions at our daily meetings and use them to constantly improve our services.<br /><br />We would very much appreciate it if you could take a few more moments and review us on <a href=\"https://www.tripadvisor.com/Restaurant_Review-g1078374-d8376683-Reviews-Rice_Paper_Scissors_Fitzroy-Fitzroy_Yarra_Greater_Melbourne_Victoria.html\">TripAdvisor</a>&nbsp;and <a href=\"https://www.zomato.com/melbourne/rice-paper-scissors-cbd\">Tomato </a>regarding your recent visit.<br /><br />Thank you once again and we look forward to seeing you soon!<br /><br />The Team at&nbsp;</span></span><span style=\"font-family:arial,helvetica,sans-serif; font-size:14px\">Rice Paper Scissors</span>",
+                "thank_email_below_threshold": "<span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">Dear {name},<br /><br />Thank you for visiting&nbsp;</span></span><span style=\"font-family:arial,helvetica,sans-serif; font-size:14px\">Rice Paper Scissors</span><span style=\"font-family:arial,helvetica,sans-serif; font-size:14px\">&nbsp;</span><span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">and for taking the time to complete our customer&nbsp;feedback survey.<br /><br />The Team at&nbsp;</span></span><span style=\"font-family:arial,helvetica,sans-serif; font-size:14px\">Rice Paper Scissors</span>",
+                "is_active": true,
+                "cover_image_url": "https://dhdbhh0jsld0o.cloudfront.net/m/048fbed6b09d2175fe55_",
+                "created_at": "2017-01-16T02:55:56.135Z",
+                "active_at": "2015-10-08T07:04:00.000Z",
+                "inactive_at": null,
+                "survey_type": "Restaurant"
+              },
+              "relationships": {
+                "questions": {
+                  "data": [
+                    {
+                      "id": "ca84e882e7281c7663b3",
+                      "type": "question"
+                    },
+                    {
+                      "id": "5268111054388575e3e7",
+                      "type": "question"
+                    },
+                    {
+                      "id": "222e1a25d117295eff63",
+                      "type": "question"
+                    },
+                    {
+                      "id": "1733b74d8d68878eac8e",
+                      "type": "question"
+                    },
+                    {
+                      "id": "4382ba2f931aee17ff7f",
+                      "type": "question"
+                    },
+                    {
+                      "id": "d4c3372be90a05e98fcd",
+                      "type": "question"
+                    },
+                    {
+                      "id": "1bc7236bc1439fd28e53",
+                      "type": "question"
+                    },
+                    {
+                      "id": "a1f59cf121b6e343d955",
+                      "type": "question"
+                    },
+                    {
+                      "id": "4ddf5d4b678f8d40d5c0",
+                      "type": "question"
+                    },
+                    {
+                      "id": "604f5943a4c47e584446",
+                      "type": "question"
+                    },
+                    {
+                      "id": "f61c04e5f8f6f30203fa",
+                      "type": "question"
+                    },
+                    {
+                      "id": "69fe898b162678f7b1fc",
+                      "type": "question"
+                    },
+                    {
+                      "id": "4144e5e95d3133b4d301",
+                      "type": "question"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "eebff4e7a3ffd969a221",
+              "type": "survey",
+              "attributes": {
+                "title": "Shabushi  Buffet",
+                "description": "Customer Experience Survey",
+                "thank_email_above_threshold": "<span style=\"font-size:14px\"><span style=\"font-family:arial,helvetica,sans-serif\">Dear {name},<br />&nbsp;<br />Thank you for visiting Shabushi Buffet and for taking the time to complete our customer feedback survey!<br />&nbsp;<br />Your feedback is very important to us and each survey is read individually by the management and owners shortly after it is sent. We discuss comments and suggestions at our daily meetings and use them to constantly improve our services.<br />&nbsp;<br />Thank you once again and we look forward to seeing you soon!<br />&nbsp;<br />The Team at Shabushi Buffet Restaurant</span></span>",
+                "thank_email_below_threshold": "<span style=\"font-family:arial,helvetica,sans-serif\">Dear {name},</span><br /><span style=\"font-family:arial,helvetica,sans-serif\">&nbsp;</span><br /><span style=\"font-family:arial,helvetica,sans-serif\">Thank you for visiting Shabushi Buffet and for taking the time to complete our customer feedback survey!</span><br /><span style=\"font-family:arial,helvetica,sans-serif\">&nbsp;</span><br /><span style=\"font-family:arial,helvetica,sans-serif\">Your feedback is very important to us and each survey is read individually by the management and owners shortly after it is sent. We discuss comments and suggestions at our daily meetings and use them to constantly improve our services.</span><br /><span style=\"font-family:arial,helvetica,sans-serif\">&nbsp;</span><br /><span style=\"font-family:arial,helvetica,sans-serif\">Thank you once again and we look forward to seeing you soon!</span><br /><span style=\"font-family:arial,helvetica,sans-serif\">&nbsp;</span><br /><span style=\"font-family:arial,helvetica,sans-serif\">The Team at Shabushi Buffet Restaurant</span>",
+                "is_active": true,
+                "cover_image_url": "https://dhdbhh0jsld0o.cloudfront.net/m/889c0aaf66d038f378ef_",
+                "created_at": "2017-01-13T04:19:12.160Z",
+                "active_at": "2017-01-13T00:00:00.000Z",
+                "inactive_at": null,
+                "survey_type": "Restaurant"
+              },
+              "relationships": {
+                "questions": {
+                  "data": [
+                    {
+                      "id": "ffbc5bd15df0a6d4d573",
+                      "type": "question"
+                    },
+                    {
+                      "id": "e27465b7962f4127dc42",
+                      "type": "question"
+                    },
+                    {
+                      "id": "a8eb0712785cb3750651",
+                      "type": "question"
+                    },
+                    {
+                      "id": "69709fd97d88eb8099a4",
+                      "type": "question"
+                    },
+                    {
+                      "id": "3799cd81fdca79038ff8",
+                      "type": "question"
+                    },
+                    {
+                      "id": "bd45d6fa4fbf117809f3",
+                      "type": "question"
+                    },
+                    {
+                      "id": "4505c06883c34e58d2ee",
+                      "type": "question"
+                    },
+                    {
+                      "id": "d91dab3804d488199262",
+                      "type": "question"
+                    },
+                    {
+                      "id": "2dc6ab4d17b072e93d92",
+                      "type": "question"
+                    },
+                    {
+                      "id": "6af2d1f1432f61926863",
+                      "type": "question"
+                    },
+                    {
+                      "id": "dd06357b68ac1c39e5c2",
+                      "type": "question"
+                    },
+                    {
+                      "id": "ef00c27a57d3601f39e4",
+                      "type": "question"
+                    },
+                    {
+                      "id": "82e307a33826c1caeeef",
+                      "type": "question"
+                    },
+                    {
+                      "id": "bcf45d9ffcbf675afb9b",
+                      "type": "question"
+                    },
+                    {
+                      "id": "fadd219a0e00fea0380c",
+                      "type": "question"
+                    },
+                    {
+                      "id": "41365ad711ff108e2cd9",
+                      "type": "question"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "b30fcfd1dbef527e178d",
+              "type": "survey",
+              "attributes": {
+                "title": "Supersports",
+                "description": "We'd love to hear from you!",
+                "thank_email_above_threshold": null,
+                "thank_email_below_threshold": null,
+                "is_active": true,
+                "cover_image_url": "https://dhdbhh0jsld0o.cloudfront.net/m/f91d50d15f2e987a3f23_",
+                "created_at": "2017-01-13T03:48:34.115Z",
+                "active_at": "2017-01-13T03:48:00.000Z",
+                "inactive_at": null,
+                "survey_type": "Retail"
+              },
+              "relationships": {
+                "questions": {
+                  "data": [
+                    {
+                      "id": "09e70ad5e1371cdfd49d",
+                      "type": "question"
+                    },
+                    {
+                      "id": "29ecdb7539630b088c0a",
+                      "type": "question"
+                    },
+                    {
+                      "id": "0294cf00419b0be2d9d5",
+                      "type": "question"
+                    },
+                    {
+                      "id": "eb5c4615e8d90a03c2dd",
+                      "type": "question"
+                    },
+                    {
+                      "id": "63bcffa57f6f70821d61",
+                      "type": "question"
+                    },
+                    {
+                      "id": "84cb22a95b712acf6b77",
+                      "type": "question"
+                    },
+                    {
+                      "id": "de3b139b3fb9332ebab1",
+                      "type": "question"
+                    },
+                    {
+                      "id": "7cc8d4c248b78c41bbfe",
+                      "type": "question"
+                    },
+                    {
+                      "id": "c2b2558404b928d14226",
+                      "type": "question"
+                    },
+                    {
+                      "id": "bac57d011b40a61d1834",
+                      "type": "question"
+                    },
+                    {
+                      "id": "7d6d4223a35303bfe22b",
+                      "type": "question"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "a52b0a01585eccaed54d",
+              "type": "survey",
+              "attributes": {
+                "title": "Beach Republic Guest Checkout DEMO",
+                "description": "Thank you Dear Citizen",
+                "thank_email_above_threshold": "Dear {name},<br /><br />Thank you for visiting Beach Republic and for taking the time to complete our brief survey. We are thrilled that you enjoyed your time with us! If you have a moment, we would be greatly appreciate it if you could leave a short review on <a href=\"http://www.tripadvisor.com/Hotel_Review-g1188000-d624070-Reviews-Beach_Republic_The_Residences-Lamai_Beach_Maret_Ko_Samui_Surat_Thani_Province.html\">TripAdvisor</a>. It helps to spread the word and let others know about the Beach Republic Revolution!<br /><br />Thank you again and we look forward to welcoming you back soon.<br /><br />Sincerely,<br /><br />Beach Republic Team",
+                "thank_email_below_threshold": "Dear {name},<br /><br />Thank you for visiting Beach Republic and for taking the time to complete our brief survey. We are constantly striving to improve and your feedback allows us to help improve the experience for you on your next visit. Each survey is read individually by senior staff and discussed with the team in daily meetings.&nbsp;<br /><br />Thank you again and we look forward to welcoming you back soon.<br /><br />Sincerely,<br /><br />Beach Republic Team",
+                "is_active": true,
+                "cover_image_url": "https://dhdbhh0jsld0o.cloudfront.net/m/1688_",
+                "created_at": "2017-01-12T03:20:07.652Z",
+                "active_at": "2016-01-22T04:12:00.000Z",
+                "inactive_at": null,
+                "survey_type": "Hotel"
+              },
+              "relationships": {
+                "questions": {
+                  "data": [
+                    {
+                      "id": "4145c43ba4ebf604934b",
+                      "type": "question"
+                    },
+                    {
+                      "id": "b0a0a1a13a18f6ecc6ec",
+                      "type": "question"
+                    },
+                    {
+                      "id": "ec5210b6ce79290d007e",
+                      "type": "question"
+                    },
+                    {
+                      "id": "092547f3a81e2d013fd0",
+                      "type": "question"
+                    },
+                    {
+                      "id": "a46c03b70424cc1aa0fe",
+                      "type": "question"
+                    },
+                    {
+                      "id": "8a584fd99f0a78fc9f39",
+                      "type": "question"
+                    },
+                    {
+                      "id": "7b520b553b0d4a11b5f3",
+                      "type": "question"
+                    },
+                    {
+                      "id": "b4883d053dd799e7ecf6",
+                      "type": "question"
+                    },
+                    {
+                      "id": "851699473e4ecbc9c877",
+                      "type": "question"
+                    },
+                    {
+                      "id": "4469909a7943a3049565",
+                      "type": "question"
+                    },
+                    {
+                      "id": "4a6eac0ca435cf724af0",
+                      "type": "question"
+                    },
+                    {
+                      "id": "03d9730b94bba5c7f02d",
+                      "type": "question"
+                    },
+                    {
+                      "id": "8d34e508e2ba180766e6",
+                      "type": "question"
+                    }
+                  ]
+                }
+              }
+            }
+          ],
+          "meta": {
+            "page": 2,
+            "pages": 4,
+            "page_size": 5,
+            "records": 20
+          }
+        }
+      }
+    ]
   }
 }
