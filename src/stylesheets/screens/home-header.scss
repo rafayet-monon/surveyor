@@ -13,6 +13,8 @@
   }
 
   &__menu {
+    z-index: 2;
+
     order: 2;
     margin-left: auto;
   }
@@ -22,5 +24,6 @@
     height: rem(36px);
 
     border-radius: 50%;
+    cursor: pointer;
   }
 }

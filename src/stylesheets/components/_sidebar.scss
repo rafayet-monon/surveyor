@@ -1,0 +1,80 @@
+.sidebar {
+  position: fixed;
+  right: 0;
+  z-index: 1;
+
+  margin: 2rem 2rem 0;
+
+  &__user-image {
+    width: rem(36px);
+    height: rem(36px);
+
+    border-radius: 50%;
+
+    cursor: pointer;
+  }
+
+  &__nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    justify-content: center;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+
+    background-color: map-get($brand-black, 'lighter');
+
+    backdrop-filter: blur(rem(82px));
+
+    transition: 0.5s;
+  }
+
+  &__nav-menu-active {
+    width: rem(264px);
+  }
+
+  &__nav-menu-items {
+    width: 100%;
+    margin: 0;
+    padding: rem(32px);
+
+    list-style: none;
+  }
+
+  &__nav-menu-information {
+    display: flex;
+    align-items: center;
+    height: rem(56px);
+    margin-bottom: rem(20px);
+
+    border-bottom: 1px solid map-get($brand-white, 'light');
+  }
+
+  &__nav-menu-username {
+    margin-bottom: rem(10px);
+
+    color: map-get($brand-white, 'primary');
+    font-weight: map-get($font-weight, 'bolder');
+    font-size: map-get($font-sizes, 'xl');
+    line-height: rem(28px);
+  }
+
+  &__nav-menu-image {
+    margin-left: auto;
+  }
+
+  &__nav-menu-logout {
+    margin-top: rem(35px);
+
+    color: map-get($brand-white, 'primary');
+    font-weight: map-get($font-weight, 'normal');
+    font-size: map-get($font-sizes, 'lg');
+    line-height: rem(25px);
+
+    cursor: pointer;
+
+    opacity: 0.5;
+  }
+}
