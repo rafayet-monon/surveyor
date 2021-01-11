@@ -27,7 +27,7 @@ describe('The Forgot Password Page', () => {
       cy.contains("We've emailed you instruction to reset your password.").should('be.visible')
     })
 
-    it('goes to login page when back button is cliced', function () {
+    it('goes to login page when back button is clicked', function () {
       cy.get('.back-button__back-icon').click()
       cy.url().should('include', '/login')
     })
