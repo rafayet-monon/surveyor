@@ -5,7 +5,7 @@ import mockAxios from 'axios';
 import { createMemoryHistory } from 'history';
 import { Router } from 'react-router-dom';
 
-import 'tests/mocks/matchMedia';
+import 'tests/__mocks__/matchMedia';
 import { AuthContext, AuthProvider } from 'contexts/auth';
 import {
   AuthenticatedRoute,

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { render } from '@testing-library/react';
-import 'tests/mocks/matchMedia';
+import 'tests/__mocks__/matchMedia';
 import mockAxios from 'axios';
 import { Route, MemoryRouter } from 'react-router-dom';
 
