@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { render } from '@testing-library/react';
-import '__mocks__/matchMedia';
+import 'tests/mocks/matchMedia';
 import mockAxios from 'axios';
 
 import { AuthContext } from 'contexts/auth';

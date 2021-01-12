@@ -1,4 +1,4 @@
-import Api from 'utils/Api';
+import Api from 'helpers/api';
 
 class SurveyAdapter {
   static getList = (page, token) => {
