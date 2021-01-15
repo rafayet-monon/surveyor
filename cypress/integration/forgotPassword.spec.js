@@ -7,9 +7,9 @@ describe('The Forgot Password Page', () => {
     cy.visit('/forgot-password')
   })
 
-  describe('Form submit with an INVALID email', () => {
-    context('given empty email', () => {
-      it('shows validation error', () => {
+  describe('Form submit with an invalid data', () => {
+    context('given an empty email', () => {
+      it('shows required field validation error', () => {
         cy.get('form').submit()
         cy.url().should('include', '/forgot-password')
         cy
@@ -20,13 +20,28 @@ describe('The Forgot Password Page', () => {
           })
       })
     })
+
+    context('given an invalid email', () => {
+      it('shows invalid email validation error', () => {
+        const invalidEmail = 'email@invalid'
+
+        cy.get('input[name=email]').type(`${invalidEmail}{enter}`)
+        cy.url().should('include', '/forgot-password')
+        cy
+          .get('.validation-error')
+          .should(($e) => {
+            expect($e).to.have.length(1)
+            expect($e).to.contain('Invalid email address')
+          })
+      })
+    })
   })
 
   describe('Form submit with a valid email', () => {
     it('Shows success message', function () {
-      const valid_email = Cypress.env('CYPRESS_VALID_EMAIL')
+      const validEmail = Cypress.env('CYPRESS_VALID_EMAIL')
 
-      cy.get('input[name=email]').type(`${valid_email}{enter}`)
+      cy.get('input[name=email]').type(`${validEmail}{enter}`)
       cy.url().should('include', '/forgot-password')
       cy.contains("We've emailed you instruction to reset your password.").should('be.visible')
     })

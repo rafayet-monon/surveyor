@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import AuthAdapter from 'adapters/authAdapter';
 
-const Handler = () => {
+const ForgotPasswordHandler = () => {
   const [requestSuccess, setRequestSuccess] = useState(false);
   const [error, setError] = useState(null);
 
@@ -31,4 +31,4 @@ const Handler = () => {
   };
 };
 
-export default Handler;
+export default ForgotPasswordHandler;

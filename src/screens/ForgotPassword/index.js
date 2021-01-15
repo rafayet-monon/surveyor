@@ -5,12 +5,12 @@ import Logo from 'components/Auth/Logo';
 import BackButton from 'components/BackButton';
 import PageBackground from 'components/PageBackground';
 import ForgotPasswordForm from 'screens/ForgotPassword/forgotPasswordForm';
-import Handler from 'screens/ForgotPassword/handler';
+import ForgotPasswordHandler from 'screens/ForgotPassword/forgotPasswordHandler';
 
 const ForgotPassword = () => {
   const logoLabel =
     'Enter your email to receive instructions for resetting your password.';
-  const { handleSubmit, requestSuccess, error } = Handler();
+  const { handleSubmit, requestSuccess, error } = ForgotPasswordHandler();
 
   return (
     <PageBackground type="default">

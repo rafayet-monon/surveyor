@@ -34,8 +34,8 @@ describe('When the forgot password form is mounted', () => {
   });
 
   describe('When the forgot password form is submitted', () => {
-    describe('given an INVALID email', () => {
-      it('shows validation error', async () => {
+    describe('given an empty email', () => {
+      it('shows required validation error', async () => {
         const mockEmail = '';
         const emailRequired = 'Required';
         const { container, findByText } = render(
@@ -47,6 +47,23 @@ describe('When the forgot password form is mounted', () => {
         SubmitForgotPasswordForm(mockEmail, container);
 
         const errorTitle = await findByText(emailRequired);
+        expect(errorTitle).toBeInTheDocument();
+      });
+    });
+
+    describe('given an invalid email', () => {
+      it('shows invalid email validation error', async () => {
+        const mockEmail = 'email@invalid';
+        const emailInvalid = 'Invalid email address';
+        const { container, findByText } = render(
+          <AuthProvider>
+            <ForgotPasswordForm />
+          </AuthProvider>
+        );
+
+        SubmitForgotPasswordForm(mockEmail, container);
+
+        const errorTitle = await findByText(emailInvalid);
         expect(errorTitle).toBeInTheDocument();
       });
     });
