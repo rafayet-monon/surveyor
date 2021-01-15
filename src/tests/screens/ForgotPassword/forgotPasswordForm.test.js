@@ -34,33 +34,37 @@ describe('When the forgot password form is mounted', () => {
   });
 
   describe('When the forgot password form is submitted', () => {
-    it('shows validation error if no email given', async () => {
-      const mockEmail = '';
-      const emailRequired = 'Required';
-      const { container, findByText } = render(
-        <AuthProvider>
-          <ForgotPasswordForm />
-        </AuthProvider>
-      );
+    describe('given an INVALID email', () => {
+      it('shows validation error', async () => {
+        const mockEmail = '';
+        const emailRequired = 'Required';
+        const { container, findByText } = render(
+          <AuthProvider>
+            <ForgotPasswordForm />
+          </AuthProvider>
+        );
 
-      SubmitForgotPasswordForm(mockEmail, container);
+        SubmitForgotPasswordForm(mockEmail, container);
 
-      const errorTitle = await findByText(emailRequired);
-      expect(errorTitle).toBeInTheDocument();
+        const errorTitle = await findByText(emailRequired);
+        expect(errorTitle).toBeInTheDocument();
+      });
     });
 
-    test('submits form with email', async () => {
-      const handleSubmit = jest.fn();
-      const mockEmail = 'mock@surveyor.com';
-      const { container } = render(
-        <AuthProvider>
-          <ForgotPasswordForm onSubmitHandler={ handleSubmit } />
-        </AuthProvider>
-      );
-      SubmitForgotPasswordForm(mockEmail, container);
+    describe('given a valid email', () => {
+      it('submits the form successfully', async () => {
+        const handleSubmit = jest.fn();
+        const mockEmail = 'mock@surveyor.com';
+        const { container } = render(
+          <AuthProvider>
+            <ForgotPasswordForm onSubmitHandler={ handleSubmit } />
+          </AuthProvider>
+        );
+        SubmitForgotPasswordForm(mockEmail, container);
 
-      await wait(() => {
-        expect(handleSubmit).toHaveBeenCalledTimes(1);
+        await wait(() => {
+          expect(handleSubmit).toHaveBeenCalledTimes(1);
+        });
       });
     });
   });

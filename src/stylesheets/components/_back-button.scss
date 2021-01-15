@@ -1,5 +1,6 @@
 .back-button {
   @include header-container();
+  position: absolute;
 
   padding: rem(16px 16px 0);
 

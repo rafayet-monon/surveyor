@@ -22,7 +22,7 @@ const ForgotPassword = () => {
         { error && (
           <Alert
             alertType="error"
-            title="Unable to login"
+            title="Unable send reset password instruction"
             description={ error }
           />
         ) }

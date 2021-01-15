@@ -1,13 +1,19 @@
 import Api from 'utils/Api';
 
 class AuthAdapter {
+  static get DEFAULT_PAYLOAD() {
+    return {
+      client_id: process.env.REACT_APP_CLIENT_ID,
+      client_secret: process.env.REACT_APP_CLIENT_SECRET
+    };
+  }
+
   static login = (email, password) => {
     return Api.post('api/v1/oauth/token', {
       grant_type: 'password',
       email: email,
       password: password,
-      client_id: process.env.REACT_APP_CLIENT_ID,
-      client_secret: process.env.REACT_APP_CLIENT_SECRET
+      ...this.DEFAULT_PAYLOAD
     });
   };
 
@@ -15,16 +21,14 @@ class AuthAdapter {
     return Api.post('api/v1/oauth/token', {
       grant_type: 'refresh_token',
       refresh_token: refresh_token,
-      client_id: process.env.REACT_APP_CLIENT_ID,
-      client_secret: process.env.REACT_APP_CLIENT_SECRET
+      ...this.DEFAULT_PAYLOAD
     });
   };
 
   static forgotPassword = (email) => {
     return Api.post('api/v1/passwords', {
       user: { email: email },
-      client_id: process.env.REACT_APP_CLIENT_ID,
-      client_secret: process.env.REACT_APP_CLIENT_SECRET
+      ...this.DEFAULT_PAYLOAD
     });
   };
 }
