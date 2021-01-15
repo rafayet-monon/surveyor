@@ -2,7 +2,7 @@ import React from 'react';
 
 import { render } from '@testing-library/react';
 
-import '__mocks__/matchMedia';
+import 'tests/__mocks__/matchMedia';
 import { BackgroundProvider } from 'contexts/background';
 import SurveyList from 'screens/Home/surveyList';
 import SurveyListResponse from 'tests/fixtures/surveyListResponse';

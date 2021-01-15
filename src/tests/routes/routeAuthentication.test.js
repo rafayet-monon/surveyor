@@ -5,12 +5,12 @@ import mockAxios from 'axios';
 import { createMemoryHistory } from 'history';
 import { Router } from 'react-router-dom';
 
-import '__mocks__/matchMedia';
+import 'tests/__mocks__/matchMedia';
 import { AuthContext, AuthProvider } from 'contexts/auth';
 import {
   AuthenticatedRoute,
   UnauthenticatedRoute
-} from 'routes/protectedRoute';
+} from 'routes/routeAuthentication';
 import Home from 'screens/Home';
 import Login from 'screens/Login';
 import SurveyListResponse from 'tests/fixtures/surveyListResponse';

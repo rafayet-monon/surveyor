@@ -1,4 +1,4 @@
-import Api from 'utils/Api';
+import Api from 'helpers/api';
 
 class ProfileAdapter {
   static get = (token) => {

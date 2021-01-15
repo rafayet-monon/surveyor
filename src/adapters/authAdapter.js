@@ -1,4 +1,4 @@
-import Api from 'utils/Api';
+import Api from 'helpers/api';
 
 class AuthAdapter {
   static get DEFAULT_PAYLOAD() {
