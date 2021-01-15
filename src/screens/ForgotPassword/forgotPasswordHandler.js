@@ -8,7 +8,7 @@ const ForgotPasswordHandler = () => {
 
   const handleSubmit = async (values) => {
     try {
-      await AuthAdapter.forgotPassword(values.email).then(function (response) {
+      await AuthAdapter.forgotPassword(values.email).then(response => {
         if (response.status === 200) {
           setRequestSuccess(true);
 
