@@ -2,7 +2,7 @@ const BuildQuestionList = (details) => {
   let questions = details.data.relationships.questions.data;
   const included = details.included;
 
-  questions.forEach(function (question, index) {
+  questions.forEach((question, index) => {
     const question_details = included.find(
       (details) => details.id === question.id
     );

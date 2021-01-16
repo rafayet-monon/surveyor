@@ -42,7 +42,6 @@ const SurveyDetail = () => {
 
   useEffect(() => {
     if (surveyDetail.length !== 0) {
-      console.log(surveyDetail);
       setQuestionList(BuildQuestionList(surveyDetail));
     }
   }, [surveyDetail]);
