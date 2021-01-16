@@ -1,22 +1,24 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 
-import SurveySelectField from 'components/SurveySelectField';
-import SurveyTextAreaField from 'components/SurveyTextAreaField';
-import SurveyTextField from 'components/SurveyTextField';
+import { DetailsContext } from 'contexts/details';
 import closeIcon from 'images/close-button-white.svg';
 import nextIcon from 'images/next-button-black.svg';
+import DetermineQuestionType from 'screens/SurveyDetail/determineQuestionType';
+import filterQuestionList from 'screens/SurveyDetail/filterQuestionList';
 
 const Questions = () => {
-  const question = 'How fulfilled did you feel during this WFH period?';
-  const options = [
-    { name: 'Bangladesh', value: 'BD' },
-    { name: 'India', value: 'IN' },
-    { name: 'Nepal', value: 'NP' },
-    { name: 'Bhutan', value: 'BH' },
-    { name: 'Thailand', value: 'TH' },
-    { name: 'Singapore', value: 'SG' },
-    { name: 'Vietnam', value: 'VN' }
-  ];
+  const detailsContext = useContext(DetailsContext);
+  const filteredQuestions = filterQuestionList(detailsContext.questionList);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const questionText = filteredQuestions[currentQuestionIndex].text;
+
+  const nextQuestion = () => {
+    setCurrentQuestionIndex(currentQuestionIndex + 1);
+  };
+
+  const submitSurvey = () => {
+    console.log('submitted');
+  };
 
   return (
     <div className="questions">
@@ -28,18 +30,35 @@ const Questions = () => {
 
       <div className="questions__container">
         <div className="questions__details">
-          <div className="questions__number">1/5</div>
-          <h1 className="questions__title"> { question }</h1>
-          <SurveySelectField options={ options } />
-          <SurveyTextAreaField />
-          <SurveyTextField />
+          <div className="questions__number">
+            { currentQuestionIndex + 1 }/{ filteredQuestions.length }
+          </div>
+          <h1 className="questions__title"> { questionText } </h1>
+          <DetermineQuestionType
+            type={ filteredQuestions[currentQuestionIndex].type }
+            pick={ filteredQuestions[currentQuestionIndex].pick }
+          />
         </div>
       </div>
 
       <div className="questions__footer">
-        <div className="questions__next-question" role="presentation">
-          <img src={ nextIcon } alt="next question" />
-        </div>
+        { currentQuestionIndex + 1 === filteredQuestions.length ? (
+          <button
+            type="submit"
+            className="button button--primary questions__submit"
+            onClick={ submitSurvey }
+          >
+            Submit
+          </button>
+        ) : (
+          <div
+            className="questions__next-question"
+            role="presentation"
+            onClick={ nextQuestion }
+          >
+            <img src={ nextIcon } alt="next question" />
+          </div>
+        ) }
       </div>
     </div>
   );
