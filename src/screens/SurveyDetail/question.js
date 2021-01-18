@@ -41,6 +41,7 @@ const Questions = () => {
         </div>
       </div>
 
+      { /*Show the submit button if it is the last question otherwise the next buttons*/ }
       <div className="questions__footer">
         { currentQuestionIndex + 1 === filteredQuestions.length ? (
           <button

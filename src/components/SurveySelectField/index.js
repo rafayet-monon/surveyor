@@ -3,6 +3,7 @@ import React from 'react';
 import SelectSearch from 'react-select-search/dist/cjs';
 
 const SurveySelectField = ({ options }) => {
+  // Adding some demo data for now to show components based on question type.
   const demoData = [
     { name: 'Bangladesh', value: 'BD' },
     { name: 'India', value: 'IN' },

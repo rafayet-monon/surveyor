@@ -5,6 +5,7 @@ import Slider from 'react-slick';
 import slickSettings from 'components/WheelSelect/slickSettings';
 
 const WheelSelect = ({ options, multipleSelect }) => {
+  // Adding some demo data for now to show components based on question type.
   const demoData = [
     {
       display: 'N0',

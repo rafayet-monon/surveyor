@@ -1,3 +1,5 @@
+// Build question list and answers from the api for easier of question and
+// answers across the components
 const BuildQuestionList = (details) => {
   let questions = details.data.relationships.questions.data;
   const included = details.included;

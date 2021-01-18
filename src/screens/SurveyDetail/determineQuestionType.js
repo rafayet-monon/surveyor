@@ -1,3 +1,4 @@
+// Based on the question type we are determining and showing components
 import React, { useEffect, useState } from 'react';
 
 import NetPromotingScore from 'components/NetPromotingScore';
@@ -21,6 +22,7 @@ const DetermineQuestionType = ({ type, pick }) => {
       case 'heart':
       case 'smiley':
       case 'star':
+      case 'money':
       case 'thumb': {
         setQuestionComponent(<Rating ratingEmoji={ questionType } />);
 

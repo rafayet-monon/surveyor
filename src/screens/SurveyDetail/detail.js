@@ -9,6 +9,8 @@ const Detail = () => {
   const detailsContext = useContext(DetailsContext);
   const { dispatch } = useContext(SurveyStatusContext);
 
+  // Pick data according to need from the contexts which provides surveyDetail
+  // and questionList
   const coverImage =
     detailsContext.surveyDetail.data.attributes.cover_image_url;
   const title = detailsContext.surveyDetail.data.attributes.title;
