@@ -17,6 +17,7 @@
 @import 'mixins/header-container';
 @import 'mixins/details-container';
 @import 'mixins/next-icon-container';
+@import 'mixins/warning-actions';
 // Components
 @import 'components/page-background';
 @import 'components/logo-auth';
@@ -41,3 +42,5 @@
 @import 'screens/survey-list';
 @import 'screens/survey-detail';
 @import 'screens/question';
+@import 'screens/quit-survey-modal';
+@import 'screens/survey-outro';

@@ -1,0 +1,6 @@
+@mixin warning-actions() {
+  width: rem(90px);
+  height: rem(40px);
+
+  font-weight: map_get($font-weight, 'bolder');
+}
