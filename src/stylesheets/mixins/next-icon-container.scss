@@ -1,0 +1,17 @@
+@mixin next-icon-container() {
+  padding: rem(14px 13px);
+  position: relative;
+
+  display: flex;
+  align-content: center;
+  justify-content: center;
+
+  float: right;
+  width: rem(56px);
+  height: rem(56px);
+  margin-left: auto;
+
+  background-color: map-get($brand-white, 'primary');
+  border-radius: 50%;
+  cursor: pointer;
+}
