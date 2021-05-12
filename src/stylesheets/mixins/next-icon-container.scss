@@ -1,5 +1,4 @@
 @mixin next-icon-container() {
-  padding: rem(14px 13px);
   position: relative;
 
   display: flex;
@@ -10,6 +9,7 @@
   width: rem(56px);
   height: rem(56px);
   margin-left: auto;
+  padding: rem(14px 13px);
 
   background-color: map-get($brand-white, 'primary');
   border-radius: 50%;
