@@ -6,7 +6,7 @@ import Rating from 'components/Rating';
 import SurveySelectField from 'components/SurveySelectField';
 import SurveyTextAreaField from 'components/SurveyTextAreaField';
 import SurveyTextField from 'components/SurveyTextField';
-import MultipleWheelSelect from 'components/WheelSelect';
+import WheelSelect from 'components/WheelSelect';
 
 const DetermineQuestionType = ({ type, pick }) => {
   const [questionType, setQuestionType] = useState(type);
@@ -46,7 +46,7 @@ const DetermineQuestionType = ({ type, pick }) => {
       case 'choice': {
         const multipleChoice = pick === 'any';
         setQuestionComponent(
-          <MultipleWheelSelect data={ null } multipleSelect={ multipleChoice } />
+          <WheelSelect data={ null } multipleSelect={ multipleChoice } />
         );
 
         break;
