@@ -3,3 +3,9 @@
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom/extend-expect';
+
+// configure custom attribute for test id
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { configure } from '@testing-library/dom'
+
+configure({ testIdAttribute: 'data-test-id' })
