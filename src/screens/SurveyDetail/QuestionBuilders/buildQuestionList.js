@@ -4,15 +4,15 @@ const buildQuestionList = (details) => {
   let questions = details.data.relationships.questions.data;
   const included = details.included;
 
-  questions.forEach((question, index) => {
+  questions.forEach((question) => {
     const question_details = included.find(
       (details) => details.id === question.id
     );
 
-    questions[index]['type'] = question_details.attributes.display_type;
-    questions[index]['pick'] = question_details.attributes.pick;
-    questions[index]['text'] = question_details.attributes.text;
-    questions[index]['answers'] = question_details.relationships.answers.data;
+    question['type'] = question_details.attributes.display_type;
+    question['pick'] = question_details.attributes.pick;
+    question['text'] = question_details.attributes.text;
+    question['answers'] = question_details.relationships.answers.data;
   });
 
   return questions;
