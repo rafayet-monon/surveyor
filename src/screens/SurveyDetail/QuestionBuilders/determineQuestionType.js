@@ -62,7 +62,7 @@ const DetermineQuestionType = ({ type, pick }) => {
     }
   }, [pick, questionType, type]);
 
-  return <div> { questionComponent } </div>;
+  return <React.Fragment> { questionComponent } </React.Fragment>;
 };
 
 export default DetermineQuestionType;

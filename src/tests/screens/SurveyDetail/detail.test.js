@@ -7,12 +7,12 @@ import { Router } from 'react-router-dom';
 
 import { DetailsContext } from 'contexts/details';
 import { SurveyStatusProvider } from 'contexts/surveyStatus';
-import BuildQuestionList from 'screens/SurveyDetail/buildQuestionList';
 import Detail from 'screens/SurveyDetail/detail';
+import buildQuestionList from 'screens/SurveyDetail/QuestionBuilders/buildQuestionList';
 import SurveyDetailResponse from 'tests/fixtures/surveyDetailResponse.json';
 
 describe('When Detail component is mounted', () => {
-  const questionList = BuildQuestionList(SurveyDetailResponse)
+  const questionList = buildQuestionList(SurveyDetailResponse)
 
   it('shows the survey image', () => {
     const history = createMemoryHistory();

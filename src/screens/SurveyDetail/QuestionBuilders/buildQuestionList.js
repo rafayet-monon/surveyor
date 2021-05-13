@@ -1,6 +1,6 @@
 // Build question list and answers from the api for easier of question and
 // answers across the components
-const BuildQuestionList = (details) => {
+const buildQuestionList = (details) => {
   let questions = details.data.relationships.questions.data;
   const included = details.included;
 
@@ -18,4 +18,4 @@ const BuildQuestionList = (details) => {
   return questions;
 };
 
-export default BuildQuestionList;
+export default buildQuestionList;

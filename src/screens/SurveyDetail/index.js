@@ -8,7 +8,7 @@ import PageBackground from 'components/PageBackground';
 import { AuthContext } from 'contexts/auth';
 import { DetailsProvider } from 'contexts/details';
 import { SurveyStatusProvider } from 'contexts/surveyStatus';
-import BuildQuestionList from 'screens/SurveyDetail/buildQuestionList';
+import buildQuestionList from 'screens/SurveyDetail/QuestionBuilders/buildQuestionList';
 import ShowSurvey from 'screens/SurveyDetail/showSurvey';
 
 const SurveyDetail = () => {
@@ -42,7 +42,7 @@ const SurveyDetail = () => {
 
   useEffect(() => {
     if (surveyDetail.length !== 0) {
-      setQuestionList(BuildQuestionList(surveyDetail));
+      setQuestionList(buildQuestionList(surveyDetail));
     }
   }, [surveyDetail]);
 
