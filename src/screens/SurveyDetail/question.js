@@ -4,7 +4,6 @@ import DetermineQuestionType from 'components/DetermineQuestionType';
 import { DetailsContext } from 'contexts/details';
 import filterQuestionList from 'helpers/filterQuestionList';
 import questionProperties from 'helpers/questionProperties';
-import closeIcon from 'images/close-button-white.svg';
 import nextIcon from 'images/next-button-black.svg';
 import QuitSurvey from 'screens/SurveyDetail/quitSurvey';
 import SurveyOutro from 'screens/SurveyDetail/surveyOutro';
