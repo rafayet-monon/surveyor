@@ -2,10 +2,10 @@
 // questions
 const questionProperties = (filteredQuestions, currentQuestionIndex) => {
   const questionText = filteredQuestions[currentQuestionIndex].text;
-  const questionSerial = `${ currentQuestionIndex + 1 } / ${ filteredQuestions.length }`
-  const isLastQuestion = currentQuestionIndex + 1 === filteredQuestions.length
-  const questionType = filteredQuestions[currentQuestionIndex].type
-  const questionPick = filteredQuestions[currentQuestionIndex].pick
+  const questionSerial = `${currentQuestionIndex + 1} / ${ filteredQuestions.length }`;
+  const isLastQuestion = currentQuestionIndex + 1 === filteredQuestions.length;
+  const questionType = filteredQuestions[currentQuestionIndex].type;
+  const questionPick = filteredQuestions[currentQuestionIndex].pick;
 
   return {
     index: currentQuestionIndex,

@@ -10,10 +10,14 @@ import questionProperties from 'screens/SurveyDetail/QuestionBuilders/questionPr
 const Questions = () => {
   const detailsContext = useContext(DetailsContext);
   const filteredQuestions = filterQuestionList(detailsContext.questionList);
-  const [currentQuestionProperties, setCurrentQuestionProperties] = useState(questionProperties(filteredQuestions, 0));
+  const [currentQuestionProperties, setCurrentQuestionProperties] = useState(
+    questionProperties(filteredQuestions, 0)
+  );
 
   const nextQuestion = () => {
-    setCurrentQuestionProperties(questionProperties(filteredQuestions, currentQuestionProperties.index + 1))
+    setCurrentQuestionProperties(
+      questionProperties(filteredQuestions, currentQuestionProperties.index + 1)
+    );
   };
 
   const submitSurvey = () => {
@@ -33,7 +37,9 @@ const Questions = () => {
           <div className="questions__number">
             { currentQuestionProperties.serial }
           </div>
-          <h1 className="questions__title"> { currentQuestionProperties.text } </h1>
+          <h1 className="questions__title">
+            { currentQuestionProperties.text }
+          </h1>
           <DetermineQuestionType
             type={ currentQuestionProperties.type }
             pick={ currentQuestionProperties.pick }
