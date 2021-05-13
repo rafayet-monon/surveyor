@@ -5,15 +5,15 @@ import closeIcon from 'images/close-button-white.svg';
 import nextIcon from 'images/next-button-black.svg';
 import DetermineQuestionType from 'screens/SurveyDetail/determineQuestionType';
 import filterQuestionList from 'screens/SurveyDetail/filterQuestionList';
+import questionProperties from 'screens/SurveyDetail/questionProperties';
 
 const Questions = () => {
   const detailsContext = useContext(DetailsContext);
   const filteredQuestions = filterQuestionList(detailsContext.questionList);
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const questionText = filteredQuestions[currentQuestionIndex].text;
+  const [currentQuestionProperties, setCurrentQuestionProperties] = useState(questionProperties(filteredQuestions, 0));
 
   const nextQuestion = () => {
-    setCurrentQuestionIndex(currentQuestionIndex + 1);
+    setCurrentQuestionProperties(questionProperties(filteredQuestions, currentQuestionProperties.index + 1))
   };
 
   const submitSurvey = () => {
@@ -31,19 +31,19 @@ const Questions = () => {
       <div className="questions__container">
         <div className="questions__details">
           <div className="questions__number">
-            { currentQuestionIndex + 1 }/{ filteredQuestions.length }
+            { currentQuestionProperties.serial }
           </div>
-          <h1 className="questions__title"> { questionText } </h1>
+          <h1 className="questions__title"> { currentQuestionProperties.text } </h1>
           <DetermineQuestionType
-            type={ filteredQuestions[currentQuestionIndex].type }
-            pick={ filteredQuestions[currentQuestionIndex].pick }
+            type={ currentQuestionProperties.type }
+            pick={ currentQuestionProperties.pick }
           />
         </div>
       </div>
 
       { /*Show the submit button if it is the last question otherwise the next buttons*/ }
       <div className="questions__footer">
-        { currentQuestionIndex + 1 === filteredQuestions.length ? (
+        { currentQuestionProperties.lastQuestion ? (
           <button
             type="submit"
             className="button button--primary questions__submit"
