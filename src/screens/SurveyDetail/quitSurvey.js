@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import { useHistory } from 'react-router-dom';
 
-import closeIcon from 'images/close-button-white.png';
+import closeIcon from 'images/close-button-white.svg';
 
 const QuitSurvey = () => {
   const [show, setShow] = useState(false);
@@ -14,10 +14,8 @@ const QuitSurvey = () => {
   const returnToHome = () => history.push('/');
 
   return (
-    <div>
-      <button className="button" onClick={ handleShow }>
-        <img src={ closeIcon } alt="close" />
-      </button>
+    <React.Fragment>
+      <img onClick={ handleShow } src={ closeIcon } alt="close" role="presentation" />
 
       { show
         ? ReactDOM.createPortal(
@@ -57,7 +55,7 @@ const QuitSurvey = () => {
             document.body
           )
         : null }
-    </div>
+    </React.Fragment>
   );
 };
 
