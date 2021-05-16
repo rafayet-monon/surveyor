@@ -18,7 +18,7 @@ const SurveyOutro = ({ message }) => {
     <PageBackground>
       <div className="survey-outro">
         <img className="survey-outro__gif" src={ SuccessGif } alt="success" />
-        <span className="survey-outro__message">{ message }</span>
+        <span className="survey-outro__message" data-test-id="outro-message">{ message }</span>
       </div>
     </PageBackground>
   );

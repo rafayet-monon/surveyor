@@ -11,7 +11,7 @@ const BackButton = () => {
   return (
     <div className="back-button">
       <div className="back-button__back-action">
-        <button className="button" onClick={ goBack }>
+        <button className="button" onClick={ goBack } data-test-id="back-button">
           <img src={ backIcon } alt="back" className="back-button__back-icon" />
         </button>
       </div>
