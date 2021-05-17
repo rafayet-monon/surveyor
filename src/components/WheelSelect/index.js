@@ -67,13 +67,13 @@ const WheelSelect = ({ options, multipleSelect }) => {
                 className="wheel-select__container"
                 key={ index }
               >
-                <div className={ elementTextClass } data-test-id="select-display">{ element.display }</div>
+                <div className={ elementTextClass } data-test-id="wheel-select">{ element.display }</div>
 
                 { multipleSelect && (
                   <div
                     className="wheel-select__checkbox-container"
                     id={ `wheel-select__checkbox--${index}` }
-                    data-test-id="multiple-select"
+                    data-test-id="wheel-multiple-select"
                   >
                     <input
                       type="checkbox"
