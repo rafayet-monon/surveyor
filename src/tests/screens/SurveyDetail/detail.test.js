@@ -21,7 +21,7 @@ describe('When Detail component is mounted', () => {
         <DetailsContext.Provider
           value={{
             surveyDetail: SurveyDetailResponse,
-            questionList: questionList
+            questionList
           }}
         >
           <SurveyStatusProvider>
@@ -44,7 +44,7 @@ describe('When Detail component is mounted', () => {
         <DetailsContext.Provider
           value={{
             surveyDetail: SurveyDetailResponse,
-            questionList: questionList
+            questionList
           }}
         >
           <SurveyStatusProvider>
@@ -70,7 +70,7 @@ describe('When Detail component is mounted', () => {
         <DetailsContext.Provider
           value={{
             surveyDetail: SurveyDetailResponse,
-            questionList: questionList
+            questionList
           }}
         >
           <SurveyStatusProvider>

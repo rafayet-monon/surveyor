@@ -10,13 +10,13 @@ import questionProperties from 'screens/SurveyDetail/QuestionBuilders/questionPr
 const Questions = () => {
   const detailsContext = useContext(DetailsContext);
   const filteredQuestions = filterQuestionList(detailsContext.questionList);
-  const [currentQuestionProperties, setCurrentQuestionProperties] = useState(
+  const [currentQuestion, setCurrentQuestion] = useState(
     questionProperties(filteredQuestions, 0)
   );
 
   const nextQuestion = () => {
-    setCurrentQuestionProperties(
-      questionProperties(filteredQuestions, currentQuestionProperties.index + 1)
+    setCurrentQuestion(
+      questionProperties(filteredQuestions, currentQuestion.index + 1)
     );
   };
 
@@ -35,21 +35,21 @@ const Questions = () => {
       <div className="questions__container">
         <div className="questions__details">
           <div className="questions__number">
-            { currentQuestionProperties.serial }
+            { currentQuestion.serial }
           </div>
           <h1 className="questions__title">
-            { currentQuestionProperties.text }
+            { currentQuestion.text }
           </h1>
           <DetermineQuestionType
-            type={ currentQuestionProperties.type }
-            pick={ currentQuestionProperties.pick }
+            type={ currentQuestion.type }
+            pick={ currentQuestion.pick }
           />
         </div>
       </div>
 
       { /*Show the submit button if it is the last question otherwise the next buttons*/ }
       <div className="questions__footer">
-        { currentQuestionProperties.lastQuestion ? (
+        { currentQuestion.lastQuestion ? (
           <button
             type="submit"
             className="button button--primary questions__submit"
