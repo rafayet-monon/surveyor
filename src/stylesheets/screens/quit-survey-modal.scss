@@ -56,7 +56,7 @@
   &__yes-button {
     @include warning-actions();
 
-    margin-right: 4px;
+    margin-right: rem(4px);
 
     color: map-get($brand-white, 'primary');
 
@@ -70,6 +70,6 @@
   &__cancel-button {
     @include warning-actions();
 
-    margin-left: 4px;
+    margin-left: rem(4px);
   }
 }
