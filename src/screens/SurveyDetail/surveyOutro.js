@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import PageBackground from 'components/PageBackground';
-import SuccessImage from 'images/thank-animation.gif';
+import SuccessGif from 'images/thank-animation.gif';
 
 const SurveyOutro = ({ message }) => {
   const history = useHistory();
@@ -17,7 +17,7 @@ const SurveyOutro = ({ message }) => {
   return (
     <PageBackground>
       <div className="survey-outro">
-        <img className="survey-outro__image" src={ SuccessImage } alt="success" />
+        <img className="survey-outro__gif" src={ SuccessGif } alt="success" />
         <span className="survey-outro__message">{ message }</span>
       </div>
     </PageBackground>
