@@ -7,15 +7,23 @@ import { Router } from 'react-router-dom';
 
 import { DetailsContext } from 'contexts/details';
 import { SurveyStatusProvider } from 'contexts/surveyStatus';
+import buildQuestionList from 'helpers/buildQuestionList';
 import Detail from 'screens/SurveyDetail/detail';
 import SurveyDetailResponse from 'tests/fixtures/surveyDetailResponse.json';
 
 describe('When Detail component is mounted', () => {
+  const questionList = buildQuestionList(SurveyDetailResponse);
+
   it('shows the survey image', () => {
     const history = createMemoryHistory();
     const { container } = render(
       <Router history={ history }>
-        <DetailsContext.Provider value={ SurveyDetailResponse.data }>
+        <DetailsContext.Provider
+          value={{
+            surveyDetail: SurveyDetailResponse,
+            questionList
+          }}
+        >
           <SurveyStatusProvider>
             <Detail />
           </SurveyStatusProvider>
@@ -33,7 +41,12 @@ describe('When Detail component is mounted', () => {
     const history = createMemoryHistory();
     const { getByText } = render(
       <Router history={ history }>
-        <DetailsContext.Provider value={ SurveyDetailResponse.data }>
+        <DetailsContext.Provider
+          value={{
+            surveyDetail: SurveyDetailResponse,
+            questionList
+          }}
+        >
           <SurveyStatusProvider>
             <Detail />
           </SurveyStatusProvider>
@@ -46,20 +59,28 @@ describe('When Detail component is mounted', () => {
     expect(surveyTtile).toBeInTheDocument();
   });
 
-  it('shows the survey description', () => {
+  it('shows the survey introduction', () => {
     const history = createMemoryHistory();
+    const introduction = questionList.find(
+      (question) => question.type === 'intro'
+    ).text;
+
     const { getByText } = render(
       <Router history={ history }>
-        <DetailsContext.Provider value={ SurveyDetailResponse.data }>
+        <DetailsContext.Provider
+          value={{
+            surveyDetail: SurveyDetailResponse,
+            questionList
+          }}
+        >
           <SurveyStatusProvider>
             <Detail />
           </SurveyStatusProvider>
         </DetailsContext.Provider>
       </Router>
     );
-
     const surveyDescription = getByText(
-      SurveyDetailResponse.data.attributes.description
+      introduction.replace(/(\r\n|\n|\r)/gm, '')
     );
 
     expect(surveyDescription).toBeInTheDocument();

@@ -2,9 +2,13 @@ import React, { createContext } from 'react';
 
 const DetailsContext = createContext();
 
-const DetailsProvider = ({ surveyDetail, children }) => {
+const DetailsProvider = ({ surveyDetail, questionList, children }) => {
   return (
-    <DetailsContext.Provider value={ surveyDetail }>
+    // Using the prebuild questionList and passing it to context provider
+    // so that it can be used among its' children
+    <DetailsContext.Provider
+      value={{ surveyDetail, questionList }}
+    >
       { children }
     </DetailsContext.Provider>
   );

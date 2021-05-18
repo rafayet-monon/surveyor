@@ -4,7 +4,20 @@ import Slider from 'react-slick';
 
 import slickSettings from 'components/WheelSelect/slickSettings';
 
-const WheelSelect = ({ data, multipleSelect }) => {
+const WheelSelect = ({ options, multipleSelect }) => {
+  // Adding some demo data for now to show components based on question type.
+  const demoData = [
+    {
+      display: 'No',
+      value: 0
+    },
+    {
+      display: 'Yes',
+      value: 1
+    }
+  ];
+  const wheelData = options || demoData;
+
   const [isClicked, setIsClicked] = useState(false);
   const sliderRef = useRef(null);
   const elementTextClass = multipleSelect
@@ -40,7 +53,7 @@ const WheelSelect = ({ data, multipleSelect }) => {
     <div className="wheel-select">
       <span className="wheel-select__selected-zone" />
       <Slider { ...slickConfig } ref={ sliderRef }>
-        { data.map(function (element, index) {
+        { wheelData.map(function (element, index) {
           return (
             <div
               className="wheel-select__element"

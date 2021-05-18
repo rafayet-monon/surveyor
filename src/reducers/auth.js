@@ -16,7 +16,7 @@ const AuthReducer = (state, action) => {
       return {
         ...state,
         isAuthenticated: true,
-        authorization_token: authorization_token
+        authorization_token
       };
     }
     case 'REFRESH': {

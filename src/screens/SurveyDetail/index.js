@@ -8,6 +8,7 @@ import PageBackground from 'components/PageBackground';
 import { AuthContext } from 'contexts/auth';
 import { DetailsProvider } from 'contexts/details';
 import { SurveyStatusProvider } from 'contexts/surveyStatus';
+import buildQuestionList from 'helpers/buildQuestionList';
 import ShowSurvey from 'screens/SurveyDetail/showSurvey';
 
 const SurveyDetail = () => {
@@ -16,6 +17,7 @@ const SurveyDetail = () => {
   const [surveyDetail, setSurveyDetail] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [backgroundImage, setBackgroundImage] = useState(null);
+  const [questionList, setQuestionList] = useState(null);
 
   const getSurveyDetail = async () => {
     try {
@@ -24,7 +26,7 @@ const SurveyDetail = () => {
         authContext.state.authorization_token
       ).then(function (response) {
         if (response.status === 200) {
-          setSurveyDetail(response.data.data);
+          setSurveyDetail(response.data);
           setBackgroundImage(response.data.data.attributes.cover_image_url);
           setIsLoading(false);
         }
@@ -38,12 +40,21 @@ const SurveyDetail = () => {
     getSurveyDetail();
   }, []);
 
+  useEffect(() => {
+    if (surveyDetail.length !== 0) {
+      setQuestionList(buildQuestionList(surveyDetail));
+    }
+  }, [surveyDetail]);
+
   return (
     <PageBackground type="image" imagePath={ backgroundImage }>
       { isLoading ? (
         <Loader />
       ) : (
-        <DetailsProvider surveyDetail={ surveyDetail }>
+        <DetailsProvider
+          surveyDetail={ surveyDetail }
+          questionList={ questionList }
+        >
           <SurveyStatusProvider>
             <ShowSurvey />
           </SurveyStatusProvider>

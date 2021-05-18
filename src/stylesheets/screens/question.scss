@@ -53,6 +53,11 @@
     padding-right: rem(32px);
   }
 
+  &__submit {
+    width: rem(120px);
+    margin-left: auto;
+  }
+
   &__navigation {
     order: 2;
     margin-left: auto;
@@ -63,19 +68,6 @@
   }
 
   &__next-question {
-    position: relative;
-
-    display: flex;
-    align-content: center;
-    justify-content: center;
-
-    float: right;
-    width: rem(56px);
-    height: rem(56px);
-    margin-left: auto;
-
-    background-color: map-get($brand-white, 'primary');
-    border-radius: 50%;
-    cursor: pointer;
+    @include next-icon-container();
   }
 }
