@@ -1,4 +1,4 @@
-import buildQuestionList from 'screens/SurveyDetail/QuestionBuilders/buildQuestionList';
+import buildQuestionList from 'helpers/buildQuestionList';
 import SurveyDetailResponse from 'tests/fixtures/surveyDetailResponse.json';
 
 describe('buildQuestionList', () => {

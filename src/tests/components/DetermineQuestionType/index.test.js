@@ -3,9 +3,11 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 
 import 'tests/__mocks__/matchMedia';
-import DetermineQuestionType from 'screens/SurveyDetail/QuestionBuilders/determineQuestionType';
-import emojis from 'tests/screens/SurveyDetail/QuestionBuilders/emojis'
+
+import DetermineQuestionType from 'components/DetermineQuestionType';
+import emojis from 'tests/components/DetermineQuestionType/emojis'
 import { questionSelectors } from 'tests/screens/SurveyDetail/selectors'
+
 
 describe('given DetermineQuestionType is mounted', () => {
   describe("given the question has type 'heart'", () => {

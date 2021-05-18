@@ -1,6 +1,6 @@
-import buildQuestionList from 'screens/SurveyDetail/QuestionBuilders/buildQuestionList';
-import filterQuestionList from 'screens/SurveyDetail/QuestionBuilders/filterQuestionList';
-import questionProperties from 'screens/SurveyDetail/QuestionBuilders/questionProperties';
+import buildQuestionList from 'helpers/buildQuestionList';
+import filterQuestionList from 'helpers/filterQuestionList';
+import questionProperties from 'helpers/questionProperties';
 import SurveyDetailResponse from 'tests/fixtures/surveyDetailResponse.json';
 
 describe('questionProperties', () => {
