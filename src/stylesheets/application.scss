@@ -33,6 +33,8 @@
 @import 'components/select-search';
 @import 'components/sidebar';
 @import 'components/back-button';
+@import 'components/quit-survey-modal';
+@import 'components/survey-outro';
 // Screens
 @import 'screens/login';
 @import 'screens/forgot-password';
@@ -42,5 +44,4 @@
 @import 'screens/survey-list';
 @import 'screens/survey-detail';
 @import 'screens/question';
-@import 'screens/quit-survey-modal';
-@import 'screens/survey-outro';
+
