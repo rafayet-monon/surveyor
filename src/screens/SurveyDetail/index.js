@@ -8,7 +8,7 @@ import PageBackground from 'components/PageBackground';
 import { AuthContext } from 'contexts/auth';
 import { DetailsProvider } from 'contexts/details';
 import { SurveyStatusProvider } from 'contexts/surveyStatus';
-import buildQuestionList from 'screens/SurveyDetail/QuestionBuilders/buildQuestionList';
+import buildQuestionList from 'helpers/buildQuestionList';
 import ShowSurvey from 'screens/SurveyDetail/showSurvey';
 
 const SurveyDetail = () => {

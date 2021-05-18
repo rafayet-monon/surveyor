@@ -8,7 +8,7 @@ const WheelSelect = ({ options, multipleSelect }) => {
   // Adding some demo data for now to show components based on question type.
   const demoData = [
     {
-      display: 'N0',
+      display: 'No',
       value: 0
     },
     {

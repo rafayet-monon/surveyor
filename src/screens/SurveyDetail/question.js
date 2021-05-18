@@ -1,11 +1,11 @@
 import React, { useContext, useState } from 'react';
 
+import DetermineQuestionType from 'components/DetermineQuestionType';
 import { DetailsContext } from 'contexts/details';
+import filterQuestionList from 'helpers/filterQuestionList';
+import questionProperties from 'helpers/questionProperties';
 import closeIcon from 'images/close-button-white.svg';
 import nextIcon from 'images/next-button-black.svg';
-import DetermineQuestionType from 'screens/SurveyDetail/QuestionBuilders/determineQuestionType';
-import filterQuestionList from 'screens/SurveyDetail/QuestionBuilders/filterQuestionList';
-import questionProperties from 'screens/SurveyDetail/QuestionBuilders/questionProperties';
 
 const Questions = () => {
   const detailsContext = useContext(DetailsContext);
