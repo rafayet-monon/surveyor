@@ -15,7 +15,13 @@ const QuitSurvey = () => {
 
   return (
     <React.Fragment>
-      <img onClick={ handleShow } src={ closeIcon } alt="close" role="presentation" />
+      <img
+        onClick={ handleShow }
+        src={ closeIcon }
+        alt="close"
+        role="presentation"
+        data-test-id="quit-survey-icon"
+      />
 
       { show
         ? ReactDOM.createPortal(
@@ -37,6 +43,7 @@ const QuitSurvey = () => {
                     type="submit"
                     className="button button--primary modal-quit-survey__yes-button"
                     onClick={ returnToHome }
+                    data-test-id="confirm-quit-survey"
                   >
                     Yes
                   </button>
@@ -45,6 +52,7 @@ const QuitSurvey = () => {
                     type="submit"
                     className="button button--primary"
                     onClick={ handleClose }
+                    data-test-id="cancel-quit-survey"
                   >
                     Cancel
                   </button>

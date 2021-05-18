@@ -18,8 +18,7 @@ const quitSurveySelectors = {
 }
 
 const outroSelectors = {
-  message: 'outro-message',
-  image: 'outro-image'
+  message: 'outro-message'
 }
 
 const questionNavigationSelectors = {
