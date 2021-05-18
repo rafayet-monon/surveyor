@@ -1,12 +1,12 @@
 import React, { useContext, useState } from 'react';
 
 import DetermineQuestionType from 'components/DetermineQuestionType';
+import QuitSurvey from 'components/QuitSurvey';
+import SurveyOutro from 'components/SurveyOutro';
 import { DetailsContext } from 'contexts/details';
 import filterQuestionList from 'helpers/filterQuestionList';
 import questionProperties from 'helpers/questionProperties';
 import nextIcon from 'images/next-button-black.svg';
-import QuitSurvey from 'screens/SurveyDetail/quitSurvey';
-import SurveyOutro from 'screens/SurveyDetail/surveyOutro';
 
 const Questions = () => {
   const detailsContext = useContext(DetailsContext);
