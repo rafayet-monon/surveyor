@@ -33,7 +33,7 @@ const Rating = ({ initialRating, maxRating, ratingEmoji }) => {
 
   return (
     <div className="rating">
-      <ul className="rating__list">
+      <ul className="rating__list" data-test-id="rating-list">
         { emojiElements.map((_key, index) => {
           const ratingValue = index + 1;
 

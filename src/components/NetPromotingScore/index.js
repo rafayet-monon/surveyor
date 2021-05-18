@@ -11,7 +11,7 @@ const NetPromotingScore = ({ start, end }) => {
 
   return (
     <div className="np-score">
-      <ul className="np-score__number-container">
+      <ul className="np-score__number-container" data-test-id="np-score-numbers">
         { scoreElements.map((score, index) => {
           const ratingValue = index + 1;
 

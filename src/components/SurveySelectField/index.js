@@ -16,7 +16,7 @@ const SurveySelectField = ({ options }) => {
   const selectData = options || demoData;
 
   return (
-    <div className="survey-input-container">
+    <div className="survey-input-container" data-test-id="survey-dropdown">
       <SelectSearch
         options={ selectData }
         search
