@@ -1,4 +1,4 @@
-.quit-survey-modal {
+.modal-quit-survey {
   &__container {
     position: fixed;
     top: 0;
@@ -6,7 +6,7 @@
     width: 100%;
     height: 100%;
 
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: map_get($brand-black, 'transparent-light');
   }
 
   &__content {
@@ -21,7 +21,7 @@
     height: rem(178px);
     padding: rem(24px);
 
-    background: map_get($brand-black, 'primary');
+    background-color: map_get($brand-black, 'light');
     border-radius: rem(14px);
     transform: translate(-50%, -50%);
   }
@@ -57,10 +57,6 @@
   }
 
   &__yes-button {
-    @include warning-actions();
-
-    margin-right: rem(4px);
-
     color: map-get($brand-white, 'primary');
 
     background: map-get($brand-gray, 'dark');
@@ -68,11 +64,5 @@
 
   &__yes-button:hover {
     color: map-get($brand-white, 'primary');
-  }
-
-  &__cancel-button {
-    @include warning-actions();
-
-    margin-left: rem(4px);
   }
 }

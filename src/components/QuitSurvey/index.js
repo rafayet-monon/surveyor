@@ -21,21 +21,21 @@ const QuitSurvey = () => {
         ? ReactDOM.createPortal(
           <React.Fragment>
             <div
-              className="quit-survey-modal__container"
+              className="modal modal-quit-survey__container"
               aria-modal
               aria-hidden
               tabIndex={ -1 }
               role="dialog"
             >
-              <div className="quit-survey-modal__content">
-                <div className="quit-survey-modal__header">Warning!</div>
-                <div className="quit-survey-modal__body">
+              <div className="modal-quit-survey__content">
+                <div className="modal-quit-survey__header">Warning!</div>
+                <div className="modal-quit-survey__body">
                   Are you sure you want to quit the survey?
                 </div>
-                <div className="quit-survey-modal__footer">
+                <div className="modal-quit-survey__footer">
                   <button
                     type="submit"
-                    className="button button--primary quit-survey-modal__yes-button"
+                    className="button button--primary modal-quit-survey__yes-button"
                     onClick={ returnToHome }
                   >
                     Yes
@@ -43,7 +43,7 @@ const QuitSurvey = () => {
 
                   <button
                     type="submit"
-                    className="button button--primary quit-survey-modal__cancel-button"
+                    className="button button--primary"
                     onClick={ handleClose }
                   >
                     Cancel

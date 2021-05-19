@@ -12,6 +12,7 @@
 @import 'base/fonts';
 @import 'base/buttons';
 @import 'base/forms';
+@import 'base/modal';
 // Mixins
 @import 'mixins/auth-container';
 @import 'mixins/header-container';
@@ -33,7 +34,7 @@
 @import 'components/select-search';
 @import 'components/sidebar';
 @import 'components/back-button';
-@import 'components/quit-survey-modal';
+@import 'components/modal-quit-survey';
 @import 'components/survey-outro';
 // Screens
 @import 'screens/login';
@@ -44,4 +45,3 @@
 @import 'screens/survey-list';
 @import 'screens/survey-detail';
 @import 'screens/question';
-

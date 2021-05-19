@@ -1,24 +1,25 @@
 // Colors
 $brand-black: (
-  lighter: hsla(0, 0%, 12%, 0.9),
-  light: hsl(240, 11%, 9%),
-  primary: hsl(0, 0%, 0%),
-  transparent: rgba(0, 0, 0, 0.4)
+  lighter: rgba(31, 31, 31, 0.9),
+  light: #1e1e1e,
+  primary: #000,
+  transparent-light: rgba(0, 0, 0, 0.4),
+  transparent-dark: rgba(37, 37, 37, 0.6)
 );
 
 $brand-white: (
-  light: hsla(0, 0%, 100%, 0.2),
-  primary: hsl(0, 0%, 100%)
+  light: rgba(255, 255, 255, 0.2),
+  primary: #fff
 );
 
 $brand-gray: (
-  primary: hsl(240, 5%, 79%),
-  transparent: hsla(0, 0%, 15%, 0.6),
-  dark: hsl(0, 0%, 27%)
+  primary: #c7c7cc,
+  transparent: rgba(38, 38, 38, 0.6),
+  dark: #454545
 );
 
 $brand-red: (
-  primary: hsl(0, 100%, 50%)
+  primary: 	#ff0000
 );
 
 // Font Size
