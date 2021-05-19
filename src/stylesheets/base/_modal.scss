@@ -5,6 +5,7 @@
 
     font-weight: map_get($font-weight, 'bolder');
   }
+
   .button:not(:first-child) {
     margin-left: rem(8px);
   }
