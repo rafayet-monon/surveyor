@@ -12,11 +12,13 @@
 @import 'base/fonts';
 @import 'base/buttons';
 @import 'base/forms';
+@import 'base/modal';
 // Mixins
 @import 'mixins/auth-container';
 @import 'mixins/header-container';
 @import 'mixins/details-container';
 @import 'mixins/next-icon-container';
+@import 'mixins/warning-actions';
 // Components
 @import 'components/page-background';
 @import 'components/logo-auth';
@@ -32,6 +34,8 @@
 @import 'components/select-search';
 @import 'components/sidebar';
 @import 'components/back-button';
+@import 'components/modal-quit-survey';
+@import 'components/survey-outro';
 // Screens
 @import 'screens/login';
 @import 'screens/forgot-password';

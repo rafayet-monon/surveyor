@@ -5,7 +5,7 @@
   margin-bottom: rem(24px);
   padding-top: rem(15px);
 
-  background: map-get($brand-black, 'light');
+  background-color: map-get($brand-black, 'transparent-dark');
   border-radius: rem(12px);
 
   backdrop-filter: blur(rem(54px));

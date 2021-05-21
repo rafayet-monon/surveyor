@@ -1,10 +1,11 @@
 import React, { useContext, useState } from 'react';
 
 import DetermineQuestionType from 'components/DetermineQuestionType';
+import QuitSurvey from 'components/QuitSurvey';
+import SurveyOutro from 'components/SurveyOutro';
 import { DetailsContext } from 'contexts/details';
 import filterQuestionList from 'helpers/filterQuestionList';
 import questionProperties from 'helpers/questionProperties';
-import closeIcon from 'images/close-button-white.svg';
 import nextIcon from 'images/next-button-black.svg';
 
 const Questions = () => {
@@ -13,6 +14,10 @@ const Questions = () => {
   const [currentQuestion, setCurrentQuestion] = useState(
     questionProperties(filteredQuestions, 0)
   );
+  const [submitted, setSubmitted] = useState(false);
+  const outroText = detailsContext.questionList.find(
+    (question) => question.type === 'outro'
+  ).text;
 
   const nextQuestion = () => {
     setCurrentQuestion(
@@ -21,16 +26,20 @@ const Questions = () => {
   };
 
   const submitSurvey = () => {
-    console.log('submitted');
+    setSubmitted(true);
   };
 
   return (
-    <div className="questions">
-      <div className="questions__header">
-        <div className="questions__quit-survey">
-          <img src={ closeIcon } alt="close" />
-        </div>
-      </div>
+    <React.Fragment>
+      { submitted ? (
+        <SurveyOutro message={ outroText } />
+      ) : (
+        <div className="questions">
+          <div className="questions__header">
+            <div className="questions__quit-survey">
+              <QuitSurvey />
+            </div>
+          </div>
 
       <div className="questions__container">
         <div className="questions__details">
@@ -47,27 +56,29 @@ const Questions = () => {
         </div>
       </div>
 
-      { /*Show the submit button if it is the last question otherwise the next buttons*/ }
-      <div className="questions__footer">
-        { currentQuestion.lastQuestion ? (
-          <button
-            type="submit"
-            className="button button--primary questions__submit"
-            onClick={ submitSurvey }
-          >
-            Submit
-          </button>
-        ) : (
-          <div
-            className="questions__next-question"
-            role="presentation"
-            onClick={ nextQuestion }
-          >
-            <img src={ nextIcon } alt="next question" />
+          { /*Show the submit button if it is the last question otherwise the next buttons*/ }
+          <div className="questions__footer">
+            { currentQuestion.lastQuestion ? (
+              <button
+                type="submit"
+                className="button button--primary questions__submit"
+                onClick={ submitSurvey }
+              >
+                Submit
+              </button>
+            ) : (
+              <div
+                className="questions__next-question"
+                role="presentation"
+                onClick={ nextQuestion }
+              >
+                <img src={ nextIcon } alt="next question" />
+              </div>
+            ) }
           </div>
-        ) }
-      </div>
-    </div>
+        </div>
+      ) }
+    </React.Fragment>
   );
 };
 
