@@ -109,6 +109,7 @@ const SurveyList = ({ surveyResponse }) => {
                 onClick={ showDetail }
                 onKeyPress={ showDetail }
                 role="presentation"
+                data-test-id="show-survey-detail"
               >
                 <img src={ nextIcon } alt="navigation detail icon" />
               </div>

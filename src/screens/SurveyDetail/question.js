@@ -63,6 +63,7 @@ const Questions = () => {
                 type="submit"
                 className="button button--primary questions__submit"
                 onClick={ submitSurvey }
+                data-test-id="submit-survey"
               >
                 Submit
               </button>
@@ -71,6 +72,7 @@ const Questions = () => {
                 className="questions__next-question"
                 role="presentation"
                 onClick={ nextQuestion }
+                data-test-id="next-question"
               >
                 <img src={ nextIcon } alt="next question" />
               </div>

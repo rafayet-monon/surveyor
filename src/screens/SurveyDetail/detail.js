@@ -28,12 +28,13 @@ const Detail = () => {
     <div className="survey-detail">
       <BackButton />
       <div className="survey-detail__description">
-        <img className="survey-detail__image" alt="SURVEY" src={ coverImage } />
-        <h3 className="survey-detail__title">{ title }</h3>
-        <p className="survey-detail__subtitle">{ introduction }</p>
+        <img className="survey-detail__image" alt="SURVEY" src={ coverImage } data-test-id="survey-cover-image" />
+        <h3 className="survey-detail__title" data-test-id="survey-title">{ title }</h3>
+        <p className="survey-detail__subtitle" data-test-id="survey-subtitle">{ introduction }</p>
         <button
           className="button button--primary survey-detail__action"
           onClick={ startSurvey }
+          data-test-id="survey-start-button"
         >
           Start Survey
         </button>
