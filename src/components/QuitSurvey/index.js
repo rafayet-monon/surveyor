@@ -33,7 +33,7 @@ const QuitSurvey = () => {
               tabIndex={ -1 }
               role="dialog"
             >
-              <div className="modal-quit-survey__content">
+              <div className="modal-quit-survey__content" data-test-id="quit-survey-warning">
                 <div className="modal-quit-survey__header">Warning!</div>
                 <div className="modal-quit-survey__body">
                   Are you sure you want to quit the survey?
