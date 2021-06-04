@@ -1,35 +1,36 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 
-const Rating = ({ initialRating, maxRating, ratingEmoji }) => {
+
+import SelectEmoji from 'components/Rating/selectEmoji';
+import * as Constants from 'constants/surveyAnswer';
+import { SurveyAnswerContext } from 'contexts/surveyAnswer';
+import QuestionObjectBuilder from 'helpers/questionObjectBuilder';
+
+const Rating = ({ initialRating,
+                  maxRating,
+                  ratingEmoji,
+                  questionId,
+                  answers
+                }) => {
+  const { dispatch } = useContext(SurveyAnswerContext);
   const [rating, setRating] = useState(initialRating);
+  const [currentQuestionId, setCurrentQuestionId] = useState(questionId);
   const emojiElements = [...Array(maxRating || 5)];
 
-  let emoji;
-  switch (ratingEmoji) {
-    case 'heart': {
-      emoji = '❤️';
+  let emoji = SelectEmoji(ratingEmoji);
 
-      break;
+  useEffect(() => {
+    if (currentQuestionId === questionId && rating) {
+      const answerId = answers[rating - 1].id;
+      dispatch({
+        type: Constants.SINGLE_ANSWER,
+        data: QuestionObjectBuilder(questionId, answerId)
+      });
+    } else {
+      setRating(initialRating);
+      setCurrentQuestionId(questionId);
     }
-    case 'smiley': {
-      emoji = '🙂';
-
-      break;
-    }
-    case 'star': {
-      emoji = '⭐';
-
-      break;
-    }
-    case 'money': {
-      emoji = '💰';
-
-      break;
-    }
-    default: {
-      emoji = '👍🏻';
-    }
-  }
+  }, [questionId, rating]);
 
   return (
     <div className="rating">
