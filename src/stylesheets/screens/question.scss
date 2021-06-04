@@ -67,8 +67,4 @@
   &__navigation-icon {
     margin-left: rem(3px);
   }
-
-  &__next-question {
-    @include next-icon-container();
-  }
 }

@@ -23,6 +23,9 @@ const WheelSelect = ({ multipleSelect, questionId, answers }) => {
     : 'wheel-select__text';
 
   useEffect(() => {
+    // Pre select the answer for single select as single select comes a answer
+    // selected as per the design
+    // If new question of wheel component then re initialize the component state
     if (currentQuestionId === questionId) {
       if (!multipleSelect) {
         const currentSelected = wheelData[0].value;
@@ -56,6 +59,7 @@ const WheelSelect = ({ multipleSelect, questionId, answers }) => {
     }
   };
 
+  // Select the answe on slide change for single select type questions
   const afterSlideChange = (current) => {
     if (!multipleSelect) {
       const currentSelected = wheelData[current].value;
@@ -69,6 +73,7 @@ const WheelSelect = ({ multipleSelect, questionId, answers }) => {
 
   const slickConfig = { ...slickSettings, ...sliderEvents };
 
+  // Select the answer on checkbox check for multiple select type questions
   const checkboxChange = (e, index) => {
     const changedItem = wheelData[index].value;
 

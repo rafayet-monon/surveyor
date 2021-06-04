@@ -1,3 +1,4 @@
+// Build select options from the API response to show them in the UI
 const SelectOptions = (surveyDetail, answers) => {
   const selectData = [];
   answers.map(function (value) {

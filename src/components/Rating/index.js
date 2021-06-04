@@ -19,6 +19,11 @@ const Rating = ({ initialRating,
 
   let emoji = SelectEmoji(ratingEmoji);
 
+  // Checking if the question changed. If not changed and  answer is given then
+  // build the question object with answer and add to the SurveyAnswerContext
+  // If changed then re-initialize the state. This state re-initialization is
+  // necessary because there might be two or more same type of question back to
+  // back.
   useEffect(() => {
     if (currentQuestionId === questionId && rating) {
       const answerId = answers[rating - 1].id;

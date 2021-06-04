@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 
 import DetermineQuestionType from 'components/DetermineQuestionType';
-import NextQuestionVisit from 'components/NextQuestionVisit';
+import NextQuestion from 'components/NextQuestion';
 import QuitSurvey from 'components/QuitSurvey';
 import SurveyOutro from 'components/SurveyOutro';
 import { DetailsContext } from 'contexts/details';
@@ -66,7 +66,7 @@ const Questions = () => {
                 Submit
               </button>
             ) : (
-              <NextQuestionVisit nextQuestion={ nextQuestion } questionId={ currentQuestion.id } />
+              <NextQuestion nextQuestion={ nextQuestion } questionId={ currentQuestion.id } />
             ) }
           </div>
         </div>
