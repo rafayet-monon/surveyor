@@ -8,23 +8,28 @@ import SurveyTextAreaField from 'components/SurveyTextAreaField';
 import SurveyTextField from 'components/SurveyTextField';
 import WheelSelect from 'components/WheelSelect';
 
-const DetermineQuestionType = ({ type, pick }) => {
-  const [questionType, setQuestionType] = useState(type);
+const DetermineQuestionType = ({ question }) => {
+  const [questionType, setQuestionType] = useState(question.type);
 
   const [questionComponent, setQuestionComponent] = useState(null);
-
   useEffect(() => {
-    if (type !== questionType) {
-      setQuestionType(type);
+    if (question.type !== questionType) {
+      setQuestionType(question.type);
     }
 
     switch (questionType) {
       case 'heart':
+      case 'money':
       case 'smiley':
       case 'star':
-      case 'money':
       case 'thumb': {
-        setQuestionComponent(<Rating ratingEmoji={ questionType } />);
+        setQuestionComponent(
+          <Rating
+            ratingEmoji={ questionType }
+            answers={ question.answers }
+            questionId={ question.id }
+          />
+        );
 
         break;
       }
@@ -44,9 +49,13 @@ const DetermineQuestionType = ({ type, pick }) => {
         break;
       }
       case 'choice': {
-        const multipleChoice = pick === 'any';
+        const multipleChoice = question.pick === 'any';
         setQuestionComponent(
-          <WheelSelect data={ null } multipleSelect={ multipleChoice } />
+          <WheelSelect
+            multipleSelect={ multipleChoice }
+            answers={ question.answers }
+            questionId={ question.id }
+          />
         );
 
         break;
@@ -60,7 +69,7 @@ const DetermineQuestionType = ({ type, pick }) => {
         setQuestionComponent(null);
       }
     }
-  }, [pick, questionType, type]);
+  }, [question.answers, question.pick, question.type, questionType]);
 
   return <React.Fragment> { questionComponent } </React.Fragment>;
 };

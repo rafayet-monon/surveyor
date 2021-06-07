@@ -1,35 +1,37 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 
-const Rating = ({ initialRating, maxRating, ratingEmoji }) => {
-  const [rating, setRating] = useState(initialRating);
+
+import SelectEmoji from 'components/Rating/selectEmoji';
+import * as Constants from 'constants/surveyAnswer';
+import { SurveyAnswerContext } from 'contexts/surveyAnswer';
+import QuestionObjectBuilder from 'helpers/questionObjectBuilder';
+
+const Rating = ({ maxRating, ratingEmoji, questionId, answers
+                }) => {
+  const { dispatch } = useContext(SurveyAnswerContext);
+  const [rating, setRating] = useState();
+  const [currentQuestionId, setCurrentQuestionId] = useState(questionId);
   const emojiElements = [...Array(maxRating || 5)];
 
-  let emoji;
-  switch (ratingEmoji) {
-    case 'heart': {
-      emoji = '❤️';
+  let emoji = SelectEmoji(ratingEmoji);
 
-      break;
+  // Checking if the question changed. If not changed and  answer is given then
+  // build the question object with answer and add to the SurveyAnswerContext
+  // If changed then re-initialize the state. This state re-initialization is
+  // necessary because there might be two or more same type of question back to
+  // back.
+  useEffect(() => {
+    if (currentQuestionId === questionId && rating) {
+      const answerId = answers[rating - 1].id;
+      dispatch({
+        type: Constants.SINGLE_ANSWER,
+        data: QuestionObjectBuilder(questionId, answerId)
+      });
+    } else {
+      setRating();
+      setCurrentQuestionId(questionId);
     }
-    case 'smiley': {
-      emoji = '🙂';
-
-      break;
-    }
-    case 'star': {
-      emoji = '⭐';
-
-      break;
-    }
-    case 'money': {
-      emoji = '💰';
-
-      break;
-    }
-    default: {
-      emoji = '👍🏻';
-    }
-  }
+  }, [questionId, rating]);
 
   return (
     <div className="rating">

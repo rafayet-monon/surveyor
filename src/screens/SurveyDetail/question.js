@@ -1,12 +1,13 @@
 import React, { useContext, useState } from 'react';
 
 import DetermineQuestionType from 'components/DetermineQuestionType';
+import NextQuestion from 'components/NextQuestion';
 import QuitSurvey from 'components/QuitSurvey';
 import SurveyOutro from 'components/SurveyOutro';
 import { DetailsContext } from 'contexts/details';
+import { SurveyAnswerProvider } from 'contexts/surveyAnswer';
 import filterQuestionList from 'helpers/filterQuestionList';
 import questionProperties from 'helpers/questionProperties';
-import nextIcon from 'images/next-button-black.svg';
 
 const Questions = () => {
   const detailsContext = useContext(DetailsContext);
@@ -30,7 +31,7 @@ const Questions = () => {
   };
 
   return (
-    <React.Fragment>
+    <SurveyAnswerProvider surveyId={ detailsContext.surveyDetail.data.id }>
       { submitted ? (
         <SurveyOutro message={ outroText } />
       ) : (
@@ -49,10 +50,7 @@ const Questions = () => {
           <h1 className="questions__title">
             { currentQuestion.text }
           </h1>
-          <DetermineQuestionType
-            type={ currentQuestion.type }
-            pick={ currentQuestion.pick }
-          />
+          <DetermineQuestionType question={ filteredQuestions[currentQuestion.index] } />
         </div>
       </div>
 
@@ -68,19 +66,12 @@ const Questions = () => {
                 Submit
               </button>
             ) : (
-              <div
-                className="questions__next-question"
-                role="presentation"
-                onClick={ nextQuestion }
-                data-test-id="next-question"
-              >
-                <img src={ nextIcon } alt="next question" />
-              </div>
+              <NextQuestion nextQuestion={ nextQuestion } questionId={ currentQuestion.id } />
             ) }
           </div>
         </div>
       ) }
-    </React.Fragment>
+    </SurveyAnswerProvider>
   );
 };
 

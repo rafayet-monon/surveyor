@@ -5,17 +5,28 @@ import { render, screen } from '@testing-library/react';
 import 'tests/__mocks__/matchMedia';
 
 import DetermineQuestionType from 'components/DetermineQuestionType';
+import { DetailsContext } from 'contexts/details';
+import { SurveyAnswerContext } from 'contexts/surveyAnswer';
+import buildQuestionList from 'helpers/buildQuestionList';
+import filterQuestionList from 'helpers/filterQuestionList';
 import emojis from 'tests/components/DetermineQuestionType/emojis'
+import SurveyDetailResponse from 'tests/fixtures/surveyDetailResponse.json';
 import { questionSelectors } from 'tests/screens/SurveyDetail/selectors'
 
-
 describe('given DetermineQuestionType is mounted', () => {
+  const details = SurveyDetailResponse;
+  const questionList = buildQuestionList(SurveyDetailResponse);
+  const filteredQuestions = filterQuestionList(questionList);
+  const question = filteredQuestions[0]
+
   describe("given the question has type 'heart'", () => {
     it('renders the Rating component', () => {
-      const pick = 'one'
+      question.type = emojis.heart.type
 
       render(
-        <DetermineQuestionType type={ emojis.heart.type } pick={ pick } />
+        <SurveyAnswerContext.Provider value={ details.data.id }>
+          <DetermineQuestionType question={ question } />
+        </SurveyAnswerContext.Provider>
       )
       const ratingContent = screen.getByTestId(questionSelectors.rating);
       expect(ratingContent).toBeInTheDocument();
@@ -25,10 +36,12 @@ describe('given DetermineQuestionType is mounted', () => {
 
   describe("given the question has type 'smiley'", () => {
     it('renders the Rating component', () => {
-      const pick = 'one'
+      question.type = emojis.smiley.type
 
       render(
-        <DetermineQuestionType type={ emojis.smiley.type } pick={ pick } />
+        <SurveyAnswerContext.Provider value={ details.data.id }>
+          <DetermineQuestionType question={ question } />
+        </SurveyAnswerContext.Provider>
       )
 
       const ratingContent = screen.getByTestId(questionSelectors.rating);
@@ -39,10 +52,12 @@ describe('given DetermineQuestionType is mounted', () => {
 
   describe("given the question has type 'star'", () => {
     it('renders the Rating component', () => {
-      const pick = 'one'
+      question.type = emojis.star.type
 
       render(
-        <DetermineQuestionType type={ emojis.star.type } pick={ pick } />
+        <SurveyAnswerContext.Provider value={ details.data.id }>
+          <DetermineQuestionType question={ question } />
+        </SurveyAnswerContext.Provider>
       )
 
       const ratingContent = screen.getByTestId(questionSelectors.rating);
@@ -53,10 +68,12 @@ describe('given DetermineQuestionType is mounted', () => {
 
   describe("given the question has type 'money'", () => {
     it('renders the Rating component', () => {
-      const pick = 'one'
+      question.type = emojis.money.type
 
       render(
-        <DetermineQuestionType type={ emojis.money.type } pick={ pick } />
+        <SurveyAnswerContext.Provider value={ details.data.id }>
+          <DetermineQuestionType question={ question } />
+        </SurveyAnswerContext.Provider>
       )
 
       const ratingContent = screen.getByTestId(questionSelectors.rating);
@@ -67,10 +84,12 @@ describe('given DetermineQuestionType is mounted', () => {
 
   describe("given the question has type 'thumb'", () => {
     it('renders the Rating component', () => {
-      const pick = 'one'
+      question.type = emojis.thumb.type
 
       render(
-        <DetermineQuestionType type={ emojis.thumb.type } pick={ pick } />
+        <SurveyAnswerContext.Provider value={ details.data.id }>
+          <DetermineQuestionType question={ question } />
+        </SurveyAnswerContext.Provider>
       )
 
       const ratingContent = screen.getByTestId(questionSelectors.rating);
@@ -81,11 +100,12 @@ describe('given DetermineQuestionType is mounted', () => {
 
   describe("given the question has type 'nps'", () => {
     it('renders the NetPromotingScore component', () => {
-      const type = 'nps'
-      const pick = 'one'
+      question.type = 'nps'
 
       const { getByTestId } = render(
-        <DetermineQuestionType type={ type } pick={ pick } />
+        <SurveyAnswerContext.Provider value={ details.data.id }>
+          <DetermineQuestionType question={ question } />
+        </SurveyAnswerContext.Provider>
       )
 
       expect(getByTestId(questionSelectors.nps)).toBeInTheDocument();
@@ -94,12 +114,12 @@ describe('given DetermineQuestionType is mounted', () => {
 
   describe("given the question has type 'textarea'", () => {
     it('renders the SurveyTextAreaField component', () => {
-      const type = 'textarea'
-      const pick = 'one'
+      question.type = 'textarea'
 
       const { getByTestId } = render(
-        <DetermineQuestionType type={ type } pick={ pick } />
-      )
+        <SurveyAnswerContext.Provider value={ details.data.id }>
+          <DetermineQuestionType question={ question } />
+        </SurveyAnswerContext.Provider>      )
 
       expect(getByTestId(questionSelectors.textArea)).toBeInTheDocument();
     })
@@ -107,11 +127,12 @@ describe('given DetermineQuestionType is mounted', () => {
 
   describe("given the question has type 'textfield'", () => {
     it('renders the SurveyTextField component', () => {
-      const type = 'textfield'
-      const pick = 'one'
+      question.type = 'textfield'
 
       const { getByTestId } = render(
-        <DetermineQuestionType type={ type } pick={ pick } />
+        <SurveyAnswerContext.Provider value={ details.data.id }>
+          <DetermineQuestionType question={ question } />
+        </SurveyAnswerContext.Provider>
       )
 
       expect(getByTestId(questionSelectors.textField)).toBeInTheDocument();
@@ -120,11 +141,21 @@ describe('given DetermineQuestionType is mounted', () => {
 
   describe("given the question has type 'choice' and pick 'one'", () => {
     it('renders the WheelSelect component with single select options', () => {
-      const type = 'choice'
-      const pick = 'one'
+      question.type = 'choice'
+      const state = { survey_id: details.data.id, questions: [] };
+      const dispatch = jest.fn();
 
       const { queryAllByTestId } = render(
-        <DetermineQuestionType type={ type } pick={ pick } />
+        <DetailsContext.Provider
+          value={{
+            surveyDetail: details,
+            questionList
+          }}
+        >
+          <SurveyAnswerContext.Provider value={{ state, dispatch }}>
+            <DetermineQuestionType question={ question } />
+          </SurveyAnswerContext.Provider>
+        </DetailsContext.Provider>
       )
 
       expect(queryAllByTestId(questionSelectors.wheelSelect)).not.toEqual([])
@@ -134,11 +165,20 @@ describe('given DetermineQuestionType is mounted', () => {
 
   describe("given the question has type 'choice' and pick 'any'", () => {
     it('renders the WheelSelect component with multiple select options', () => {
-      const type = 'choice'
-      const pick = 'any'
+      question.type = 'choice'
+      question.pick = 'any'
 
       const { queryAllByTestId } = render(
-        <DetermineQuestionType type={ type } pick={ pick } />
+        <DetailsContext.Provider
+          value={{
+            surveyDetail: details,
+            questionList
+          }}
+        >
+          <SurveyAnswerContext.Provider value={ details.data.id }>
+            <DetermineQuestionType question={ question } />
+          </SurveyAnswerContext.Provider>
+        </DetailsContext.Provider>
       )
 
       expect(queryAllByTestId(questionSelectors.wheelSelect)).not.toEqual([])
@@ -148,11 +188,12 @@ describe('given DetermineQuestionType is mounted', () => {
 
   describe("given the question has type 'dropdown'", () => {
     it('renders the SurveySelectField component', () => {
-      const type = 'dropdown'
-      const pick = 'one'
+      question.type = 'dropdown'
 
       const { getByTestId } = render(
-        <DetermineQuestionType type={ type } pick={ pick } />
+        <SurveyAnswerContext.Provider value={ details.data.id }>
+          <DetermineQuestionType question={ question } />
+        </SurveyAnswerContext.Provider>
       )
 
       expect(getByTestId(questionSelectors.dropdown)).toBeInTheDocument();

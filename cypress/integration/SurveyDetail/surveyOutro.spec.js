@@ -18,7 +18,7 @@ describe('Survey outro', () => {
   });
 
   context('given the survey is submitted', function () {
-    it('shows the outro page', function () {
+    it.skip('shows the outro page', function () {
       const outroMessage =
         'Thank you for taking the time to share your feedback!';
       const totalQuestion = 10;
