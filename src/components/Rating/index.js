@@ -6,14 +6,10 @@ import * as Constants from 'constants/surveyAnswer';
 import { SurveyAnswerContext } from 'contexts/surveyAnswer';
 import QuestionObjectBuilder from 'helpers/questionObjectBuilder';
 
-const Rating = ({ initialRating,
-                  maxRating,
-                  ratingEmoji,
-                  questionId,
-                  answers
+const Rating = ({ maxRating, ratingEmoji, questionId, answers
                 }) => {
   const { dispatch } = useContext(SurveyAnswerContext);
-  const [rating, setRating] = useState(initialRating);
+  const [rating, setRating] = useState();
   const [currentQuestionId, setCurrentQuestionId] = useState(questionId);
   const emojiElements = [...Array(maxRating || 5)];
 
@@ -32,7 +28,7 @@ const Rating = ({ initialRating,
         data: QuestionObjectBuilder(questionId, answerId)
       });
     } else {
-      setRating(initialRating);
+      setRating();
       setCurrentQuestionId(questionId);
     }
   }, [questionId, rating]);
