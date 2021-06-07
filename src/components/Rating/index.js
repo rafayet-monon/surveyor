@@ -1,13 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
 
-
 import SelectEmoji from 'components/Rating/selectEmoji';
 import * as Constants from 'constants/surveyAnswer';
 import { SurveyAnswerContext } from 'contexts/surveyAnswer';
 import QuestionObjectBuilder from 'helpers/questionObjectBuilder';
 
-const Rating = ({ maxRating, ratingEmoji, questionId, answers
-                }) => {
+const Rating = ({ maxRating, ratingEmoji, questionId, answers }) => {
   const { dispatch } = useContext(SurveyAnswerContext);
   const [rating, setRating] = useState();
   const [currentQuestionId, setCurrentQuestionId] = useState(questionId);

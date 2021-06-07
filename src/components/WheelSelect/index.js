@@ -9,7 +9,6 @@ import { DetailsContext } from 'contexts/details';
 import { SurveyAnswerContext } from 'contexts/surveyAnswer';
 import QuestionObjectBuilder from 'helpers/questionObjectBuilder';
 
-
 const WheelSelect = ({ multipleSelect, questionId, answers }) => {
   const [isClicked, setIsClicked] = useState(false);
   const { dispatch } = useContext(SurveyAnswerContext);
@@ -42,7 +41,7 @@ const WheelSelect = ({ multipleSelect, questionId, answers }) => {
   }, [multipleSelect, questionId]);
 
   window.addEventListener('wheel', (e) => {
-    setIsClicked(false)
+    setIsClicked(false);
     slideList(e.wheelDelta);
   });
 
@@ -103,7 +102,9 @@ const WheelSelect = ({ multipleSelect, questionId, answers }) => {
               onKeyPress={ () => setIsClicked(true) }
             >
               <div className="wheel-select__container" key={ index }>
-                <div className={ elementTextClass } data-test-id="wheel-select">{ element.display }</div>
+                <div className={ elementTextClass } data-test-id="wheel-select">
+                  { element.display }
+                </div>
 
                 { multipleSelect && (
                   <div
@@ -121,6 +122,7 @@ const WheelSelect = ({ multipleSelect, questionId, answers }) => {
                       aria-label="wheel-select__checkbox-label"
                       htmlFor={ `checkbox-${index}` }
                       className="wheel-select__checkbox-label"
+                      data-test-id={ `checkbox-${index}` }
                     />
                   </div>
                 ) }
