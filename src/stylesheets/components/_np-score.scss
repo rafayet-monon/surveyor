@@ -52,6 +52,10 @@
   }
   /* stylelint-enable */
 
+  &__number--selected {
+    opacity: 1;
+  }
+
   &__identifier {
     @include make-row();
 

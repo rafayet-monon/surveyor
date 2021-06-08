@@ -1,0 +1,1484 @@
+{
+  "data": {
+    "id": "5d2538f53ca50536292c",
+    "type": "survey",
+    "attributes": {
+      "title": "Health Land Spa",
+      "description": "We'd love to hear from you!",
+      "thank_email_above_threshold": null,
+      "thank_email_below_threshold": null,
+      "is_active": true,
+      "cover_image_url": "https://dhdbhh0jsld0o.cloudfront.net/m/59e9e7327354006c1ebc_",
+      "created_at": "2017-01-18T09:13:55.081Z",
+      "active_at": "2017-01-18T09:13:00.000Z",
+      "inactive_at": null,
+      "survey_type": "Wellness"
+    },
+    "relationships": {
+      "questions": {
+        "data": [
+          {
+            "id": "6d788e28f7b3730e7e4a",
+            "type": "question"
+          },
+          {
+            "id": "dfca51c6be36d3519fe3",
+            "type": "question"
+          },
+          {
+            "id": "55298425db5d686d8d56",
+            "type": "question"
+          },
+          {
+            "id": "77d88af72c454531af24",
+            "type": "question"
+          },
+          {
+            "id": "c6f8b0757c1e704823d1",
+            "type": "question"
+          },
+          {
+            "id": "dd4e3a011a6059b7c469",
+            "type": "question"
+          },
+          {
+            "id": "12fc670b50e012ce79a2",
+            "type": "question"
+          },
+          {
+            "id": "55ff73b35a7b5784317a",
+            "type": "question"
+          },
+          {
+            "id": "d6b133cf862dd3d90dc1",
+            "type": "question"
+          },
+          {
+            "id": "cc26fa7b93d8535904b4",
+            "type": "question"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "6d788e28f7b3730e7e4a",
+      "type": "question",
+      "attributes": {
+        "text": "Thank You for visiting Health Land!\nIt is our goal to provide you with the best possible service and your input is vital to our success. Please help us serve you and other better by taking a few minutes to answer the following questions on the next pages. All information is kept confidential and used strictly to improve our service. ",
+        "help_text": null,
+        "display_order": 0,
+        "short_text": "introduction",
+        "pick": "none",
+        "display_type": "intro",
+        "is_mandatory": false,
+        "correct_answer_id": null,
+        "facebook_profile": null,
+        "twitter_profile": null,
+        "image_url": "https://dhdbhh0jsld0o.cloudfront.net/m/b0f0cd86cc7f3256f404_",
+        "cover_image_url": "https://dhdbhh0jsld0o.cloudfront.net/m/59e9e7327354006c1ebc_",
+        "cover_image_opacity": 0.65,
+        "cover_background_color": null,
+        "is_shareable_on_facebook": false,
+        "is_shareable_on_twitter": false,
+        "font_face": null,
+        "font_size": null,
+        "tag_list": ""
+      },
+      "relationships": {
+        "answers": {
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "dfca51c6be36d3519fe3",
+      "type": "question",
+      "attributes": {
+        "text": "Please Select Location",
+        "help_text": null,
+        "display_order": 1,
+        "short_text": "Location",
+        "pick": "one",
+        "display_type": "dropdown",
+        "is_mandatory": false,
+        "correct_answer_id": null,
+        "facebook_profile": null,
+        "twitter_profile": null,
+        "image_url": null,
+        "cover_image_url": "https://dhdbhh0jsld0o.cloudfront.net/m/59e9e7327354006c1ebc_",
+        "cover_image_opacity": 0.65,
+        "cover_background_color": null,
+        "is_shareable_on_facebook": false,
+        "is_shareable_on_twitter": false,
+        "font_face": null,
+        "font_size": null,
+        "tag_list": ""
+      },
+      "relationships": {
+        "answers": {
+          "data": [
+            {
+              "id": "c929621b5857bf4e4196",
+              "type": "answer"
+            },
+            {
+              "id": "6bfa792ab02a591efc79",
+              "type": "answer"
+            },
+            {
+              "id": "1d78c896f194835ec7b9",
+              "type": "answer"
+            },
+            {
+              "id": "45e77eea34c5550bfdee",
+              "type": "answer"
+            },
+            {
+              "id": "5b7e1aed424c823d15ef",
+              "type": "answer"
+            },
+            {
+              "id": "a3b328d04453d698747a",
+              "type": "answer"
+            },
+            {
+              "id": "0eb659d4f59ff09a9766",
+              "type": "answer"
+            },
+            {
+              "id": "2907139a43db7f92b028",
+              "type": "answer"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "55298425db5d686d8d56",
+      "type": "question",
+      "attributes": {
+        "text": "Staff was courteous and helpful",
+        "help_text": null,
+        "display_order": 2,
+        "short_text": "Staff courteousness",
+        "pick": "one",
+        "display_type": "smiley",
+        "is_mandatory": false,
+        "correct_answer_id": null,
+        "facebook_profile": null,
+        "twitter_profile": null,
+        "image_url": null,
+        "cover_image_url": "https://dhdbhh0jsld0o.cloudfront.net/m/59e9e7327354006c1ebc_",
+        "cover_image_opacity": 0.65,
+        "cover_background_color": null,
+        "is_shareable_on_facebook": false,
+        "is_shareable_on_twitter": false,
+        "font_face": null,
+        "font_size": null,
+        "tag_list": ""
+      },
+      "relationships": {
+        "answers": {
+          "data": [
+            {
+              "id": "d84b04d77f3cc558df40",
+              "type": "answer"
+            },
+            {
+              "id": "023e7923a586ebc97394",
+              "type": "answer"
+            },
+            {
+              "id": "085b28b0818bf6ef6a71",
+              "type": "answer"
+            },
+            {
+              "id": "8818396d337e6b9060b8",
+              "type": "answer"
+            },
+            {
+              "id": "23d9072c99fd7aa4b39b",
+              "type": "answer"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "77d88af72c454531af24",
+      "type": "question",
+      "attributes": {
+        "text": "Staff provided complete, accurate information to you",
+        "help_text": null,
+        "display_order": 3,
+        "short_text": "Staff provided info",
+        "pick": "one",
+        "display_type": "smiley",
+        "is_mandatory": false,
+        "correct_answer_id": null,
+        "facebook_profile": null,
+        "twitter_profile": null,
+        "image_url": null,
+        "cover_image_url": "https://dhdbhh0jsld0o.cloudfront.net/m/59e9e7327354006c1ebc_",
+        "cover_image_opacity": 0.65,
+        "cover_background_color": null,
+        "is_shareable_on_facebook": false,
+        "is_shareable_on_twitter": false,
+        "font_face": null,
+        "font_size": null,
+        "tag_list": ""
+      },
+      "relationships": {
+        "answers": {
+          "data": [
+            {
+              "id": "78c20e869d17b8993aee",
+              "type": "answer"
+            },
+            {
+              "id": "fd43f6822252f3824591",
+              "type": "answer"
+            },
+            {
+              "id": "d0e81631d292285ca986",
+              "type": "answer"
+            },
+            {
+              "id": "5c4431abd075944c90e9",
+              "type": "answer"
+            },
+            {
+              "id": "8a32d1bfc37446e7c9fb",
+              "type": "answer"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "c6f8b0757c1e704823d1",
+      "type": "question",
+      "attributes": {
+        "text": "Check in/out was expedited in a courteous and timely manner",
+        "help_text": null,
+        "display_order": 4,
+        "short_text": "check in and out",
+        "pick": "one",
+        "display_type": "smiley",
+        "is_mandatory": false,
+        "correct_answer_id": null,
+        "facebook_profile": null,
+        "twitter_profile": null,
+        "image_url": null,
+        "cover_image_url": "https://dhdbhh0jsld0o.cloudfront.net/m/59e9e7327354006c1ebc_",
+        "cover_image_opacity": 0.65,
+        "cover_background_color": null,
+        "is_shareable_on_facebook": false,
+        "is_shareable_on_twitter": false,
+        "font_face": null,
+        "font_size": null,
+        "tag_list": ""
+      },
+      "relationships": {
+        "answers": {
+          "data": [
+            {
+              "id": "333aaa800709a3d258c8",
+              "type": "answer"
+            },
+            {
+              "id": "a1cf0e19fac94765e6c9",
+              "type": "answer"
+            },
+            {
+              "id": "8fd773122bb069ab6201",
+              "type": "answer"
+            },
+            {
+              "id": "b8207c365809381a53b7",
+              "type": "answer"
+            },
+            {
+              "id": "f931c2a10403e11837a2",
+              "type": "answer"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "dd4e3a011a6059b7c469",
+      "type": "question",
+      "attributes": {
+        "text": "Therapists skill",
+        "help_text": null,
+        "display_order": 5,
+        "short_text": "Therapists skill",
+        "pick": "one",
+        "display_type": "smiley",
+        "is_mandatory": false,
+        "correct_answer_id": null,
+        "facebook_profile": null,
+        "twitter_profile": null,
+        "image_url": null,
+        "cover_image_url": "https://dhdbhh0jsld0o.cloudfront.net/m/59e9e7327354006c1ebc_",
+        "cover_image_opacity": 0.65,
+        "cover_background_color": null,
+        "is_shareable_on_facebook": false,
+        "is_shareable_on_twitter": false,
+        "font_face": null,
+        "font_size": null,
+        "tag_list": ""
+      },
+      "relationships": {
+        "answers": {
+          "data": [
+            {
+              "id": "818a9a2c911324474980",
+              "type": "answer"
+            },
+            {
+              "id": "aa638d5a998682510357",
+              "type": "answer"
+            },
+            {
+              "id": "a651dd72ec0d4c8e408b",
+              "type": "answer"
+            },
+            {
+              "id": "7a94f728e2a23a3817ad",
+              "type": "answer"
+            },
+            {
+              "id": "815365dd549c0cb77c55",
+              "type": "answer"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "12fc670b50e012ce79a2",
+      "type": "question",
+      "attributes": {
+        "text": "Overall experience",
+        "help_text": null,
+        "display_order": 6,
+        "short_text": "Overall",
+        "pick": "one",
+        "display_type": "smiley",
+        "is_mandatory": false,
+        "correct_answer_id": null,
+        "facebook_profile": null,
+        "twitter_profile": null,
+        "image_url": null,
+        "cover_image_url": "https://dhdbhh0jsld0o.cloudfront.net/m/59e9e7327354006c1ebc_",
+        "cover_image_opacity": 0.65,
+        "cover_background_color": null,
+        "is_shareable_on_facebook": false,
+        "is_shareable_on_twitter": false,
+        "font_face": null,
+        "font_size": null,
+        "tag_list": ""
+      },
+      "relationships": {
+        "answers": {
+          "data": [
+            {
+              "id": "d9869f4d34b6743baedb",
+              "type": "answer"
+            },
+            {
+              "id": "2701e0c2a68c1a046e53",
+              "type": "answer"
+            },
+            {
+              "id": "caf181f31b4da17ef9a7",
+              "type": "answer"
+            },
+            {
+              "id": "3b0b0c020c8ea5a9d409",
+              "type": "answer"
+            },
+            {
+              "id": "985719780ded63fdc784",
+              "type": "answer"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "55ff73b35a7b5784317a",
+      "type": "question",
+      "attributes": {
+        "text": "Your additional comments",
+        "help_text": "(Optional)",
+        "display_order": 7,
+        "short_text": "Comments",
+        "pick": "none",
+        "display_type": "textarea",
+        "is_mandatory": false,
+        "correct_answer_id": null,
+        "facebook_profile": null,
+        "twitter_profile": null,
+        "image_url": null,
+        "cover_image_url": "https://dhdbhh0jsld0o.cloudfront.net/m/59e9e7327354006c1ebc_",
+        "cover_image_opacity": 0.65,
+        "cover_background_color": null,
+        "is_shareable_on_facebook": false,
+        "is_shareable_on_twitter": false,
+        "font_face": null,
+        "font_size": null,
+        "tag_list": ""
+      },
+      "relationships": {
+        "answers": {
+          "data": [
+            {
+              "id": "0f6fddd85365a80b5bb5",
+              "type": "answer"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "d6b133cf862dd3d90dc1",
+      "type": "question",
+      "attributes": {
+        "text": "Please let us know how we may get in touch with you",
+        "help_text": null,
+        "display_order": 8,
+        "short_text": "New question",
+        "pick": "none",
+        "display_type": "textfield",
+        "is_mandatory": false,
+        "correct_answer_id": null,
+        "facebook_profile": null,
+        "twitter_profile": null,
+        "image_url": null,
+        "cover_image_url": "https://dhdbhh0jsld0o.cloudfront.net/m/59e9e7327354006c1ebc_",
+        "cover_image_opacity": 0.65,
+        "cover_background_color": null,
+        "is_shareable_on_facebook": false,
+        "is_shareable_on_twitter": false,
+        "font_face": null,
+        "font_size": null,
+        "tag_list": ""
+      },
+      "relationships": {
+        "answers": {
+          "data": [
+            {
+              "id": "93f1e3fa25347984b97d",
+              "type": "answer"
+            },
+            {
+              "id": "dd8c5c50c41460ccb004",
+              "type": "answer"
+            },
+            {
+              "id": "d9411cf888bbd312a6cb",
+              "type": "answer"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "cc26fa7b93d8535904b4",
+      "type": "question",
+      "attributes": {
+        "text": "Thanks for responding our survey",
+        "help_text": null,
+        "display_order": 9,
+        "short_text": "thanks_message",
+        "pick": "none",
+        "display_type": "outro",
+        "is_mandatory": false,
+        "correct_answer_id": null,
+        "facebook_profile": null,
+        "twitter_profile": null,
+        "image_url": null,
+        "cover_image_url": "https://dhdbhh0jsld0o.cloudfront.net/m/59e9e7327354006c1ebc_",
+        "cover_image_opacity": 0.65,
+        "cover_background_color": null,
+        "is_shareable_on_facebook": false,
+        "is_shareable_on_twitter": false,
+        "font_face": null,
+        "font_size": null,
+        "tag_list": ""
+      },
+      "relationships": {
+        "answers": {
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "c929621b5857bf4e4196",
+      "type": "answer",
+      "attributes": {
+        "text": "Asoke",
+        "help_text": null,
+        "input_mask_placeholder": null,
+        "short_text": "answer_1",
+        "is_mandatory": false,
+        "is_customer_first_name": false,
+        "is_customer_last_name": false,
+        "is_customer_title": false,
+        "is_customer_email": false,
+        "prompt_custom_answer": false,
+        "weight": null,
+        "display_order": 0,
+        "display_type": "default",
+        "input_mask": null,
+        "date_constraint": null,
+        "default_value": null,
+        "response_class": "answer",
+        "reference_identifier": null,
+        "score": null,
+        "alerts": []
+      }
+    },
+    {
+      "id": "6bfa792ab02a591efc79",
+      "type": "answer",
+      "attributes": {
+        "text": "Chaeng Wattana",
+        "help_text": null,
+        "input_mask_placeholder": null,
+        "short_text": "answer_2",
+        "is_mandatory": false,
+        "is_customer_first_name": false,
+        "is_customer_last_name": false,
+        "is_customer_title": false,
+        "is_customer_email": false,
+        "prompt_custom_answer": false,
+        "weight": null,
+        "display_order": 1,
+        "display_type": "default",
+        "input_mask": null,
+        "date_constraint": null,
+        "default_value": null,
+        "response_class": "answer",
+        "reference_identifier": null,
+        "score": null,
+        "alerts": []
+      }
+    },
+    {
+      "id": "1d78c896f194835ec7b9",
+      "type": "answer",
+      "attributes": {
+        "text": "Ekamai",
+        "help_text": null,
+        "input_mask_placeholder": null,
+        "short_text": "answer_3",
+        "is_mandatory": false,
+        "is_customer_first_name": false,
+        "is_customer_last_name": false,
+        "is_customer_title": false,
+        "is_customer_email": false,
+        "prompt_custom_answer": false,
+        "weight": null,
+        "display_order": 2,
+        "display_type": "default",
+        "input_mask": null,
+        "date_constraint": null,
+        "default_value": null,
+        "response_class": "answer",
+        "reference_identifier": null,
+        "score": null,
+        "alerts": []
+      }
+    },
+    {
+      "id": "45e77eea34c5550bfdee",
+      "type": "answer",
+      "attributes": {
+        "text": "Manutham",
+        "help_text": null,
+        "input_mask_placeholder": null,
+        "short_text": "answer_4",
+        "is_mandatory": false,
+        "is_customer_first_name": false,
+        "is_customer_last_name": false,
+        "is_customer_title": false,
+        "is_customer_email": false,
+        "prompt_custom_answer": false,
+        "weight": null,
+        "display_order": 3,
+        "display_type": "default",
+        "input_mask": null,
+        "date_constraint": null,
+        "default_value": null,
+        "response_class": "answer",
+        "reference_identifier": null,
+        "score": null,
+        "alerts": []
+      }
+    },
+    {
+      "id": "5b7e1aed424c823d15ef",
+      "type": "answer",
+      "attributes": {
+        "text": "Pattaya",
+        "help_text": null,
+        "input_mask_placeholder": null,
+        "short_text": "answer_5",
+        "is_mandatory": false,
+        "is_customer_first_name": false,
+        "is_customer_last_name": false,
+        "is_customer_title": false,
+        "is_customer_email": false,
+        "prompt_custom_answer": false,
+        "weight": null,
+        "display_order": 4,
+        "display_type": "default",
+        "input_mask": null,
+        "date_constraint": null,
+        "default_value": null,
+        "response_class": "answer",
+        "reference_identifier": null,
+        "score": null,
+        "alerts": []
+      }
+    },
+    {
+      "id": "a3b328d04453d698747a",
+      "type": "answer",
+      "attributes": {
+        "text": "Pinklao",
+        "help_text": null,
+        "input_mask_placeholder": null,
+        "short_text": "answer_6",
+        "is_mandatory": false,
+        "is_customer_first_name": false,
+        "is_customer_last_name": false,
+        "is_customer_title": false,
+        "is_customer_email": false,
+        "prompt_custom_answer": false,
+        "weight": null,
+        "display_order": 5,
+        "display_type": "default",
+        "input_mask": null,
+        "date_constraint": null,
+        "default_value": null,
+        "response_class": "answer",
+        "reference_identifier": null,
+        "score": null,
+        "alerts": []
+      }
+    },
+    {
+      "id": "0eb659d4f59ff09a9766",
+      "type": "answer",
+      "attributes": {
+        "text": "Rama II",
+        "help_text": null,
+        "input_mask_placeholder": null,
+        "short_text": "answer_7",
+        "is_mandatory": false,
+        "is_customer_first_name": false,
+        "is_customer_last_name": false,
+        "is_customer_title": false,
+        "is_customer_email": false,
+        "prompt_custom_answer": false,
+        "weight": null,
+        "display_order": 6,
+        "display_type": "default",
+        "input_mask": null,
+        "date_constraint": null,
+        "default_value": null,
+        "response_class": "answer",
+        "reference_identifier": null,
+        "score": null,
+        "alerts": []
+      }
+    },
+    {
+      "id": "2907139a43db7f92b028",
+      "type": "answer",
+      "attributes": {
+        "text": "Srinakarin",
+        "help_text": null,
+        "input_mask_placeholder": null,
+        "short_text": "answer_8",
+        "is_mandatory": false,
+        "is_customer_first_name": false,
+        "is_customer_last_name": false,
+        "is_customer_title": false,
+        "is_customer_email": false,
+        "prompt_custom_answer": false,
+        "weight": null,
+        "display_order": 7,
+        "display_type": "default",
+        "input_mask": null,
+        "date_constraint": null,
+        "default_value": null,
+        "response_class": "answer",
+        "reference_identifier": null,
+        "score": null,
+        "alerts": []
+      }
+    },
+    {
+      "id": "d84b04d77f3cc558df40",
+      "type": "answer",
+      "attributes": {
+        "text": "1",
+        "help_text": null,
+        "input_mask_placeholder": null,
+        "short_text": "answer_1",
+        "is_mandatory": false,
+        "is_customer_first_name": false,
+        "is_customer_last_name": false,
+        "is_customer_title": false,
+        "is_customer_email": false,
+        "prompt_custom_answer": false,
+        "weight": null,
+        "display_order": 0,
+        "display_type": "default",
+        "input_mask": null,
+        "date_constraint": null,
+        "default_value": null,
+        "response_class": "answer",
+        "reference_identifier": null,
+        "score": 0,
+        "alerts": []
+      }
+    },
+    {
+      "id": "023e7923a586ebc97394",
+      "type": "answer",
+      "attributes": {
+        "text": "2",
+        "help_text": null,
+        "input_mask_placeholder": null,
+        "short_text": "answer_2",
+        "is_mandatory": false,
+        "is_customer_first_name": false,
+        "is_customer_last_name": false,
+        "is_customer_title": false,
+        "is_customer_email": false,
+        "prompt_custom_answer": false,
+        "weight": null,
+        "display_order": 1,
+        "display_type": "default",
+        "input_mask": null,
+        "date_constraint": null,
+        "default_value": null,
+        "response_class": "answer",
+        "reference_identifier": null,
+        "score": 25,
+        "alerts": []
+      }
+    },
+    {
+      "id": "085b28b0818bf6ef6a71",
+      "type": "answer",
+      "attributes": {
+        "text": "3",
+        "help_text": null,
+        "input_mask_placeholder": null,
+        "short_text": "answer_3",
+        "is_mandatory": false,
+        "is_customer_first_name": false,
+        "is_customer_last_name": false,
+        "is_customer_title": false,
+        "is_customer_email": false,
+        "prompt_custom_answer": false,
+        "weight": null,
+        "display_order": 2,
+        "display_type": "default",
+        "input_mask": null,
+        "date_constraint": null,
+        "default_value": null,
+        "response_class": "answer",
+        "reference_identifier": null,
+        "score": 50,
+        "alerts": []
+      }
+    },
+    {
+      "id": "8818396d337e6b9060b8",
+      "type": "answer",
+      "attributes": {
+        "text": "4",
+        "help_text": null,
+        "input_mask_placeholder": null,
+        "short_text": "answer_4",
+        "is_mandatory": false,
+        "is_customer_first_name": false,
+        "is_customer_last_name": false,
+        "is_customer_title": false,
+        "is_customer_email": false,
+        "prompt_custom_answer": false,
+        "weight": null,
+        "display_order": 3,
+        "display_type": "default",
+        "input_mask": null,
+        "date_constraint": null,
+        "default_value": null,
+        "response_class": "answer",
+        "reference_identifier": null,
+        "score": 75,
+        "alerts": []
+      }
+    },
+    {
+      "id": "23d9072c99fd7aa4b39b",
+      "type": "answer",
+      "attributes": {
+        "text": "5",
+        "help_text": null,
+        "input_mask_placeholder": null,
+        "short_text": "answer_5",
+        "is_mandatory": false,
+        "is_customer_first_name": false,
+        "is_customer_last_name": false,
+        "is_customer_title": false,
+        "is_customer_email": false,
+        "prompt_custom_answer": false,
+        "weight": null,
+        "display_order": 4,
+        "display_type": "default",
+        "input_mask": null,
+        "date_constraint": null,
+        "default_value": null,
+        "response_class": "answer",
+        "reference_identifier": null,
+        "score": 100,
+        "alerts": []
+      }
+    },
+    {
+      "id": "78c20e869d17b8993aee",
+      "type": "answer",
+      "attributes": {
+        "text": "1",
+        "help_text": null,
+        "input_mask_placeholder": null,
+        "short_text": "answer_1",
+        "is_mandatory": false,
+        "is_customer_first_name": false,
+        "is_customer_last_name": false,
+        "is_customer_title": false,
+        "is_customer_email": false,
+        "prompt_custom_answer": false,
+        "weight": null,
+        "display_order": 0,
+        "display_type": "default",
+        "input_mask": null,
+        "date_constraint": null,
+        "default_value": null,
+        "response_class": "answer",
+        "reference_identifier": null,
+        "score": 0,
+        "alerts": []
+      }
+    },
+    {
+      "id": "fd43f6822252f3824591",
+      "type": "answer",
+      "attributes": {
+        "text": "2",
+        "help_text": null,
+        "input_mask_placeholder": null,
+        "short_text": "answer_2",
+        "is_mandatory": false,
+        "is_customer_first_name": false,
+        "is_customer_last_name": false,
+        "is_customer_title": false,
+        "is_customer_email": false,
+        "prompt_custom_answer": false,
+        "weight": null,
+        "display_order": 1,
+        "display_type": "default",
+        "input_mask": null,
+        "date_constraint": null,
+        "default_value": null,
+        "response_class": "answer",
+        "reference_identifier": null,
+        "score": 25,
+        "alerts": []
+      }
+    },
+    {
+      "id": "d0e81631d292285ca986",
+      "type": "answer",
+      "attributes": {
+        "text": "3",
+        "help_text": null,
+        "input_mask_placeholder": null,
+        "short_text": "answer_3",
+        "is_mandatory": false,
+        "is_customer_first_name": false,
+        "is_customer_last_name": false,
+        "is_customer_title": false,
+        "is_customer_email": false,
+        "prompt_custom_answer": false,
+        "weight": null,
+        "display_order": 2,
+        "display_type": "default",
+        "input_mask": null,
+        "date_constraint": null,
+        "default_value": null,
+        "response_class": "answer",
+        "reference_identifier": null,
+        "score": 50,
+        "alerts": []
+      }
+    },
+    {
+      "id": "5c4431abd075944c90e9",
+      "type": "answer",
+      "attributes": {
+        "text": "4",
+        "help_text": null,
+        "input_mask_placeholder": null,
+        "short_text": "answer_4",
+        "is_mandatory": false,
+        "is_customer_first_name": false,
+        "is_customer_last_name": false,
+        "is_customer_title": false,
+        "is_customer_email": false,
+        "prompt_custom_answer": false,
+        "weight": null,
+        "display_order": 3,
+        "display_type": "default",
+        "input_mask": null,
+        "date_constraint": null,
+        "default_value": null,
+        "response_class": "answer",
+        "reference_identifier": null,
+        "score": 75,
+        "alerts": []
+      }
+    },
+    {
+      "id": "8a32d1bfc37446e7c9fb",
+      "type": "answer",
+      "attributes": {
+        "text": "5",
+        "help_text": null,
+        "input_mask_placeholder": null,
+        "short_text": "answer_5",
+        "is_mandatory": false,
+        "is_customer_first_name": false,
+        "is_customer_last_name": false,
+        "is_customer_title": false,
+        "is_customer_email": false,
+        "prompt_custom_answer": false,
+        "weight": null,
+        "display_order": 4,
+        "display_type": "default",
+        "input_mask": null,
+        "date_constraint": null,
+        "default_value": null,
+        "response_class": "answer",
+        "reference_identifier": null,
+        "score": 100,
+        "alerts": []
+      }
+    },
+    {
+      "id": "333aaa800709a3d258c8",
+      "type": "answer",
+      "attributes": {
+        "text": "1",
+        "help_text": null,
+        "input_mask_placeholder": null,
+        "short_text": "answer_1",
+        "is_mandatory": false,
+        "is_customer_first_name": false,
+        "is_customer_last_name": false,
+        "is_customer_title": false,
+        "is_customer_email": false,
+        "prompt_custom_answer": false,
+        "weight": null,
+        "display_order": 0,
+        "display_type": "default",
+        "input_mask": null,
+        "date_constraint": null,
+        "default_value": null,
+        "response_class": "answer",
+        "reference_identifier": null,
+        "score": 0,
+        "alerts": []
+      }
+    },
+    {
+      "id": "a1cf0e19fac94765e6c9",
+      "type": "answer",
+      "attributes": {
+        "text": "2",
+        "help_text": null,
+        "input_mask_placeholder": null,
+        "short_text": "answer_2",
+        "is_mandatory": false,
+        "is_customer_first_name": false,
+        "is_customer_last_name": false,
+        "is_customer_title": false,
+        "is_customer_email": false,
+        "prompt_custom_answer": false,
+        "weight": null,
+        "display_order": 1,
+        "display_type": "default",
+        "input_mask": null,
+        "date_constraint": null,
+        "default_value": null,
+        "response_class": "answer",
+        "reference_identifier": null,
+        "score": 25,
+        "alerts": []
+      }
+    },
+    {
+      "id": "8fd773122bb069ab6201",
+      "type": "answer",
+      "attributes": {
+        "text": "3",
+        "help_text": null,
+        "input_mask_placeholder": null,
+        "short_text": "answer_3",
+        "is_mandatory": false,
+        "is_customer_first_name": false,
+        "is_customer_last_name": false,
+        "is_customer_title": false,
+        "is_customer_email": false,
+        "prompt_custom_answer": false,
+        "weight": null,
+        "display_order": 2,
+        "display_type": "default",
+        "input_mask": null,
+        "date_constraint": null,
+        "default_value": null,
+        "response_class": "answer",
+        "reference_identifier": null,
+        "score": 50,
+        "alerts": []
+      }
+    },
+    {
+      "id": "b8207c365809381a53b7",
+      "type": "answer",
+      "attributes": {
+        "text": "4",
+        "help_text": null,
+        "input_mask_placeholder": null,
+        "short_text": "answer_4",
+        "is_mandatory": false,
+        "is_customer_first_name": false,
+        "is_customer_last_name": false,
+        "is_customer_title": false,
+        "is_customer_email": false,
+        "prompt_custom_answer": false,
+        "weight": null,
+        "display_order": 3,
+        "display_type": "default",
+        "input_mask": null,
+        "date_constraint": null,
+        "default_value": null,
+        "response_class": "answer",
+        "reference_identifier": null,
+        "score": 75,
+        "alerts": []
+      }
+    },
+    {
+      "id": "f931c2a10403e11837a2",
+      "type": "answer",
+      "attributes": {
+        "text": "5",
+        "help_text": null,
+        "input_mask_placeholder": null,
+        "short_text": "answer_5",
+        "is_mandatory": false,
+        "is_customer_first_name": false,
+        "is_customer_last_name": false,
+        "is_customer_title": false,
+        "is_customer_email": false,
+        "prompt_custom_answer": false,
+        "weight": null,
+        "display_order": 4,
+        "display_type": "default",
+        "input_mask": null,
+        "date_constraint": null,
+        "default_value": null,
+        "response_class": "answer",
+        "reference_identifier": null,
+        "score": 100,
+        "alerts": []
+      }
+    },
+    {
+      "id": "818a9a2c911324474980",
+      "type": "answer",
+      "attributes": {
+        "text": "1",
+        "help_text": null,
+        "input_mask_placeholder": null,
+        "short_text": "answer_1",
+        "is_mandatory": false,
+        "is_customer_first_name": false,
+        "is_customer_last_name": false,
+        "is_customer_title": false,
+        "is_customer_email": false,
+        "prompt_custom_answer": false,
+        "weight": null,
+        "display_order": 0,
+        "display_type": "default",
+        "input_mask": null,
+        "date_constraint": null,
+        "default_value": null,
+        "response_class": "answer",
+        "reference_identifier": null,
+        "score": 0,
+        "alerts": []
+      }
+    },
+    {
+      "id": "aa638d5a998682510357",
+      "type": "answer",
+      "attributes": {
+        "text": "2",
+        "help_text": null,
+        "input_mask_placeholder": null,
+        "short_text": "answer_2",
+        "is_mandatory": false,
+        "is_customer_first_name": false,
+        "is_customer_last_name": false,
+        "is_customer_title": false,
+        "is_customer_email": false,
+        "prompt_custom_answer": false,
+        "weight": null,
+        "display_order": 1,
+        "display_type": "default",
+        "input_mask": null,
+        "date_constraint": null,
+        "default_value": null,
+        "response_class": "answer",
+        "reference_identifier": null,
+        "score": 25,
+        "alerts": []
+      }
+    },
+    {
+      "id": "a651dd72ec0d4c8e408b",
+      "type": "answer",
+      "attributes": {
+        "text": "3",
+        "help_text": null,
+        "input_mask_placeholder": null,
+        "short_text": "answer_3",
+        "is_mandatory": false,
+        "is_customer_first_name": false,
+        "is_customer_last_name": false,
+        "is_customer_title": false,
+        "is_customer_email": false,
+        "prompt_custom_answer": false,
+        "weight": null,
+        "display_order": 2,
+        "display_type": "default",
+        "input_mask": null,
+        "date_constraint": null,
+        "default_value": null,
+        "response_class": "answer",
+        "reference_identifier": null,
+        "score": 50,
+        "alerts": []
+      }
+    },
+    {
+      "id": "7a94f728e2a23a3817ad",
+      "type": "answer",
+      "attributes": {
+        "text": "4",
+        "help_text": null,
+        "input_mask_placeholder": null,
+        "short_text": "answer_4",
+        "is_mandatory": false,
+        "is_customer_first_name": false,
+        "is_customer_last_name": false,
+        "is_customer_title": false,
+        "is_customer_email": false,
+        "prompt_custom_answer": false,
+        "weight": null,
+        "display_order": 3,
+        "display_type": "default",
+        "input_mask": null,
+        "date_constraint": null,
+        "default_value": null,
+        "response_class": "answer",
+        "reference_identifier": null,
+        "score": 75,
+        "alerts": []
+      }
+    },
+    {
+      "id": "815365dd549c0cb77c55",
+      "type": "answer",
+      "attributes": {
+        "text": "5",
+        "help_text": null,
+        "input_mask_placeholder": null,
+        "short_text": "answer_5",
+        "is_mandatory": false,
+        "is_customer_first_name": false,
+        "is_customer_last_name": false,
+        "is_customer_title": false,
+        "is_customer_email": false,
+        "prompt_custom_answer": false,
+        "weight": null,
+        "display_order": 4,
+        "display_type": "default",
+        "input_mask": null,
+        "date_constraint": null,
+        "default_value": null,
+        "response_class": "answer",
+        "reference_identifier": null,
+        "score": 100,
+        "alerts": []
+      }
+    },
+    {
+      "id": "d9869f4d34b6743baedb",
+      "type": "answer",
+      "attributes": {
+        "text": "1",
+        "help_text": null,
+        "input_mask_placeholder": null,
+        "short_text": "answer_1",
+        "is_mandatory": false,
+        "is_customer_first_name": false,
+        "is_customer_last_name": false,
+        "is_customer_title": false,
+        "is_customer_email": false,
+        "prompt_custom_answer": false,
+        "weight": null,
+        "display_order": 0,
+        "display_type": "default",
+        "input_mask": null,
+        "date_constraint": null,
+        "default_value": null,
+        "response_class": "answer",
+        "reference_identifier": null,
+        "score": 0,
+        "alerts": []
+      }
+    },
+    {
+      "id": "2701e0c2a68c1a046e53",
+      "type": "answer",
+      "attributes": {
+        "text": "2",
+        "help_text": null,
+        "input_mask_placeholder": null,
+        "short_text": "answer_2",
+        "is_mandatory": false,
+        "is_customer_first_name": false,
+        "is_customer_last_name": false,
+        "is_customer_title": false,
+        "is_customer_email": false,
+        "prompt_custom_answer": false,
+        "weight": null,
+        "display_order": 1,
+        "display_type": "default",
+        "input_mask": null,
+        "date_constraint": null,
+        "default_value": null,
+        "response_class": "answer",
+        "reference_identifier": null,
+        "score": 25,
+        "alerts": []
+      }
+    },
+    {
+      "id": "caf181f31b4da17ef9a7",
+      "type": "answer",
+      "attributes": {
+        "text": "3",
+        "help_text": null,
+        "input_mask_placeholder": null,
+        "short_text": "answer_3",
+        "is_mandatory": false,
+        "is_customer_first_name": false,
+        "is_customer_last_name": false,
+        "is_customer_title": false,
+        "is_customer_email": false,
+        "prompt_custom_answer": false,
+        "weight": null,
+        "display_order": 2,
+        "display_type": "default",
+        "input_mask": null,
+        "date_constraint": null,
+        "default_value": null,
+        "response_class": "answer",
+        "reference_identifier": null,
+        "score": 50,
+        "alerts": []
+      }
+    },
+    {
+      "id": "3b0b0c020c8ea5a9d409",
+      "type": "answer",
+      "attributes": {
+        "text": "4",
+        "help_text": null,
+        "input_mask_placeholder": null,
+        "short_text": "answer_4",
+        "is_mandatory": false,
+        "is_customer_first_name": false,
+        "is_customer_last_name": false,
+        "is_customer_title": false,
+        "is_customer_email": false,
+        "prompt_custom_answer": false,
+        "weight": null,
+        "display_order": 3,
+        "display_type": "default",
+        "input_mask": null,
+        "date_constraint": null,
+        "default_value": null,
+        "response_class": "answer",
+        "reference_identifier": null,
+        "score": 75,
+        "alerts": []
+      }
+    },
+    {
+      "id": "985719780ded63fdc784",
+      "type": "answer",
+      "attributes": {
+        "text": "5",
+        "help_text": null,
+        "input_mask_placeholder": null,
+        "short_text": "answer_5",
+        "is_mandatory": false,
+        "is_customer_first_name": false,
+        "is_customer_last_name": false,
+        "is_customer_title": false,
+        "is_customer_email": false,
+        "prompt_custom_answer": false,
+        "weight": null,
+        "display_order": 4,
+        "display_type": "default",
+        "input_mask": null,
+        "date_constraint": null,
+        "default_value": null,
+        "response_class": "answer",
+        "reference_identifier": null,
+        "score": 100,
+        "alerts": []
+      }
+    },
+    {
+      "id": "0f6fddd85365a80b5bb5",
+      "type": "answer",
+      "attributes": {
+        "text": null,
+        "help_text": null,
+        "input_mask_placeholder": null,
+        "short_text": "answer_1",
+        "is_mandatory": false,
+        "is_customer_first_name": false,
+        "is_customer_last_name": false,
+        "is_customer_title": false,
+        "is_customer_email": false,
+        "prompt_custom_answer": false,
+        "weight": null,
+        "display_order": 0,
+        "display_type": "default",
+        "input_mask": null,
+        "date_constraint": null,
+        "default_value": null,
+        "response_class": "text",
+        "reference_identifier": null,
+        "score": null,
+        "alerts": []
+      }
+    },
+    {
+      "id": "93f1e3fa25347984b97d",
+      "type": "answer",
+      "attributes": {
+        "text": "Name",
+        "help_text": null,
+        "input_mask_placeholder": "John Smith",
+        "short_text": "answer_1",
+        "is_mandatory": false,
+        "is_customer_first_name": false,
+        "is_customer_last_name": false,
+        "is_customer_title": false,
+        "is_customer_email": false,
+        "prompt_custom_answer": false,
+        "weight": null,
+        "display_order": 0,
+        "display_type": "default",
+        "input_mask": null,
+        "date_constraint": null,
+        "default_value": null,
+        "response_class": "string",
+        "reference_identifier": null,
+        "score": null,
+        "alerts": []
+      }
+    },
+    {
+      "id": "dd8c5c50c41460ccb004",
+      "type": "answer",
+      "attributes": {
+        "text": "Phone",
+        "help_text": null,
+        "input_mask_placeholder": "0999-999-999",
+        "short_text": "answer_2",
+        "is_mandatory": false,
+        "is_customer_first_name": false,
+        "is_customer_last_name": false,
+        "is_customer_title": false,
+        "is_customer_email": false,
+        "prompt_custom_answer": false,
+        "weight": null,
+        "display_order": 1,
+        "display_type": "default",
+        "input_mask": "\\+?[0-9]{6,13}",
+        "date_constraint": null,
+        "default_value": null,
+        "response_class": "string",
+        "reference_identifier": null,
+        "score": null,
+        "alerts": []
+      }
+    },
+    {
+      "id": "d9411cf888bbd312a6cb",
+      "type": "answer",
+      "attributes": {
+        "text": "Email",
+        "help_text": null,
+        "input_mask_placeholder": "you@example.com",
+        "short_text": "answer_3",
+        "is_mandatory": false,
+        "is_customer_first_name": false,
+        "is_customer_last_name": false,
+        "is_customer_title": false,
+        "is_customer_email": false,
+        "prompt_custom_answer": false,
+        "weight": null,
+        "display_order": 2,
+        "display_type": "default",
+        "input_mask": "[\\.\\-_\\+a-zA-Z0-9]+@[\\-\\a-zA-Z0-9]+(?:\\.[\\-a-zA-Z0-9]+)+",
+        "date_constraint": null,
+        "default_value": null,
+        "response_class": "string",
+        "reference_identifier": null,
+        "score": null,
+        "alerts": []
+      }
+    }
+  ]
+}
