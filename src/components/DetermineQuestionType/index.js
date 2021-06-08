@@ -34,7 +34,12 @@ const DetermineQuestionType = ({ question }) => {
         break;
       }
       case 'nps': {
-        setQuestionComponent(<NetPromotingScore />);
+        setQuestionComponent(
+          <NetPromotingScore
+            answers={ question.answers }
+            questionId={ question.id }
+          />
+        );
 
         break;
       }
@@ -61,7 +66,12 @@ const DetermineQuestionType = ({ question }) => {
         break;
       }
       case 'dropdown': {
-        setQuestionComponent(<SurveySelectField options={ null } />);
+        setQuestionComponent(
+          <SurveySelectField
+            answers={ question.answers }
+            questionId={ question.id }
+          />
+        );
 
         break;
       }

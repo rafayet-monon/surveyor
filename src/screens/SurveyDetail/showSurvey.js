@@ -8,7 +8,9 @@ const ShowSurvey = () => {
   const surveyStatusContext = useContext(SurveyStatusContext);
 
   return (
-    <React.Fragment>{ surveyStatusContext.state.started ? <Questions /> : <Detail /> }</ React.Fragment>
+    <React.Fragment>
+      { surveyStatusContext.state.started ? <Questions /> : <Detail /> }
+    </React.Fragment>
   );
 };
 

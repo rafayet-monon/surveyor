@@ -1,28 +1,40 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 
-import SelectSearch from 'react-select-search/dist/cjs';
+import Select from 'react-select';
 
-const SurveySelectField = ({ options }) => {
-  // Adding some demo data for now to show components based on question type.
-  const demoData = [
-    { name: 'Bangladesh', value: 'BD' },
-    { name: 'India', value: 'IN' },
-    { name: 'Nepal', value: 'NP' },
-    { name: 'Bhutan', value: 'BH' },
-    { name: 'Thailand', value: 'TH' },
-    { name: 'Singapore', value: 'SG' },
-    { name: 'Vietnam', value: 'VN' }
-  ];
-  const selectData = options || demoData;
+import SelectData from 'components/SurveySelectField/selectData';
+import SelectStyles from 'components/SurveySelectField/selectStyles';
+import * as Constants from 'constants/surveyAnswer';
+import { DetailsContext } from 'contexts/details';
+import { SurveyAnswerContext } from 'contexts/surveyAnswer';
+import QuestionObjectBuilder from 'helpers/questionObjectBuilder';
+
+const SurveySelectField = ({ questionId, answers }) => {
+  const detailsContext = useContext(DetailsContext);
+  const [selectData, setSelectData] = useState([]);
+  const [selectValue, setSelectValue] = useState(null);
+  const [currentQuestionId, setCurrentQuestionId] = useState(questionId);
+  const { dispatch } = useContext(SurveyAnswerContext);
+
+  useEffect(() => {
+    setSelectData(SelectData(detailsContext.surveyDetail, answers));
+
+    if (currentQuestionId === questionId && selectValue) {
+      dispatch({
+        type: Constants.SINGLE_ANSWER,
+        data: QuestionObjectBuilder(questionId, selectValue)
+      });
+    } else {
+      setCurrentQuestionId(questionId);
+    }
+  }, [selectValue]);
 
   return (
     <div className="survey-input-container" data-test-id="survey-dropdown">
-      <SelectSearch
+      <Select
+        onChange={ (option) => setSelectValue(option.value) }
         options={ selectData }
-        search
-        emptyMessage="Not found"
-        placeholder="Select suitable option"
-        className="select-search"
+        styles={ SelectStyles }
       />
     </div>
   );
