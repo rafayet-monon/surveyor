@@ -24,13 +24,19 @@ const SurveyAnswerReducer = (state, action) => {
     const questionObj = state.questions.find(
       (details) => details.id === action.data.id
     );
-
     if (questionObj) {
+
       const answerObj = questionObj.answers.find(
         (answer) => answer.id === newAnswer.id
       );
       if (answerObj) {
-        questionObj.answers.pop(answerObj);
+        if(newAnswer.answer === undefined) {
+          // pop object when multiple wheel is unchecked
+          questionObj.answers.pop(answerObj);
+        } else {
+          // add answer for multiple text field
+          answerObj.answer = newAnswer.answer
+        }
       } else {
         questionObj.answers.push(newAnswer);
       }

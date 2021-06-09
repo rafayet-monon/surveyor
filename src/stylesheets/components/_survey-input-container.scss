@@ -1,3 +1,7 @@
 .survey-input-container {
   margin-top: rem(65px);
+
+  &__text-field {
+    margin-bottom: rem(30px);
+  }
 }

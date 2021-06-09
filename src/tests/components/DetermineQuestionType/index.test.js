@@ -131,9 +131,16 @@ describe('given DetermineQuestionType is mounted', () => {
       question.type = 'textfield';
 
       const { getByTestId } = render(
-        <SurveyAnswerContext.Provider value={ details.data.id }>
-          <DetermineQuestionType question={ question } />
-        </SurveyAnswerContext.Provider>
+        <DetailsContext.Provider
+          value={{
+            surveyDetail: details,
+            questionList
+          }}
+        >
+          <SurveyAnswerContext.Provider value={ details.data.id }>
+            <DetermineQuestionType question={ question } />
+          </SurveyAnswerContext.Provider>
+        </DetailsContext.Provider>
       );
 
       expect(getByTestId(questionSelectors.textField)).toBeInTheDocument();
