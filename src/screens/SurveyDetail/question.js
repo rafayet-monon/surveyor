@@ -1,16 +1,22 @@
 import React, { useContext, useState } from 'react';
 
+import { Redirect } from 'react-router-dom';
+
+import SurveyAdapter from 'adapters/surveyAdapter';
 import DetermineQuestionType from 'components/DetermineQuestionType';
 import NextQuestion from 'components/NextQuestion';
 import QuitSurvey from 'components/QuitSurvey';
 import SurveyOutro from 'components/SurveyOutro';
+import { AuthContext } from 'contexts/auth';
 import { DetailsContext } from 'contexts/details';
-import { SurveyAnswerProvider } from 'contexts/surveyAnswer';
+import { SurveyAnswerContext } from 'contexts/surveyAnswer';
 import filterQuestionList from 'helpers/filterQuestionList';
 import questionProperties from 'helpers/questionProperties';
 
 const Questions = () => {
   const detailsContext = useContext(DetailsContext);
+  const answerContext = useContext(SurveyAnswerContext);
+  const authContext = useContext(AuthContext);
   const filteredQuestions = filterQuestionList(detailsContext.questionList);
   const [currentQuestion, setCurrentQuestion] = useState(
     questionProperties(filteredQuestions, 0)
@@ -26,12 +32,25 @@ const Questions = () => {
     );
   };
 
-  const submitSurvey = () => {
-    setSubmitted(true);
+  const submitSurvey = async () => {
+    try {
+      await SurveyAdapter.submit(
+        answerContext.state,
+        authContext.state.authorization_token
+      ).then(function (response) {
+        console.log(response)
+        if (response.status === 201) {
+          setSubmitted(true);
+        }
+      });
+    } catch (error) {
+      console.log('failed')
+      return <Redirect to={ '/' } />;
+    }
   };
 
   return (
-    <SurveyAnswerProvider surveyId={ detailsContext.surveyDetail.data.id }>
+    <React.Fragment>
       { submitted ? (
         <SurveyOutro message={ outroText } />
       ) : (
@@ -71,7 +90,7 @@ const Questions = () => {
           </div>
         </div>
       ) }
-    </SurveyAnswerProvider>
+    </React.Fragment>
   );
 };
 

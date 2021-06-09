@@ -16,6 +16,14 @@ class SurveyAdapter {
       }
     });
   };
+
+  static submit = (data, token) => {
+    return Api.post('api/v1/responses', data,{
+      headers: {
+        Authorization: token
+      }
+    });
+  };
 }
 
 export default SurveyAdapter;
