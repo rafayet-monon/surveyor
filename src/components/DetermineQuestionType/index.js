@@ -44,12 +44,22 @@ const DetermineQuestionType = ({ question }) => {
         break;
       }
       case 'textarea': {
-        setQuestionComponent(<SurveyTextAreaField />);
+        setQuestionComponent(
+          <SurveyTextAreaField
+            answers={ question.answers }
+            questionId={ question.id }
+          />
+        );
 
         break;
       }
       case 'textfield': {
-        setQuestionComponent(<SurveyTextField />);
+        setQuestionComponent(
+          <SurveyTextField
+            answers={ question.answers }
+            questionId={ question.id }
+          />
+        );
 
         break;
       }
